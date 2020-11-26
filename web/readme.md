@@ -1,4 +1,4 @@
-# Genshin Pack
+# Genshin Pack (Web Version)
 
 Keep track of your materials and plan your upgrades for Genshin Impact.
 
