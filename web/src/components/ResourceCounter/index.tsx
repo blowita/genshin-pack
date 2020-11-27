@@ -1,19 +1,36 @@
-import React, { useCallback, useMemo, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 
 import { FaStar } from 'react-icons/fa'
 import { TiMinus, TiPlus } from 'react-icons/ti'
 
 import { Buttons, Container, Counter, Filler, Stars } from './styles'
 
-const rarity = 5
-const name = `Boreal Wolf's Cracked Tooth (weapon ascension material - rarity ${rarity})`
-const requirement = 0
-
 const integerRegexp = /^[0-9]*$/
 
-const Resources: React.FC = () => {
-  const [counter, setCounter] = useState(0)
+type ResourceCounterItem = {
+  name: string
+  type: string
+  rarity: number
+  imageUrl: string
+}
+
+type ResourceCounterProps = {
+  item: ResourceCounterItem
+  count?: number
+  setCount: (count: number) => void
+  target?: number
+}
+
+const Resources: React.FC<ResourceCounterProps> = ({
+  item,
+  count,
+  setCount,
+  target,
+}) => {
+  const [counter, setCounter] = useState(count || 0)
   const [hideButtons, setHideButtons] = useState(true)
+
+  const name = `${item.name} (${item.type} - rarity ${item.rarity})`
 
   const increment = useCallback(
     () => setCounter((c) => Math.min(c + 1, 9999)),
@@ -32,42 +49,55 @@ const Resources: React.FC = () => {
   }, [])
 
   const fulfilled = useMemo(() => {
-    return !requirement || counter > requirement
-  }, [counter])
+    return !target || counter > target
+  }, [counter, target])
+
+  useEffect(() => {
+    setCount(counter)
+  }, [counter, setCount])
 
   return (
     <Container
-      className={'rarity-' + rarity}
+      className={'rarity-' + item.rarity}
+      resourceUrl={item.imageUrl}
       onMouseEnter={() => setHideButtons(false)}
       onMouseLeave={() => setHideButtons(true)}
     >
       <Buttons className={hideButtons ? 'hidden' : ''}>
-        <button className="minus" onClick={decrement}>
+        <button
+          className="minus"
+          onClick={decrement}
+          aria-label={`Decrement ${name} stored amount`}
+        >
           <TiMinus />
         </button>
-        <button className="plus" onClick={increment}>
+        <button
+          className="plus"
+          onClick={increment}
+          aria-label={`Increment ${name} stored amount`}
+        >
           <TiPlus />
         </button>
       </Buttons>
       <Filler />
       <Stars>
-        {[...Array(rarity).keys()].map((key) => (
+        {[...Array(item.rarity).keys()].map((key) => (
           <FaStar key={key} />
         ))}
       </Stars>
       <Counter>
         <input
-          aria-label={`${name} stored amount`}
           value={counter}
           onChange={changeCounter}
           size={3}
+          aria-label={`${name} stored amount`}
         />
         <span>/</span>
         <span
           className={fulfilled ? 'fulfilled' : 'required'}
           aria-label={`${name} required amount`}
         >
-          {requirement || '-'}
+          {target || '-'}
         </span>
       </Counter>
     </Container>

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { shade } from 'polished'
 
@@ -42,7 +42,11 @@ export const Buttons = styled.div`
   }
 `
 
-export const Container = styled.div`
+interface ContainerProps {
+  resourceUrl: string
+}
+
+export const Container = styled.div<ContainerProps>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -52,9 +56,13 @@ export const Container = styled.div`
   height: 6rem;
   border-radius: 0.3rem;
 
-  background: url('https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Boreal_Wolf%27s_Cracked_Tooth.png')
-    no-repeat top center;
+  ${(props) => css`
+    background-image: url(${props.resourceUrl});
+  `}
   background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+
   background-color: #aaaaaa;
 
   &.rarity-2 {

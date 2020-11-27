@@ -2,16 +2,21 @@ import styled from 'styled-components'
 
 export const Content = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
 
-  width: 100%;
-  max-width: 700px;
+  margin: -0.5rem;
 
-  margin-top: 1rem;
+  > div {
+    margin: 0.5rem;
+  }
 `
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 1rem;
 `
