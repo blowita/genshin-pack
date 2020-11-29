@@ -1,90 +1,62 @@
-import React from 'react'
+import React, { useCallback, useMemo } from 'react'
 
-import Counter from '../../components/ResourceCounter'
+import FlatList from 'flatlist-react'
+import { BiArrowToTop } from 'react-icons/bi'
+
+import ResourceCounter from '../../components/ResourceCounter'
+
+import { Resource, resources } from '../../data/resources'
 
 import { Container, Content } from './styles'
 
-const items = [
-  {
-    name: "Boreal Wolf's Milk Tooth",
-    type: 'weapon ascension material',
-    rarity: 2,
-    imageUrl:
-      'https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_Boreal_Wolf%27s_Milk_Tooth.png',
-    stock: 8,
-  },
-  {
-    name: "Boreal Wolf's Cracked Tooth",
-    type: 'weapon ascension material',
-    rarity: 3,
-    imageUrl:
-      'https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Boreal_Wolf%27s_Cracked_Tooth.png',
-    stock: 4,
-  },
-  {
-    name: "Boreal Wolf's Broken Fang",
-    type: 'weapon ascension material',
-    rarity: 4,
-    imageUrl:
-      'https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Boreal_Wolf%27s_Broken_Fang.png',
-    stock: 2,
-  },
-  {
-    name: "Boreal Wolf's Nostalgia",
-    type: 'weapon ascension material',
-    rarity: 5,
-    imageUrl:
-      'https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Item_Boreal_Wolf%27s_Nostalgia.png',
-    stock: 1,
-  },
-  {
-    name: "Boreal Wolf's Milk Tooth",
-    type: 'weapon ascension material',
-    rarity: 2,
-    imageUrl:
-      'https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_Boreal_Wolf%27s_Milk_Tooth.png',
-    stock: 8,
-  },
-  {
-    name: "Boreal Wolf's Cracked Tooth",
-    type: 'weapon ascension material',
-    rarity: 3,
-    imageUrl:
-      'https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Boreal_Wolf%27s_Cracked_Tooth.png',
-    stock: 4,
-  },
-  {
-    name: "Boreal Wolf's Broken Fang",
-    type: 'weapon ascension material',
-    rarity: 4,
-    imageUrl:
-      'https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Boreal_Wolf%27s_Broken_Fang.png',
-    stock: 2,
-  },
-  {
-    name: "Boreal Wolf's Nostalgia",
-    type: 'weapon ascension material',
-    rarity: 5,
-    imageUrl:
-      'https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Item_Boreal_Wolf%27s_Nostalgia.png',
-    stock: 1,
-  },
-]
+const stocks = resources.map((item) => ({
+  name: item.name,
+  stock: 0,
+}))
 
-const Resources: React.FC = () => (
-  <Container>
-    <Content>
-      {items.map((item, key) => (
-        <Counter
-          item={item}
-          count={item.stock}
-          setCount={(value) => (items[key].stock = value)}
-          target={Math.floor(Math.random() * 999)}
-          key={key}
-        />
-      ))}
-    </Content>
-  </Container>
+const renderResourceListItem = (
+  resource: Resource,
+  key: number
+): JSX.Element => (
+  <ResourceCounter
+    resource={resource}
+    count={stocks[key].stock}
+    setCount={(value) => (stocks[key].stock = value)}
+    target={Math.floor(Math.random() * 999)}
+    key={key}
+  />
 )
+
+const ScrollToTopButton: React.FC = () => (
+  <button>
+    <BiArrowToTop />
+  </button>
+)
+
+const Resources: React.FC = () => {
+  const sort = useMemo(() => ['sortId'], [])
+
+  const filter = useCallback((item: Resource) => !!item.imageUrl, [])
+
+  return (
+    <Container>
+      <Content>
+        <FlatList
+          list={resources}
+          renderItem={renderResourceListItem}
+          wrapperHtmlTag="div"
+          renderOnScroll
+          renderWhenEmpty={() => <span>No items available.</span>}
+          sortBy={sort}
+          filterBy={filter}
+          scrollToTop
+          scrollToTopButton={ScrollToTopButton}
+          scrollToTopPadding={0}
+          scrollToTopPosition="top right"
+        />
+      </Content>
+    </Container>
+  )
+}
 
 export default Resources

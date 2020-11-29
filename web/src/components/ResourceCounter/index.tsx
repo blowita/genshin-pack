@@ -3,26 +3,21 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { FaStar } from 'react-icons/fa'
 import { TiMinus, TiPlus } from 'react-icons/ti'
 
-import { Buttons, Container, Counter, Filler, Stars } from './styles'
+import { Resource } from '../../data/resources'
+
+import { Buttons, Container, Counter, Cover, Filler, Stars } from './styles'
 
 const integerRegexp = /^[0-9]*$/
 
-type ResourceCounterItem = {
-  name: string
-  type: string
-  rarity: number
-  imageUrl: string
-}
-
 type ResourceCounterProps = {
-  item: ResourceCounterItem
+  resource: Resource
   count?: number
   setCount: (count: number) => void
   target?: number
 }
 
 const Resources: React.FC<ResourceCounterProps> = ({
-  item,
+  resource,
   count,
   setCount,
   target,
@@ -30,7 +25,7 @@ const Resources: React.FC<ResourceCounterProps> = ({
   const [counter, setCounter] = useState(count || 0)
   const [hideButtons, setHideButtons] = useState(true)
 
-  const name = `${item.name} (${item.type} - rarity ${item.rarity})`
+  const name = `${resource.name} (${resource.type} - rarity ${resource.rarity})`
 
   const increment = useCallback(
     () => setCounter((c) => Math.min(c + 1, 9999)),
@@ -58,33 +53,36 @@ const Resources: React.FC<ResourceCounterProps> = ({
 
   return (
     <Container
-      className={'rarity-' + item.rarity}
-      resourceUrl={item.imageUrl}
       onMouseEnter={() => setHideButtons(false)}
       onMouseLeave={() => setHideButtons(true)}
     >
-      <Buttons className={hideButtons ? 'hidden' : ''}>
-        <button
-          className="minus"
-          onClick={decrement}
-          aria-label={`Decrement ${name} stored amount`}
-        >
-          <TiMinus />
-        </button>
-        <button
-          className="plus"
-          onClick={increment}
-          aria-label={`Increment ${name} stored amount`}
-        >
-          <TiPlus />
-        </button>
-      </Buttons>
-      <Filler />
-      <Stars>
-        {[...Array(item.rarity).keys()].map((key) => (
-          <FaStar key={key} />
-        ))}
-      </Stars>
+      <Cover
+        className={'rarity-' + resource.rarity}
+        resourceUrl={resource.imageUrl}
+      >
+        <Buttons className={hideButtons ? 'hidden' : ''}>
+          <button
+            className="minus"
+            onClick={decrement}
+            aria-label={`Decrement ${name} stored amount`}
+          >
+            <TiMinus />
+          </button>
+          <button
+            className="plus"
+            onClick={increment}
+            aria-label={`Increment ${name} stored amount`}
+          >
+            <TiPlus />
+          </button>
+        </Buttons>
+        <Filler />
+        <Stars>
+          {[...Array(resource.rarity).keys()].map((key) => (
+            <FaStar key={key} />
+          ))}
+        </Stars>
+      </Cover>
       <Counter>
         <input
           value={counter}

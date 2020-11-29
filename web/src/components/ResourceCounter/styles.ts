@@ -42,41 +42,15 @@ export const Buttons = styled.div`
   }
 `
 
-interface ContainerProps {
-  resourceUrl: string
-}
-
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
 
   width: 5rem;
   height: 6rem;
   border-radius: 0.3rem;
 
-  ${(props) => css`
-    background-image: url(${props.resourceUrl});
-  `}
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top center;
-
-  background-color: #aaaaaa;
-
-  &.rarity-2 {
-    background-color: #6faa88;
-  }
-  &.rarity-3 {
-    background-color: #6faacc;
-  }
-  &.rarity-4 {
-    background-color: #886faa;
-  }
-  &.rarity-5 {
-    background-color: #cc9000;
-  }
+  background: white;
 `
 
 export const Counter = styled.div`
@@ -110,6 +84,44 @@ export const Counter = styled.div`
     &.fulfilled {
       color: green;
     }
+  }
+`
+
+interface CoverProps {
+  resourceUrl: string
+}
+
+export const Cover = styled.div<CoverProps>`
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.8rem 1.2rem;
+
+  ${(props) => css`
+    background-image: url(${props.resourceUrl});
+  `}
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  background-color: #aaaaaa;
+
+  &.rarity-2 {
+    background-color: #6faa88;
+  }
+  &.rarity-3 {
+    background-color: #6faacc;
+  }
+  &.rarity-4 {
+    background-color: #886faa;
+  }
+  &.rarity-5 {
+    background-color: #cc9000;
   }
 `
 

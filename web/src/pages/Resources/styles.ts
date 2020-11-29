@@ -1,15 +1,44 @@
 import styled from 'styled-components'
 
 export const Content = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-
+  height: 80vh;
   margin: -0.5rem;
 
   > div {
-    margin: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    ::-webkit-scrollbar {
+      width: 20px;
+    }
+
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888888;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgb(54, 56, 58);
+    }
+
+    > div {
+      margin: 0.5rem;
+    }
+  }
+
+  > button {
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
   }
 `
 
