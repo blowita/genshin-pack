@@ -14,6 +14,11 @@ const stocks = resources.map((item) => ({
   stock: 0,
 }))
 
+const targets = resources.map((item) => ({
+  name: item.name,
+  target: Math.floor(Math.random() * 999),
+}))
+
 const renderResourceListItem = (
   resource: Resource,
   key: number
@@ -22,7 +27,7 @@ const renderResourceListItem = (
     resource={resource}
     count={stocks[key].stock}
     setCount={(value) => (stocks[key].stock = value)}
-    target={Math.floor(Math.random() * 999)}
+    target={targets[key].target}
     key={key}
   />
 )

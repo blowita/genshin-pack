@@ -44,7 +44,7 @@ const Resources: React.FC<ResourceCounterProps> = ({
   }, [])
 
   const fulfilled = useMemo(() => {
-    return !target || counter > target
+    return !target || counter >= target
   }, [counter, target])
 
   useEffect(() => {

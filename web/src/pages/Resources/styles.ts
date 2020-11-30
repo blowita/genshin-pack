@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Content = styled.div`
-  height: 80vh;
   margin: -0.5rem;
 
   > div {
@@ -47,5 +46,6 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  margin: 1rem;
+  height: 100vh;
+  padding: 1rem;
 `

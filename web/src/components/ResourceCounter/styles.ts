@@ -18,7 +18,6 @@ export const Buttons = styled.div`
     height: 1.5rem;
     width: 1.5rem;
     border-radius: 0.2rem;
-    margin: 0.2rem;
 
     color: #222222;
 
@@ -100,14 +99,17 @@ export const Cover = styled.div<CoverProps>`
 
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem;
-  border-bottom-right-radius: 0.8rem 1.2rem;
+  border-bottom-right-radius: 1rem 1rem;
+
+  padding: 0.3rem;
 
   ${(props) => css`
     background-image: url(${props.resourceUrl});
   `}
-  background-size: 75%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+  background-origin: content-box;
 
   background-color: #aaaaaa;
 
@@ -135,7 +137,7 @@ export const Stars = styled.div`
   justify-content: center;
 
   width: 100%;
-  margin-bottom: 0.2rem;
+  margin-bottom: -0.1rem;
 
   color: #ffcc00;
   font-size: 0.9rem;
