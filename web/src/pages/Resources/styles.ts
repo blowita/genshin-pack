@@ -1,7 +1,80 @@
 import styled from 'styled-components'
 
+import { shade } from 'polished'
+
+export const Categories = styled.div`
+  div.wrapper {
+    position: relative;
+    display: inline-block;
+
+    button {
+      width: 3rem;
+      height: 3rem;
+      font-size: 2rem;
+      border-radius: 0.3rem;
+
+      background-color: ${shade(0.2, '#c0c0c0')};
+
+      :hover {
+        background-color: #c0c0c0;
+      }
+
+      &.selected {
+        background-color: ${shade(0.2, '#33ff33')};
+
+        :hover {
+          background-color: #33ff33;
+        }
+      }
+    }
+
+    span.tooltip {
+      visibility: hidden;
+      min-width: 8rem;
+      background-color: white;
+      color: black;
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 0.3rem;
+      border-radius: 0.3rem;
+
+      position: absolute;
+      z-index: 1;
+
+      top: 115%;
+      left: 50%;
+      margin-left: -4rem;
+
+      opacity: 0;
+      transition: opacity 0.2s ease-out 0s, visibility 0.2s ease-out 0s;
+
+      &::after {
+        content: ' ';
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -0.3rem;
+        border-width: 0.3rem;
+        border-style: solid;
+        border-color: transparent transparent white transparent;
+      }
+    }
+
+    &:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 0.2s ease-out 0.5s, visibility 0.2s ease-out 0.5s;
+    }
+
+    & + div.wrapper {
+      margin-left: 0.3rem;
+    }
+  }
+`
+
 export const Content = styled.div`
   margin: -0.5rem;
+  margin-top: 0.5rem;
 
   > div {
     display: flex;

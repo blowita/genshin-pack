@@ -5,6 +5,7 @@ export type Resource = {
     | 'Character Ascension Material'
     | 'Character EXP Material'
     | 'Common Ascension Material'
+    | 'Common Currency'
     | 'Talent Level-Up Material'
     | 'Weapon Ascension Material'
   rarity: number
@@ -12,6 +13,14 @@ export type Resource = {
 }
 
 export const resources = [
+  {
+    sortId: 0,
+    name: 'Mora',
+    type: 'Common Currency',
+    rarity: 3,
+    imageUrl:
+      'https://static.wikia.nocookie.net/gensin-impact/images/8/84/Icon_Mora.png',
+  },
   {
     sortId: 1,
     name: "Hero's Wit",

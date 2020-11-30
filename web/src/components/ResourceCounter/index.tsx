@@ -16,7 +16,7 @@ type ResourceCounterProps = {
   target?: number
 }
 
-const Resources: React.FC<ResourceCounterProps> = ({
+const ResourceCounter: React.FC<ResourceCounterProps> = ({
   resource,
   count,
   setCount,
@@ -102,4 +102,4 @@ const Resources: React.FC<ResourceCounterProps> = ({
   )
 }
 
-export default Resources
+export default ResourceCounter
