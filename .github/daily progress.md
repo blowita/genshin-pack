@@ -1,10 +1,10 @@
 Day 5:
 
-<video src="https://i.imgur.com/EVEW6Ui.mp4" autoplay>
+https://i.imgur.com/EVEW6Ui.mp4
 
 Day 4:
 
-<video src="https://i.imgur.com/A2V9bOa.mp4" autoplay>
+https://i.imgur.com/A2V9bOa.mp4
 
 Day 3:
 
