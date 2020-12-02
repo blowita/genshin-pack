@@ -61,6 +61,12 @@ export const Cover = styled.div<CoverProps>`
   background-origin: content-box;
 
   background-color: ${(props) => handleRarityType(props.resourceRarity)};
+
+  > div:last-of-type {
+    width: 100%;
+    margin-bottom: -0.1rem;
+    font-size: 0.9rem;
+  }
 `
 
 export const Actions = styled.div<ActionsProps>`
@@ -122,18 +128,6 @@ export const Actions = styled.div<ActionsProps>`
 
 export const Filler = styled.div`
   flex-grow: 1;
-`
-
-export const Stars = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  width: 100%;
-  margin-bottom: -0.1rem;
-
-  color: #ffcc00;
-  font-size: 0.9rem;
 `
 
 export const Counter = styled.div`

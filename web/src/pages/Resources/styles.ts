@@ -26,17 +26,17 @@ export const Content = styled.div`
     justify-content: center;
 
     ::-webkit-scrollbar {
-      width: 20px;
+      width: 1.2rem;
     }
 
     ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 5px grey;
-      border-radius: 10px;
+      box-shadow: inset 0 0 0.3rem grey;
+      border-radius: 0.6rem;
     }
 
     ::-webkit-scrollbar-thumb {
       background: #888888;
-      border-radius: 10px;
+      border-radius: 0.6rem;
     }
 
     ::-webkit-scrollbar-thumb:hover {
@@ -53,6 +53,6 @@ export const Content = styled.div`
     height: 1.2rem;
     font-size: 1.2rem;
     border: none;
-    border-radius: 0.6rem;
+    border-radius: 50%;
   }
 `

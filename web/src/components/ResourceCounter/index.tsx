@@ -1,12 +1,13 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 
-import { FaStar } from 'react-icons/fa'
 import { GrUpgrade } from 'react-icons/gr'
 import { TiMinus, TiPlus } from 'react-icons/ti'
 
 import { Resource } from '../../data/resources'
 
-import { Actions, Container, Counter, Cover, Filler, Stars } from './styles'
+import RarityDisplay from '../RarityDisplay'
+
+import { Actions, Container, Counter, Cover, Filler } from './styles'
 
 const upgradable = false
 
@@ -91,11 +92,7 @@ const ResourceCounter: React.FC<ResourceCounterProps> = ({
           )}
         </Actions>
         <Filler />
-        <Stars>
-          {[...Array(resource.rarity).keys()].map((key) => (
-            <FaStar key={key} />
-          ))}
-        </Stars>
+        <RarityDisplay rarity={resource.rarity} />
       </Cover>
       <Counter>
         <input

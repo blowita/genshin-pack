@@ -1,12 +1,13 @@
 import React from 'react'
 
-import Resources from './pages/Resources'
+import Characters from './pages/Characters'
+// import Resources from './pages/Resources'
 
 import GlobalStyle from './styles/global'
 
 const App: React.FC = () => (
   <>
-    <Resources />
+    <Characters />
     <GlobalStyle />
   </>
 )
