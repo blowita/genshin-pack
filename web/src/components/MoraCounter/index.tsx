@@ -6,7 +6,8 @@ import { resources } from '../../data/resources'
 
 import { Container, Counter, Cover, Filler, Stars } from './styles'
 
-const resource = resources.find((item) => item.name === 'Mora')
+const name = `Mora`
+const resource = resources.find((item) => item.name === name)
 
 const integerRegexp = /^[0-9]*$/
 
@@ -22,8 +23,6 @@ const MoraCounter: React.FC<MoraCounterProps> = ({
   target,
 }) => {
   const [counter, setCounter] = useState(count || 0)
-
-  const name = `Mora`
 
   const changeCounter = useCallback((e) => {
     if (integerRegexp.test(e.target.value)) {
@@ -44,10 +43,7 @@ const MoraCounter: React.FC<MoraCounterProps> = ({
 
   return (
     <Container>
-      <Cover
-        className={'rarity-' + resource?.rarity}
-        resourceUrl={resource ? resource.imageUrl : ''}
-      >
+      <Cover resourceImageUrl={resource ? resource.imageUrl : ''}>
         <Filler />
         <Stars>
           {[...Array(resource?.rarity).keys()].map((key) => (

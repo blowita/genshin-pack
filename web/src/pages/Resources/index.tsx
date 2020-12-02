@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from 'react'
+import React, { useCallback, useState } from 'react'
 
 import FlatList from 'flatlist-react'
 import { BiArrowToTop } from 'react-icons/bi'
@@ -9,10 +9,13 @@ import {
   GiSwordwoman,
 } from 'react-icons/gi'
 
-import MoraCounter from '../../components/MoraCounter'
-import ResourceCounter from '../../components/ResourceCounter'
+import {
+  MoraCounter,
+  ResourceCategoryButton,
+  ResourceCounter,
+} from '../../components'
 
-import { Resource, resources } from '../../data/resources'
+import { Resource, resources, ResourceType } from '../../data/resources'
 
 import { Categories, Container, Content } from './styles'
 
@@ -55,73 +58,48 @@ const ScrollToTopButton: React.FC = () => (
 )
 
 const Resources: React.FC = () => {
-  const [category, setCategory] = useState('')
+  const [category, setCategory] = useState<ResourceType | null>(null)
 
-  const categorySelection = (base: string) => {
-    return () => setCategory((category) => (category !== base ? base : ''))
+  const categorySelection = (base: ResourceType) => {
+    return () => setCategory((category) => (category !== base ? base : null))
   }
 
-  const sort = useMemo(() => ['sortId'], [])
-
   const filter = useCallback(
-    (item: Resource) => {
-      switch (category) {
-        case 'monster drops':
-          return item.type === 'Common Ascension Material'
-          break
-        case 'character ascension':
-          return item.type === 'Character Ascension Material'
-          break
-        case 'talent upgrade':
-          return item.type === 'Talent Level-Up Material'
-        case 'weapon ascension':
-          return item.type === 'Weapon Ascension Material'
-        default:
-          return true
-      }
-    },
+    (item: Resource) => (category ? item.type === category : true),
     [category]
   )
 
   return (
     <Container>
       <Categories>
-        <div className="wrapper">
-          <button
-            className={category === 'monster drops' ? 'selected' : ''}
-            onClick={categorySelection('monster drops')}
-          >
-            <GiDroplets />
-          </button>
-          <span className="tooltip">Monster Drops</span>
-        </div>
-        <div className="wrapper">
-          <button
-            className={category === 'character ascension' ? 'selected' : ''}
-            onClick={categorySelection('character ascension')}
-          >
-            <GiSwordwoman />
-          </button>
-          <span className="tooltip">Character Ascension</span>
-        </div>
-        <div className="wrapper">
-          <button
-            className={category === 'talent upgrade' ? 'selected' : ''}
-            onClick={categorySelection('talent upgrade')}
-          >
-            <GiBookCover />
-          </button>
-          <span className="tooltip">Talent Level-Up</span>
-        </div>
-        <div className="wrapper">
-          <button
-            className={category === 'weapon ascension' ? 'selected' : ''}
-            onClick={categorySelection('weapon ascension')}
-          >
-            <GiSwordSmithing />
-          </button>
-          <span className="tooltip">Weapon Ascension</span>
-        </div>
+        <ResourceCategoryButton
+          tooltip="Monster Drops"
+          selected={category === ResourceType.CommonAscension}
+          onClick={categorySelection(ResourceType.CommonAscension)}
+        >
+          <GiDroplets />
+        </ResourceCategoryButton>
+        <ResourceCategoryButton
+          tooltip="Character Ascension"
+          selected={category === ResourceType.CharacterAscension}
+          onClick={categorySelection(ResourceType.CharacterAscension)}
+        >
+          <GiSwordwoman />
+        </ResourceCategoryButton>
+        <ResourceCategoryButton
+          tooltip="Talent Level-Up"
+          selected={category === ResourceType.TalentLevelUp}
+          onClick={categorySelection(ResourceType.TalentLevelUp)}
+        >
+          <GiBookCover />
+        </ResourceCategoryButton>
+        <ResourceCategoryButton
+          tooltip="Weapon Ascension"
+          selected={category === ResourceType.WeaponAscension}
+          onClick={categorySelection(ResourceType.WeaponAscension)}
+        >
+          <GiSwordSmithing />
+        </ResourceCategoryButton>
       </Categories>
       <Content>
         <FlatList
@@ -130,7 +108,7 @@ const Resources: React.FC = () => {
           wrapperHtmlTag="div"
           renderOnScroll
           renderWhenEmpty={() => <span>No items available.</span>}
-          sortBy={sort}
+          sortBy={['sortId']}
           filterBy={filter}
           scrollToTop
           scrollToTopButton={ScrollToTopButton}
