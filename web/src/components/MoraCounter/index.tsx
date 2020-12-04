@@ -11,7 +11,7 @@ const resource = resources.find((item) => item.name === name)
 
 const integerRegexp = /^[0-9]*$/
 
-type MoraCounterProps = {
+interface MoraCounterProps {
   count?: number
   setCount: (count: number) => void
   target?: number

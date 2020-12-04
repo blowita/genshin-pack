@@ -7,7 +7,7 @@ export enum ResourceType {
   WeaponAscension = 'Weapon Ascension Material',
 }
 
-export type Resource = {
+export interface Resource {
   sortId: number
   name: string
   type: ResourceType

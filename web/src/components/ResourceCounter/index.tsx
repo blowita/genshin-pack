@@ -13,7 +13,7 @@ const upgradable = false
 
 const integerRegexp = /^[0-9]*$/
 
-type ResourceCounterProps = {
+interface ResourceCounterProps {
   resource: Resource
   count?: number
   setCount: (count: number) => void

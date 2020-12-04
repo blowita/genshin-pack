@@ -8,6 +8,14 @@ export const Container = styled.div`
   padding: 1rem;
 `
 
+export const Controls = styled.div`
+  margin-bottom: 1rem;
+
+  > label {
+    margin-left: 0.2rem;
+  }
+`
+
 export const Content = styled.div`
   display: flex;
   flex-direction: row;

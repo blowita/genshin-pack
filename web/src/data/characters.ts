@@ -17,7 +17,7 @@ export enum WeaponType {
   Polearm = 'Polearm',
 }
 
-export type Character = {
+export interface Character {
   sortId: number
   name: string
   element: ElementType

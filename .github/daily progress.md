@@ -1,3 +1,7 @@
+Day 7:
+
+https://i.imgur.com/KtQSSod.mp4
+
 Day 6:
 
 https://i.imgur.com/CQgzmgn.mp4
