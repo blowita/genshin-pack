@@ -1,8 +1,10 @@
 import styled, { css } from 'styled-components'
 
+import { shade } from 'polished'
+
 import { ElementType, WeaponType } from '../../data/characters'
 
-interface ContainerProps {
+interface Props {
   enabled: boolean
 }
 
@@ -14,23 +16,36 @@ interface CharacterWeaponProps {
   weapon: WeaponType
 }
 
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.div<Props>`
   width: 20rem;
-  border: solid 1px white;
+  border: solid 1px;
+  border-color: ${(props) => (props.enabled ? 'white' : shade(0.4, 'white'))};
   border-radius: 0.5rem;
   padding: 0.3rem;
-  background-color: #303030;
+  color: ${(props) => (props.enabled ? 'white' : shade(0.4, 'white'))};
+  background-color: ${(props) =>
+    props.enabled ? '#303030' : shade(0.4, '#303030')};
 
-  opacity: ${(props) => (props.enabled ? 1.0 : 0.6)};
+  .talents {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.3rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .talents > div {
+    display: block;
+    white-space: nowrap;
+    margin-right: 1rem;
+  }
 
   .talents .label {
     display: inline-block;
-    width: 10rem;
+    width: 3.5rem;
   }
 
   .talents .current {
     font-weight: 300;
-    margin-right: 1.5rem;
   }
 
   .talents .target {
@@ -38,7 +53,7 @@ export const Container = styled.div<ContainerProps>`
   }
 `
 
-export const TopRow = styled.div`
+export const TopRow = styled.div<Props>`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -46,6 +61,11 @@ export const TopRow = styled.div`
 
   > div:first-of-type {
     margin-right: 0.3rem;
+    ${(props) =>
+      !props.enabled &&
+      css`
+        opacity: 0.6;
+      `}
   }
 
   > div:last-of-type {
@@ -56,71 +76,12 @@ export const TopRow = styled.div`
 export const CharacterInfo = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
 `
 
 export const CharacterName = styled.span`
   font-size: 1.3rem;
   margin-right: 0.3rem;
-`
-
-export const CharacterSwitch = styled.div`
-  align-self: center;
-  position: relative;
-
-  display: inline-block;
-
-  width: 2rem;
-  height: 1.2rem;
-
-  input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-
-  span {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    cursor: pointer;
-    background-color: #cccccc;
-    border-radius: 0.6rem;
-
-    transition: 0.4s;
-
-    ::before {
-      position: absolute;
-      content: '';
-
-      height: 0.8rem;
-      width: 0.8rem;
-      left: 0.2rem;
-      bottom: 0.2rem;
-
-      background-color: white;
-      border-radius: 50%;
-
-      transition: 0.4s;
-    }
-  }
-
-  input:checked + span {
-    background-color: #5e916c;
-  }
-
-  input:checked + span:before {
-    transform: translateX(0.8rem);
-  }
-
-  input:focus + span,
-  span:hover {
-    box-shadow: 0 0 0.8rem #5e916c;
-  }
 `
 
 export const Filler = styled.div`
@@ -240,10 +201,14 @@ export const LevelProgress = styled.div`
 
   .label,
   .ascension {
-    margin-right: 1.5rem;
+    margin-right: 0.2rem;
+  }
+
+  .level {
+    margin-left: 0.2rem;
   }
 
   .label {
-    font-weight: 400;
+    font-weight: 300;
   }
 `

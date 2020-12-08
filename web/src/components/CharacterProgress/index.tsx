@@ -1,15 +1,15 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useCallback, useState } from 'react'
 
 import { Character } from '../../data/characters'
+import AscensionProgress from '../AscensionProgress'
 
 import CharacterAvatar from '../CharacterAvatar'
+import ToggleSwitch from '../ToggleSwitch'
 
 import {
   CharacterElement,
   CharacterInfo,
   CharacterName,
-  CharacterSwitch,
   CharacterWeapon,
   Container,
   Filler,
@@ -17,6 +17,8 @@ import {
   Tooltip,
   TopRow,
 } from './styles'
+
+const ascensionLimits = [20, 40, 50, 60, 70, 80, 90]
 
 interface CharacterProgressProps {
   character: Character & {
@@ -32,14 +34,24 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
 }) => {
   const [enabled, setEnabled] = useState(character.enabled)
 
+  const [ascensionProgress, setAscensionProgress] = useState(0)
+  const [desiredAscensionProgress, setDesiredAscensionProgress] = useState(0)
+  const [currentLevel] = useState(1)
+  const [desiredLevel] = useState(1)
+
   const toggleEnabled = useCallback(() => {
     setEnabled((value) => !value)
     character.toggleEnabled()
   }, [character])
 
+  const changeAscensionProgress = useCallback((v: number) => {
+    setAscensionProgress(v)
+    setDesiredAscensionProgress((d) => Math.max(d, v))
+  }, [])
+
   return (
     <Container enabled={enabled}>
-      <TopRow>
+      <TopRow enabled={enabled}>
         <div>
           <CharacterAvatar
             characterImageUrl={character.imageUrl}
@@ -50,15 +62,11 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
           <CharacterInfo>
             <CharacterName>{character.name}</CharacterName>
             {showSwitch && (
-              <CharacterSwitch>
-                <input
-                  aria-label={`Toggle tracking of ${character.name}`}
-                  type="checkbox"
-                  checked={enabled}
-                  onChange={toggleEnabled}
-                />
-                <span onMouseDown={toggleEnabled} />
-              </CharacterSwitch>
+              <ToggleSwitch
+                aria-label={`Toggle tracking of ${character.name}`}
+                checked={enabled}
+                onChange={toggleEnabled}
+              />
             )}
             <Filler />
             <CharacterElement element={character.element}>
@@ -70,32 +78,51 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
           </CharacterInfo>
           <LevelProgress>
             <div className="current">
-              <span className="label">C:</span>
-              <span className="ascension">0 / 6 (stars)</span>
-              <span className="level">Lv. 1 / 20</span>
+              <span className="label">Now:</span>
+              <AscensionProgress
+                fieldsetName={`current-${character.name}`}
+                legend={`${character.name}'s current ascension progress:`}
+                value={ascensionProgress}
+                onChange={changeAscensionProgress}
+                disabled={!enabled}
+              />
+              <span className="level">
+                Lv. {currentLevel}/{ascensionLimits[ascensionProgress]}
+              </span>
             </div>
             <div className="target">
-              <span className="label">T:</span>
-              <span className="ascension">6 / 6 (stars)</span>
-              <span className="level">Lv. 90 / 90</span>
+              <span className="label">Plan:</span>
+              <AscensionProgress
+                fieldsetName={`desired-${character.name}`}
+                legend={`${character.name}'s desired ascension progress:`}
+                value={desiredAscensionProgress}
+                onChange={setDesiredAscensionProgress}
+                disabled={!enabled}
+              />
+              <span className="level">
+                Lv. {desiredLevel}/{ascensionLimits[desiredAscensionProgress]}
+              </span>
             </div>
           </LevelProgress>
         </div>
       </TopRow>
       <div className="talents">
         <div>
-          <span className="label">Auto Attack</span>
+          <span className="label">Attack</span>
           <span className="current">1</span>
+          <span> &gt; </span>
           <span className="target">9</span>
         </div>
         <div>
-          <span className="label">Elemental Skill</span>
+          <span className="label">Skill</span>
           <span className="current">1</span>
+          <span> &gt; </span>
           <span className="target">9</span>
         </div>
         <div>
-          <span className="label">Elemental Burst</span>
+          <span className="label">Burst</span>
           <span className="current">1</span>
+          <span> &gt; </span>
           <span className="target">9</span>
         </div>
       </div>
