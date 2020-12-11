@@ -1,12 +1,15 @@
 import React, { useCallback, useState } from 'react'
 
-import { Character } from '../../data/characters'
-import AscensionProgress from '../AscensionProgress'
+import { FaForward } from 'react-icons/fa'
 
+import { Character } from '../../data/characters'
+
+import AscensionProgress from '../AscensionProgress'
 import CharacterAvatar from '../CharacterAvatar'
 import ToggleSwitch from '../ToggleSwitch'
 
 import {
+  Avatar,
   CharacterElement,
   CharacterInfo,
   CharacterName,
@@ -14,8 +17,8 @@ import {
   Container,
   Filler,
   LevelProgress,
+  Talents,
   Tooltip,
-  TopRow,
 } from './styles'
 
 const ascensionLimits = [20, 40, 50, 60, 70, 80, 90]
@@ -26,18 +29,20 @@ interface CharacterProgressProps {
     toggleEnabled: () => void
   }
   showSwitch: boolean
+  lockAscension: boolean
 }
 
 const CharacterProgress: React.FC<CharacterProgressProps> = ({
   character,
   showSwitch,
+  lockAscension,
 }) => {
   const [enabled, setEnabled] = useState(character.enabled)
 
   const [ascensionProgress, setAscensionProgress] = useState(0)
   const [desiredAscensionProgress, setDesiredAscensionProgress] = useState(0)
-  const [currentLevel] = useState(1)
-  const [desiredLevel] = useState(1)
+  const [currentLevel, setCurrentLevel] = useState(1)
+  const [desiredLevel, setDesiredLevel] = useState(1)
 
   const toggleEnabled = useCallback(() => {
     setEnabled((value) => !value)
@@ -51,81 +56,153 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
 
   return (
     <Container enabled={enabled}>
-      <TopRow enabled={enabled}>
+      <CharacterInfo>
+        <CharacterName>{character.name}</CharacterName>
+        {showSwitch && (
+          <ToggleSwitch
+            aria-label={`Toggle tracking of ${character.name}`}
+            checked={enabled}
+            onChange={toggleEnabled}
+          />
+        )}
+        <Filler />
+        <CharacterElement element={character.element}>
+          <Tooltip>{character.element}</Tooltip>
+        </CharacterElement>
+        <CharacterWeapon weapon={character.weapon}>
+          <Tooltip>{character.weapon}</Tooltip>
+        </CharacterWeapon>
+      </CharacterInfo>
+      <Avatar enabled={enabled}>
+        <CharacterAvatar
+          characterImageUrl={character.imageUrl}
+          characterRarity={character.rarity}
+        />
+      </Avatar>
+      <LevelProgress>
+        <legend>Ascension/Level</legend>
         <div>
-          <CharacterAvatar
-            characterImageUrl={character.imageUrl}
-            characterRarity={character.rarity}
+          <span className="label">Current:</span>
+          <AscensionProgress
+            fieldsetName={`current-${character.name}`}
+            legend={`${character.name}'s current ascension progress:`}
+            value={ascensionProgress}
+            onChange={changeAscensionProgress}
+            disabled={!enabled || lockAscension}
+          />
+          <span>Lv.</span>
+          <input
+            aria-label={`${character.name}'s current level`}
+            type="number"
+            min="1"
+            max={ascensionLimits[ascensionProgress]}
+            step="1"
+            value={currentLevel}
+            onChange={(e) => setCurrentLevel(Number(e.target.value))}
+            disabled={!enabled}
+          />
+          <Filler />
+          <span>/{ascensionLimits[ascensionProgress]}</span>
+        </div>
+        <div>
+          <span className="label">Desired:</span>
+          <AscensionProgress
+            fieldsetName={`desired-${character.name}`}
+            legend={`${character.name}'s desired ascension progress:`}
+            value={desiredAscensionProgress}
+            onChange={setDesiredAscensionProgress}
+            disabled={!enabled || lockAscension}
+          />
+          <span>Lv.</span>
+          <input
+            aria-label={`${character.name}'s desired level`}
+            type="number"
+            min="1"
+            max={ascensionLimits[desiredAscensionProgress]}
+            step="1"
+            value={desiredLevel}
+            onChange={(e) => setDesiredLevel(Number(e.target.value))}
+            disabled={!enabled}
+          />
+          <Filler />
+          <span>/{ascensionLimits[desiredAscensionProgress]}</span>
+        </div>
+      </LevelProgress>
+      <Talents>
+        <legend>Talents</legend>
+        <div>
+          <span>Attack</span>
+          <input
+            aria-label={`${character.name}'s attack talent current level`}
+            type="number"
+            min="1"
+            max="10"
+            step="1"
+            defaultValue={6}
+            disabled={!enabled}
+          />
+          <span>
+            <FaForward />
+          </span>
+          <input
+            aria-label={`${character.name}'s attack talent desired level`}
+            type="number"
+            min="1"
+            max="10"
+            step="1"
+            defaultValue={8}
+            disabled={!enabled}
           />
         </div>
         <div>
-          <CharacterInfo>
-            <CharacterName>{character.name}</CharacterName>
-            {showSwitch && (
-              <ToggleSwitch
-                aria-label={`Toggle tracking of ${character.name}`}
-                checked={enabled}
-                onChange={toggleEnabled}
-              />
-            )}
-            <Filler />
-            <CharacterElement element={character.element}>
-              <Tooltip>{character.element}</Tooltip>
-            </CharacterElement>
-            <CharacterWeapon weapon={character.weapon}>
-              <Tooltip>{character.weapon}</Tooltip>
-            </CharacterWeapon>
-          </CharacterInfo>
-          <LevelProgress>
-            <div className="current">
-              <span className="label">Now:</span>
-              <AscensionProgress
-                fieldsetName={`current-${character.name}`}
-                legend={`${character.name}'s current ascension progress:`}
-                value={ascensionProgress}
-                onChange={changeAscensionProgress}
-                disabled={!enabled}
-              />
-              <span className="level">
-                Lv. {currentLevel}/{ascensionLimits[ascensionProgress]}
-              </span>
-            </div>
-            <div className="target">
-              <span className="label">Plan:</span>
-              <AscensionProgress
-                fieldsetName={`desired-${character.name}`}
-                legend={`${character.name}'s desired ascension progress:`}
-                value={desiredAscensionProgress}
-                onChange={setDesiredAscensionProgress}
-                disabled={!enabled}
-              />
-              <span className="level">
-                Lv. {desiredLevel}/{ascensionLimits[desiredAscensionProgress]}
-              </span>
-            </div>
-          </LevelProgress>
-        </div>
-      </TopRow>
-      <div className="talents">
-        <div>
-          <span className="label">Attack</span>
-          <span className="current">1</span>
-          <span> &gt; </span>
-          <span className="target">9</span>
+          <span>Skill</span>
+          <input
+            aria-label={`${character.name}'s elemental skill talent current level`}
+            type="number"
+            min="1"
+            max="10"
+            step="1"
+            defaultValue={6}
+            disabled={!enabled}
+          />
+          <span>
+            <FaForward />
+          </span>
+          <input
+            aria-label={`${character.name}'s elemental skill talent desired level`}
+            type="number"
+            min="1"
+            max="10"
+            step="1"
+            defaultValue={8}
+            disabled={!enabled}
+          />
         </div>
         <div>
-          <span className="label">Skill</span>
-          <span className="current">1</span>
-          <span> &gt; </span>
-          <span className="target">9</span>
+          <span>Burst</span>
+          <input
+            aria-label={`${character.name}'s elemental burst talent current level`}
+            type="number"
+            min="1"
+            max="10"
+            step="1"
+            defaultValue={6}
+            disabled={!enabled}
+          />
+          <span>
+            <FaForward />
+          </span>
+          <input
+            aria-label={`${character.name}'s elemental burst talent desired level`}
+            type="number"
+            min="1"
+            max="10"
+            step="1"
+            defaultValue={8}
+            disabled={!enabled}
+          />
         </div>
-        <div>
-          <span className="label">Burst</span>
-          <span className="current">1</span>
-          <span> &gt; </span>
-          <span className="target">9</span>
-        </div>
-      </div>
+      </Talents>
     </Container>
   )
 }

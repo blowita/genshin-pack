@@ -25,11 +25,11 @@ export const Container = styled.div<CharacterAvatarProps>`
   flex-direction: column;
   justify-content: flex-end;
 
-  width: 4rem;
-  height: 4.5rem;
+  width: 4em;
+  height: 4.5em;
 
-  padding: 0.1rem;
-  border-radius: 0.3rem;
+  padding: 0.1em;
+  border-radius: 0.3em;
 
   ${(props) =>
     props.characterImageUrl &&
@@ -44,9 +44,9 @@ export const Container = styled.div<CharacterAvatarProps>`
   background-color: ${(props) => handleRarityType(props.characterRarity)};
 
   > div {
-    font-size: 0.7rem;
+    font-size: 0.7em;
     background-color: #00000055;
-    padding: 0.1rem;
-    border-radius: 0.3rem;
+    padding: 0.1em;
+    border-radius: 0.3em;
   }
 `

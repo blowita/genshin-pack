@@ -13,16 +13,21 @@ const enabled = characters.map((character) => ({
 
 const Characters: React.FC = () => {
   const [hideUnchecked, setHideUnchecked] = useState(false)
-
-  const [lockCheckmarks, setLockCheckmarks] = useState(false)
+  const [lockCharacters, setLockCharacters] = useState(false)
+  const [lockAscensions, setLockAscensions] = useState(false)
 
   const toggleHideUnchecked = useCallback(
     () => setHideUnchecked((value) => !value),
     []
   )
 
-  const toggleLockCheckmarks = useCallback(
-    () => setLockCheckmarks((value) => !value),
+  const toggleLockCharacters = useCallback(
+    () => setLockCharacters((value) => !value),
+    []
+  )
+
+  const toggleLockAscensions = useCallback(
+    () => setLockAscensions((value) => !value),
     []
   )
 
@@ -31,23 +36,32 @@ const Characters: React.FC = () => {
       <Controls>
         <div>
           <input
-            id="filter-checkmarks"
+            id="filter-characters"
             type="checkbox"
             checked={hideUnchecked}
             onChange={toggleHideUnchecked}
           />
-          <label htmlFor="filter-checkmarks">
+          <label htmlFor="filter-characters">
             Show only characters you marked
           </label>
         </div>
         <div>
           <input
-            id="lock-checkmarks"
+            id="lock-characters"
             type="checkbox"
-            checked={lockCheckmarks}
-            onChange={toggleLockCheckmarks}
+            checked={lockCharacters}
+            onChange={toggleLockCharacters}
           />
-          <label htmlFor="lock-checkmarks">Lock checkmarks</label>
+          <label htmlFor="lock-characters">Lock characters</label>
+        </div>
+        <div>
+          <input
+            id="lock-ascensions"
+            type="checkbox"
+            checked={lockAscensions}
+            onChange={toggleLockAscensions}
+          />
+          <label htmlFor="lock-ascensions">Lock ascensions</label>
         </div>
       </Controls>
       <Content>
@@ -62,7 +76,8 @@ const Characters: React.FC = () => {
                     enabled[key].enabled = !enabled[key].enabled
                   },
                 }}
-                showSwitch={!lockCheckmarks}
+                showSwitch={!lockCharacters}
+                lockAscension={lockAscensions}
                 key={key}
               />
             )

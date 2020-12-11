@@ -39,29 +39,27 @@ const AscensionProgress: React.FC<AscensionProgressProps> = ({
   )
 
   return (
-    <Container>
-      <fieldset disabled={disabled}>
-        <legend className="visuallyhidden">{legend}</legend>
+    <Container disabled={disabled}>
+      <legend className="visuallyhidden">{legend}</legend>
+      <Option
+        label="Unascended"
+        name={groupName}
+        value={0}
+        onChange={() => changeProgress(0)}
+        defaultChecked={value === 0}
+        fulfilled
+      />
+      {values.map((v) => (
         <Option
-          label="Unascended"
+          label={`Ascension ${v + 1}`}
           name={groupName}
-          value={0}
-          onChange={() => changeProgress(0)}
-          defaultChecked={value === 0}
-          fulfilled
+          value={v + 1}
+          onChange={() => changeProgress(v + 1)}
+          defaultChecked={value === v + 1}
+          fulfilled={v + 1 <= value}
+          key={v}
         />
-        {values.map((v) => (
-          <Option
-            label={`Ascension ${v + 1}`}
-            name={groupName}
-            value={v + 1}
-            onChange={() => changeProgress(v + 1)}
-            defaultChecked={value === v + 1}
-            fulfilled={v + 1 <= value}
-            key={v}
-          />
-        ))}
-      </fieldset>
+      ))}
     </Container>
   )
 }

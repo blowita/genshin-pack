@@ -17,66 +17,31 @@ interface CharacterWeaponProps {
 }
 
 export const Container = styled.div<Props>`
-  width: 20rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  width: 21rem;
+
   border: solid 1px;
   border-color: ${(props) => (props.enabled ? 'white' : shade(0.4, 'white'))};
   border-radius: 0.5rem;
   padding: 0.3rem;
+
   color: ${(props) => (props.enabled ? 'white' : shade(0.4, 'white'))};
   background-color: ${(props) =>
     props.enabled ? '#303030' : shade(0.4, '#303030')};
-
-  .talents {
-    display: flex;
-    flex-direction: row;
-    margin-top: 0.3rem;
-    margin-bottom: 0.2rem;
-  }
-
-  .talents > div {
-    display: block;
-    white-space: nowrap;
-    margin-right: 1rem;
-  }
-
-  .talents .label {
-    display: inline-block;
-    width: 3.5rem;
-  }
-
-  .talents .current {
-    font-weight: 300;
-  }
-
-  .talents .target {
-    font-weight: 300;
-  }
-`
-
-export const TopRow = styled.div<Props>`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-
-  > div:first-of-type {
-    margin-right: 0.3rem;
-    ${(props) =>
-      !props.enabled &&
-      css`
-        opacity: 0.6;
-      `}
-  }
-
-  > div:last-of-type {
-    flex-grow: 1;
-  }
 `
 
 export const CharacterInfo = styled.div`
+  order: 1;
+
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-grow: 1;
+
+  min-width: 20rem;
 `
 
 export const CharacterName = styled.span`
@@ -114,6 +79,7 @@ export const CharacterElement = styled.div<CharacterElementProps>`
 
   width: 1.5rem;
   height: 1.5rem;
+  margin-left: 0.2rem;
 
   ${(props) =>
     getElementImageUrl(props.element) &&
@@ -154,7 +120,7 @@ export const CharacterWeapon = styled.div<CharacterWeaponProps>`
 
   width: 1.5rem;
   height: 1.5rem;
-  margin-left: 0.5rem;
+  margin-left: 0.2rem;
 
   ${(props) =>
     getWeaponImageUrl(props.weapon) &&
@@ -190,25 +156,105 @@ export const Tooltip = styled.span`
   border-radius: 0.3rem;
 `
 
-export const LevelProgress = styled.div`
-  flex-direction: column;
+export const Avatar = styled.div<Props>`
+  order: 2;
 
-  font-weight: 300;
+  display: flex;
+  align-items: center;
+
+  font-size: 1.3rem;
+  margin-right: 0.3rem;
+
+  ${(props) =>
+    !props.enabled &&
+    css`
+      opacity: 0.6;
+    `}
+`
+
+export const LevelProgress = styled.fieldset`
+  order: 4;
+
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  margin-top: 0.3rem;
+  border-radius: 0.3rem;
+  border-color: #ffffff22;
+  padding: 0.3rem;
+
+  > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    fieldset {
+      font-size: 1rem;
+      margin-right: 0.2rem;
+    }
+
+    fieldset + span {
+      margin-left: 0.8rem;
+    }
+
+    > input {
+      background-color: transparent;
+      color: white;
+      width: 3rem;
+      border-radius: 0.3rem;
+      margin-left: 0.3rem;
+      margin-right: 0.2rem;
+      text-align: right;
+    }
+
+    & + div {
+      margin-top: 0.5rem;
+    }
+  }
+`
+
+export const Talents = styled.fieldset`
+  order: 3;
+
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  border-radius: 0.3rem;
+  border-color: #ffffff22;
+  padding: 0.3rem;
 
   div {
+    display: flex;
     flex-direction: row;
-  }
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
 
-  .label,
-  .ascension {
-    margin-right: 0.2rem;
-  }
+    span:first-of-type {
+      width: 4rem;
+    }
 
-  .level {
-    margin-left: 0.2rem;
-  }
+    input {
+      background-color: transparent;
+      color: white;
+      width: 2.5rem;
+      border-radius: 0.3rem;
+      text-align: right;
+    }
 
-  .label {
-    font-weight: 300;
+    input + span {
+      margin-left: 0.3rem;
+      margin-right: 0.25rem;
+    }
+
+    span svg {
+      opacity: 0.6;
+    }
+
+    & + div {
+      margin-top: 0.5rem;
+    }
   }
 `

@@ -1,31 +1,29 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
-  display: inline-flex;
+export const Container = styled.fieldset`
+  display: flex;
   flex-direction: row;
+  align-items: center;
 
-  fieldset {
-    display: inline-flex;
-    flex-direction: row;
-    align-self: baseline;
+  margin-inline: 0;
+  padding-inline: 0;
+  padding-block: 0;
+  border: none;
+  border-radius: 0.3em;
 
-    margin-inline: 0;
-    padding-inline: 0;
-    padding-block: 0;
-    border: none;
+  div + div {
+    margin-left: 0.2em;
+  }
 
-    font-size: 1rem;
+  div:first-of-type svg {
+    visibility: hidden;
+  }
 
-    div + div {
-      margin-left: 0.1rem;
-    }
+  :disabled svg {
+    opacity: 0.5;
+  }
 
-    div:first-of-type svg {
-      visibility: hidden;
-    }
-
-    :disabled svg {
-      opacity: 0.5;
-    }
+  :focus-within {
+    box-shadow: 0 0 0.8em #5e916c;
   }
 `
