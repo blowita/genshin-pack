@@ -9,8 +9,8 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #222;
-    color: #FFF;
+    background: #222222;
+    color: white;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -41,5 +41,26 @@ export default createGlobalStyle`
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+  }
+
+  [data-title] {
+    position: relative;
+  }
+
+  [data-title]:after {
+    content: attr(data-title);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-out 0s, visibility 0.2s ease-out 0s;
+
+    position: absolute;
+    z-index: 1;
+  }
+
+  [data-title]:hover:after {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s ease-out 0.5s,
+      visibility 0.2s ease-out 0.5s;
   }
 `

@@ -15,6 +15,7 @@ const Characters: React.FC = () => {
   const [hideUnchecked, setHideUnchecked] = useState(false)
   const [lockCharacters, setLockCharacters] = useState(false)
   const [lockAscensions, setLockAscensions] = useState(false)
+  const [lockDesired, setLockDesired] = useState(false)
 
   const toggleHideUnchecked = useCallback(
     () => setHideUnchecked((value) => !value),
@@ -28,6 +29,11 @@ const Characters: React.FC = () => {
 
   const toggleLockAscensions = useCallback(
     () => setLockAscensions((value) => !value),
+    []
+  )
+
+  const toggleLockDesired = useCallback(
+    () => setLockDesired((value) => !value),
     []
   )
 
@@ -63,6 +69,15 @@ const Characters: React.FC = () => {
           />
           <label htmlFor="lock-ascensions">Lock ascensions</label>
         </div>
+        <div>
+          <input
+            id="lock-desired"
+            type="checkbox"
+            checked={lockDesired}
+            onChange={toggleLockDesired}
+          />
+          <label htmlFor="lock-desired">Lock desired</label>
+        </div>
       </Controls>
       <Content>
         {characters.map(
@@ -78,6 +93,7 @@ const Characters: React.FC = () => {
                 }}
                 showSwitch={!lockCharacters}
                 lockAscension={lockAscensions}
+                lockDesired={lockDesired}
                 key={key}
               />
             )

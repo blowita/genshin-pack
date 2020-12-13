@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from 'react'
 
 import FlatList from 'flatlist-react'
-import { BiArrowToTop } from 'react-icons/bi'
 import {
   GiBookCover,
   GiDroplets,
@@ -9,15 +8,11 @@ import {
   GiSwordwoman,
 } from 'react-icons/gi'
 
-import {
-  MoraCounter,
-  ResourceCategoryButton,
-  ResourceCounter,
-} from '../../components'
+import { MoraCounter, ResourceCounter } from '../../components'
 
 import { Resource, resources, ResourceType } from '../../data/resources'
 
-import { Categories, Container, Content } from './styles'
+import { Categories, CategoryButton, Container, Content } from './styles'
 
 let moraStock = 0
 
@@ -51,12 +46,6 @@ const renderResourceListItem = (resource: Resource, key: number): JSX.Element =>
     />
   )
 
-const ScrollToTopButton: React.FC = () => (
-  <button>
-    <BiArrowToTop />
-  </button>
-)
-
 const Resources: React.FC = () => {
   const [category, setCategory] = useState<ResourceType | null>(null)
 
@@ -72,48 +61,47 @@ const Resources: React.FC = () => {
   return (
     <Container>
       <Categories>
-        <ResourceCategoryButton
-          tooltip="Monster Drops"
+        <CategoryButton
+          data-title="Monster Drops"
           selected={category === ResourceType.CommonAscension}
           onClick={categorySelection(ResourceType.CommonAscension)}
         >
           <GiDroplets />
-        </ResourceCategoryButton>
-        <ResourceCategoryButton
-          tooltip="Character Ascension"
+          <span className="visuallyhidden">Monster Drops</span>
+        </CategoryButton>
+        <CategoryButton
+          data-title="Character Ascension"
           selected={category === ResourceType.CharacterAscension}
           onClick={categorySelection(ResourceType.CharacterAscension)}
         >
           <GiSwordwoman />
-        </ResourceCategoryButton>
-        <ResourceCategoryButton
-          tooltip="Talent Level-Up"
+          <span className="visuallyhidden">Character Ascension</span>
+        </CategoryButton>
+        <CategoryButton
+          data-title="Talent Level-Up"
           selected={category === ResourceType.TalentLevelUp}
           onClick={categorySelection(ResourceType.TalentLevelUp)}
         >
           <GiBookCover />
-        </ResourceCategoryButton>
-        <ResourceCategoryButton
-          tooltip="Weapon Ascension"
+          <span className="visuallyhidden">Talent Level-Up</span>
+        </CategoryButton>
+        <CategoryButton
+          data-title="Weapon Ascension"
           selected={category === ResourceType.WeaponAscension}
           onClick={categorySelection(ResourceType.WeaponAscension)}
         >
           <GiSwordSmithing />
-        </ResourceCategoryButton>
+          <span className="visuallyhidden">Weapon Ascension</span>
+        </CategoryButton>
       </Categories>
       <Content>
         <FlatList
           list={resources}
           renderItem={renderResourceListItem}
           wrapperHtmlTag="div"
-          renderOnScroll
           renderWhenEmpty={() => <span>No items available.</span>}
           sortBy={['sortId']}
           filterBy={filter}
-          scrollToTop
-          scrollToTopButton={ScrollToTopButton}
-          scrollToTopPadding={0}
-          scrollToTopPosition="top right"
         />
       </Content>
     </Container>

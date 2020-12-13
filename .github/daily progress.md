@@ -1,3 +1,7 @@
+Day 10:
+
+https://i.imgur.com/euM97l3.mp4
+
 Day 9:
 
 https://i.imgur.com/rDqUM30.mp4

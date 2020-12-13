@@ -8,12 +8,12 @@ interface Props {
   enabled: boolean
 }
 
-interface CharacterElementProps {
-  element: ElementType
+interface CharacterElementAttrs {
+  'data-title': ElementType
 }
 
-interface CharacterWeaponProps {
-  weapon: WeaponType
+interface CharacterWeaponAttrs {
+  'data-title': WeaponType
 }
 
 export const Container = styled.div<Props>`
@@ -74,28 +74,31 @@ const elementImageUrls: Record<ElementType, string> = {
 const getElementImageUrl = (element: ElementType): string =>
   elementImageUrls[element]
 
-export const CharacterElement = styled.div<CharacterElementProps>`
-  position: relative;
-
+export const CharacterElement = styled.div.attrs(
+  ({ 'data-title': dataTitle }: CharacterElementAttrs) => ({
+    dataTitle: dataTitle || '',
+  })
+)`
   width: 1.5rem;
   height: 1.5rem;
   margin-left: 0.2rem;
 
-  ${(props) =>
-    getElementImageUrl(props.element) &&
-    css`
-      background-image: url(${getElementImageUrl(props.element)});
-    `}
+  background-image: url(${(props) => getElementImageUrl(props.dataTitle)});
 
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   background-origin: content-box;
 
-  :hover span {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.2s ease-out 0.5s, visibility 0.2s ease-out 0.5s;
+  &[data-title]:after {
+    top: -1.8rem;
+
+    background-color: white;
+    color: black;
+    padding: 0 0.2rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 `
 
@@ -115,49 +118,36 @@ const weaponImageUrls: Record<WeaponType, string> = {
 const getWeaponImageUrl = (weapon: WeaponType): string =>
   weaponImageUrls[weapon]
 
-export const CharacterWeapon = styled.div<CharacterWeaponProps>`
-  position: relative;
-
+export const CharacterWeapon = styled.div.attrs(
+  ({ 'data-title': dataTitle }: CharacterWeaponAttrs) => ({
+    dataTitle: dataTitle || '',
+  })
+)`
   width: 1.5rem;
   height: 1.5rem;
   margin-left: 0.2rem;
 
-  ${(props) =>
-    getWeaponImageUrl(props.weapon) &&
-    css`
-      background-image: url(${getWeaponImageUrl(props.weapon)});
-    `}
+  background-image: url(${(props) => getWeaponImageUrl(props.dataTitle)});
 
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   background-origin: content-box;
 
-  :hover span {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.2s ease-out 0.5s, visibility 0.2s ease-out 0.5s;
+  &[data-title]:after {
+    top: -1.8rem;
+
+    background-color: white;
+    color: black;
+    padding: 0 0.2rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 `
 
-export const Tooltip = styled.span`
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.2s ease-out 0s, visibility 0.2s ease-out 0s;
-
-  position: absolute;
-  z-index: 1;
-  top: -1.2rem;
-  left: 0.9rem;
-
-  background-color: white;
-  color: black;
-  padding: 0 0.2rem;
-  border-radius: 0.3rem;
-`
-
 export const Avatar = styled.div<Props>`
-  order: 2;
+  order: 3;
 
   display: flex;
   align-items: center;
@@ -173,13 +163,12 @@ export const Avatar = styled.div<Props>`
 `
 
 export const LevelProgress = styled.fieldset`
-  order: 4;
+  order: 2;
 
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 
-  margin-top: 0.3rem;
   border-radius: 0.3rem;
   border-color: #ffffff22;
   padding: 0.3rem;
@@ -215,10 +204,11 @@ export const LevelProgress = styled.fieldset`
 `
 
 export const Talents = styled.fieldset`
-  order: 3;
+  order: 4;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-grow: 1;
 
   border-radius: 0.3rem;

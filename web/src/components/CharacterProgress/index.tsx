@@ -18,7 +18,6 @@ import {
   Filler,
   LevelProgress,
   Talents,
-  Tooltip,
 } from './styles'
 
 const ascensionLimits = [20, 40, 50, 60, 70, 80, 90]
@@ -30,12 +29,14 @@ interface CharacterProgressProps {
   }
   showSwitch: boolean
   lockAscension: boolean
+  lockDesired: boolean
 }
 
 const CharacterProgress: React.FC<CharacterProgressProps> = ({
   character,
   showSwitch,
   lockAscension,
+  lockDesired,
 }) => {
   const [enabled, setEnabled] = useState(character.enabled)
 
@@ -66,11 +67,11 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
           />
         )}
         <Filler />
-        <CharacterElement element={character.element}>
-          <Tooltip>{character.element}</Tooltip>
+        <CharacterElement data-title={character.element}>
+          <span className="visuallyhidden">{character.element}</span>
         </CharacterElement>
-        <CharacterWeapon weapon={character.weapon}>
-          <Tooltip>{character.weapon}</Tooltip>
+        <CharacterWeapon data-title={character.weapon}>
+          <span className="visuallyhidden">{character.weapon}</span>
         </CharacterWeapon>
       </CharacterInfo>
       <Avatar enabled={enabled}>
@@ -111,7 +112,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
             legend={`${character.name}'s desired ascension progress:`}
             value={desiredAscensionProgress}
             onChange={setDesiredAscensionProgress}
-            disabled={!enabled || lockAscension}
+            disabled={!enabled || lockAscension || lockDesired}
           />
           <span>Lv.</span>
           <input
@@ -122,7 +123,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
             step="1"
             value={desiredLevel}
             onChange={(e) => setDesiredLevel(Number(e.target.value))}
-            disabled={!enabled}
+            disabled={!enabled || lockDesired}
           />
           <Filler />
           <span>/{ascensionLimits[desiredAscensionProgress]}</span>
@@ -151,7 +152,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
             max="10"
             step="1"
             defaultValue={8}
-            disabled={!enabled}
+            disabled={!enabled || lockDesired}
           />
         </div>
         <div>
@@ -175,7 +176,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
             max="10"
             step="1"
             defaultValue={8}
-            disabled={!enabled}
+            disabled={!enabled || lockDesired}
           />
         </div>
         <div>
@@ -199,7 +200,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
             max="10"
             step="1"
             defaultValue={8}
-            disabled={!enabled}
+            disabled={!enabled || lockDesired}
           />
         </div>
       </Talents>
