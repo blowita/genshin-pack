@@ -21,7 +21,7 @@ export const Container = styled.div<Props>`
   flex-direction: row;
   flex-wrap: wrap;
 
-  width: 21rem;
+  width: 18rem;
 
   border: solid 1px;
   border-color: ${(props) => (props.enabled ? 'white' : shade(0.4, 'white'))};
@@ -34,14 +34,12 @@ export const Container = styled.div<Props>`
 `
 
 export const CharacterInfo = styled.div`
-  order: 1;
-
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-grow: 1;
 
-  min-width: 20rem;
+  min-width: 17rem;
 `
 
 export const CharacterName = styled.span`
@@ -147,12 +145,10 @@ export const CharacterWeapon = styled.div.attrs(
 `
 
 export const Avatar = styled.div<Props>`
-  order: 3;
-
   display: flex;
   align-items: center;
 
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-right: 0.3rem;
 
   ${(props) =>
@@ -163,8 +159,6 @@ export const Avatar = styled.div<Props>`
 `
 
 export const LevelProgress = styled.fieldset`
-  order: 2;
-
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -175,37 +169,34 @@ export const LevelProgress = styled.fieldset`
 
   > div {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 
     fieldset {
       font-size: 1rem;
-      margin-right: 0.2rem;
     }
 
-    fieldset + span {
-      margin-left: 0.8rem;
-    }
+    > div {
+      margin-top: 0.3rem;
 
-    > input {
-      background-color: transparent;
-      color: white;
-      width: 3rem;
-      border-radius: 0.3rem;
-      margin-left: 0.3rem;
-      margin-right: 0.2rem;
-      text-align: right;
+      > input {
+        background-color: transparent;
+        color: white;
+        width: 3rem;
+        border-radius: 0.3rem;
+        margin-left: 0.3rem;
+        margin-right: 0.2rem;
+        text-align: right;
+      }
     }
+  }
 
-    & + div {
-      margin-top: 0.5rem;
-    }
+  > span {
+    text-align: center;
   }
 `
 
 export const Talents = styled.fieldset`
-  order: 4;
-
   display: flex;
   flex-direction: column;
   align-items: center;

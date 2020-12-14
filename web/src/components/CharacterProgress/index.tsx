@@ -1,8 +1,8 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback } from 'react'
 
-import { FaForward } from 'react-icons/fa'
+import { FaAngleDoubleDown, FaForward } from 'react-icons/fa'
 
-import { Character } from '../../data/characters'
+import { characterStore } from '../../entities'
 
 import AscensionProgress from '../AscensionProgress'
 import CharacterAvatar from '../CharacterAvatar'
@@ -22,47 +22,99 @@ import {
 
 const ascensionLimits = [20, 40, 50, 60, 70, 80, 90]
 
+const isLevel = /^[1-9][0-9]*$/
+
 interface CharacterProgressProps {
-  character: Character & {
-    enabled: boolean
-    toggleEnabled: () => void
-  }
+  characterName: string
   showSwitch: boolean
   lockAscension: boolean
   lockDesired: boolean
 }
 
 const CharacterProgress: React.FC<CharacterProgressProps> = ({
-  character,
+  characterName,
   showSwitch,
   lockAscension,
   lockDesired,
 }) => {
-  const [enabled, setEnabled] = useState(character.enabled)
+  const character = characterStore.useEntityValue(characterName)
 
-  const [ascensionProgress, setAscensionProgress] = useState(0)
-  const [desiredAscensionProgress, setDesiredAscensionProgress] = useState(0)
-  const [currentLevel, setCurrentLevel] = useState(1)
-  const [desiredLevel, setDesiredLevel] = useState(1)
+  const patchCharacter = characterStore.usePatchEntity(characterName)
 
   const toggleEnabled = useCallback(() => {
-    setEnabled((value) => !value)
-    character.toggleEnabled()
-  }, [character])
+    patchCharacter({ enabled: !character.enabled })
+  }, [character, patchCharacter])
 
-  const changeAscensionProgress = useCallback((v: number) => {
-    setAscensionProgress(v)
-    setDesiredAscensionProgress((d) => Math.max(d, v))
-  }, [])
+  const changeAscensionProgress = useCallback(
+    (current: number) => {
+      patchCharacter({
+        ascension: {
+          current,
+          desired: Math.max(current, character.ascension.desired),
+        },
+      })
+    },
+    [character, patchCharacter]
+  )
+
+  const changeDesiredAscensionProgress = useCallback(
+    (desired: number) => {
+      patchCharacter({
+        ascension: {
+          ...character.ascension,
+          desired: Math.max(character.ascension.current, desired),
+        },
+      })
+    },
+    [character, patchCharacter]
+  )
+
+  const changeCurrentLevel = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      if (isLevel.test(event.target.value)) {
+        const current = Number(event.target.value)
+        patchCharacter({
+          level: {
+            current: Math.min(
+              current,
+              ascensionLimits[character.ascension.current],
+              90
+            ),
+            desired: Math.min(Math.max(current, character.level.desired), 90),
+          },
+        })
+      }
+    },
+    [character, patchCharacter]
+  )
+
+  const changeDesiredLevel = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      if (isLevel.test(event.target.value)) {
+        const desired = Number(event.target.value)
+        patchCharacter({
+          level: {
+            ...character.level,
+            desired: Math.min(
+              Math.max(character.level.current, desired),
+              ascensionLimits[character.ascension.desired],
+              90
+            ),
+          },
+        })
+      }
+    },
+    [character, patchCharacter]
+  )
 
   return (
-    <Container enabled={enabled}>
+    <Container enabled={character.enabled}>
       <CharacterInfo>
         <CharacterName>{character.name}</CharacterName>
         {showSwitch && (
           <ToggleSwitch
             aria-label={`Toggle tracking of ${character.name}`}
-            checked={enabled}
+            checked={character.enabled}
             onChange={toggleEnabled}
           />
         )}
@@ -74,7 +126,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
           <span className="visuallyhidden">{character.weapon}</span>
         </CharacterWeapon>
       </CharacterInfo>
-      <Avatar enabled={enabled}>
+      <Avatar enabled={character.enabled}>
         <CharacterAvatar
           characterImageUrl={character.imageUrl}
           characterRarity={character.rarity}
@@ -83,50 +135,53 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
       <LevelProgress>
         <legend>Ascension/Level</legend>
         <div>
-          <span className="label">Current:</span>
           <AscensionProgress
             fieldsetName={`current-${character.name}`}
             legend={`${character.name}'s current ascension progress:`}
-            value={ascensionProgress}
+            value={character.ascension.current}
             onChange={changeAscensionProgress}
-            disabled={!enabled || lockAscension}
+            disabled={!character.enabled || lockAscension}
           />
-          <span>Lv.</span>
-          <input
-            aria-label={`${character.name}'s current level`}
-            type="number"
-            min="1"
-            max={ascensionLimits[ascensionProgress]}
-            step="1"
-            value={currentLevel}
-            onChange={(e) => setCurrentLevel(Number(e.target.value))}
-            disabled={!enabled}
-          />
-          <Filler />
-          <span>/{ascensionLimits[ascensionProgress]}</span>
+          <div>
+            <span>Lv.</span>
+            <input
+              aria-label={`${character.name}'s current level`}
+              type="number"
+              min="1"
+              max={ascensionLimits[character.ascension.current]}
+              step="1"
+              value={character.level.current}
+              onChange={changeCurrentLevel}
+              disabled={!character.enabled}
+            />
+            <span>/{ascensionLimits[character.ascension.current]}</span>
+          </div>
         </div>
+        <span>
+          <FaAngleDoubleDown />
+        </span>
         <div>
-          <span className="label">Desired:</span>
           <AscensionProgress
             fieldsetName={`desired-${character.name}`}
             legend={`${character.name}'s desired ascension progress:`}
-            value={desiredAscensionProgress}
-            onChange={setDesiredAscensionProgress}
-            disabled={!enabled || lockAscension || lockDesired}
+            value={character.ascension.desired}
+            onChange={changeDesiredAscensionProgress}
+            disabled={!character.enabled || lockAscension || lockDesired}
           />
-          <span>Lv.</span>
-          <input
-            aria-label={`${character.name}'s desired level`}
-            type="number"
-            min="1"
-            max={ascensionLimits[desiredAscensionProgress]}
-            step="1"
-            value={desiredLevel}
-            onChange={(e) => setDesiredLevel(Number(e.target.value))}
-            disabled={!enabled || lockDesired}
-          />
-          <Filler />
-          <span>/{ascensionLimits[desiredAscensionProgress]}</span>
+          <div>
+            <span>Lv.</span>
+            <input
+              aria-label={`${character.name}'s desired level`}
+              type="number"
+              min="1"
+              max={ascensionLimits[character.ascension.desired]}
+              step="1"
+              value={character.level.desired}
+              onChange={changeDesiredLevel}
+              disabled={!character.enabled || lockDesired}
+            />
+            <span>/{ascensionLimits[character.ascension.desired]}</span>
+          </div>
         </div>
       </LevelProgress>
       <Talents>
@@ -140,7 +195,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
             max="10"
             step="1"
             defaultValue={6}
-            disabled={!enabled}
+            disabled={!character.enabled}
           />
           <span>
             <FaForward />
@@ -152,7 +207,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
             max="10"
             step="1"
             defaultValue={8}
-            disabled={!enabled || lockDesired}
+            disabled={!character.enabled || lockDesired}
           />
         </div>
         <div>
@@ -164,7 +219,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
             max="10"
             step="1"
             defaultValue={6}
-            disabled={!enabled}
+            disabled={!character.enabled}
           />
           <span>
             <FaForward />
@@ -176,7 +231,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
             max="10"
             step="1"
             defaultValue={8}
-            disabled={!enabled || lockDesired}
+            disabled={!character.enabled || lockDesired}
           />
         </div>
         <div>
@@ -188,7 +243,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
             max="10"
             step="1"
             defaultValue={6}
-            disabled={!enabled}
+            disabled={!character.enabled}
           />
           <span>
             <FaForward />
@@ -200,7 +255,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
             max="10"
             step="1"
             defaultValue={8}
-            disabled={!enabled || lockDesired}
+            disabled={!character.enabled || lockDesired}
           />
         </div>
       </Talents>
