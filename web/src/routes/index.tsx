@@ -3,20 +3,20 @@ import { HashRouter, Redirect, Route, Switch } from 'react-router-dom'
 
 import { Header } from '../layout'
 
-import { Characters, Resources } from '../pages'
+import { CharactersPage, ResourcesPage } from '../pages'
 
 const Routes: React.FC = () => (
   <HashRouter>
     <Header />
     <Switch>
       <Route exact path="/">
-        <Characters />
+        <CharactersPage />
       </Route>
       <Route exact path="/characters">
-        <Characters />
+        <CharactersPage />
       </Route>
       <Route exact path="/resources">
-        <Resources />
+        <ResourcesPage />
       </Route>
       <Redirect to="/" />
     </Switch>

@@ -1,18 +1,27 @@
 import React, { useCallback } from 'react'
 
 import { FaAngleDoubleDown, FaForward } from 'react-icons/fa'
+import { useRecoilValue } from 'recoil'
 
-import { characterStore } from '../../entities'
+import { ReactComponent as AscensionStar } from '../../assets/AscensionStar.svg'
 
-import AscensionProgress from '../AscensionProgress'
+import { characterStore } from '../../recoil/entities'
+
+import {
+  lockAscensionsCheckbox,
+  lockCharactersCheckbox,
+  lockDesiredCheckbox,
+} from '../../recoil/controls/CharactersPage'
+
 import CharacterAvatar from '../CharacterAvatar'
-import ToggleSwitch from '../ToggleSwitch'
 
 import {
   Avatar,
+  AscensionProgressFieldset,
   CharacterElement,
   CharacterInfo,
   CharacterName,
+  CharacterToggle,
   CharacterWeapon,
   Container,
   Filler,
@@ -25,28 +34,26 @@ const ascensionLimits = [20, 40, 50, 60, 70, 80, 90]
 const isLevel = /^[1-9][0-9]*$/
 
 interface CharacterProgressProps {
-  characterName: string
-  showSwitch: boolean
-  lockAscension: boolean
-  lockDesired: boolean
+  characterId: string
 }
 
 const CharacterProgress: React.FC<CharacterProgressProps> = ({
-  characterName,
-  showSwitch,
-  lockAscension,
-  lockDesired,
+  characterId,
 }) => {
-  const character = characterStore.useEntityValue(characterName)
+  const character = characterStore.useEntityValue(characterId)
+  const patchCharacter = characterStore.usePatchEntity(characterId)
 
-  const patchCharacter = characterStore.usePatchEntity(characterName)
+  const lockAscension = useRecoilValue(lockAscensionsCheckbox)
+  const lockCharacter = useRecoilValue(lockCharactersCheckbox)
+  const lockDesired = useRecoilValue(lockDesiredCheckbox)
 
   const toggleEnabled = useCallback(() => {
     patchCharacter({ enabled: !character.enabled })
   }, [character, patchCharacter])
 
   const changeAscensionProgress = useCallback(
-    (current: number) => {
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      const current = Number(event.target.value)
       patchCharacter({
         ascension: {
           current,
@@ -58,7 +65,8 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
   )
 
   const changeDesiredAscensionProgress = useCallback(
-    (desired: number) => {
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      const desired = Number(event.target.value)
       patchCharacter({
         ascension: {
           ...character.ascension,
@@ -111,13 +119,17 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
     <Container enabled={character.enabled}>
       <CharacterInfo>
         <CharacterName>{character.name}</CharacterName>
-        {showSwitch && (
-          <ToggleSwitch
+        <CharacterToggle>
+          <input
             aria-label={`Toggle tracking of ${character.name}`}
+            type="checkbox"
             checked={character.enabled}
             onChange={toggleEnabled}
+            className="visuallyhidden"
+            disabled={lockCharacter}
           />
-        )}
+          <span />
+        </CharacterToggle>
         <Filler />
         <CharacterElement data-title={character.element}>
           <span className="visuallyhidden">{character.element}</span>
@@ -127,21 +139,46 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
         </CharacterWeapon>
       </CharacterInfo>
       <Avatar enabled={character.enabled}>
-        <CharacterAvatar
-          characterImageUrl={character.imageUrl}
-          characterRarity={character.rarity}
-        />
+        <CharacterAvatar characterId={character.id} />
       </Avatar>
       <LevelProgress>
         <legend>Ascension/Level</legend>
         <div>
-          <AscensionProgress
-            fieldsetName={`current-${character.name}`}
-            legend={`${character.name}'s current ascension progress:`}
-            value={character.ascension.current}
-            onChange={changeAscensionProgress}
+          <AscensionProgressFieldset
             disabled={!character.enabled || lockAscension}
-          />
+          >
+            <legend className="visuallyhidden">{`${character.name}'s current ascension:`}</legend>
+            <label data-title="Unascended">
+              <input
+                type="radio"
+                name={`ascension-progress-current-${character.name}`}
+                value={0}
+                checked={character.ascension.current === 0}
+                onChange={changeAscensionProgress}
+                className="visuallyhidden"
+              />
+              <span className="visuallyhidden">Unascended</span>
+              <AscensionStar className="fulfilled" />
+            </label>
+            {[...Array(6).keys()].map((v) => (
+              <label data-title={`Ascension ${v + 1}`} key={v}>
+                <input
+                  type="radio"
+                  name={`ascension-progress-current-${character.name}`}
+                  value={v + 1}
+                  checked={character.ascension.current === v + 1}
+                  onChange={changeAscensionProgress}
+                  className="visuallyhidden"
+                />
+                <span className="visuallyhidden">{`Ascension ${v + 1}`}</span>
+                <AscensionStar
+                  className={
+                    character.ascension.current >= v + 1 ? 'fulfilled' : ''
+                  }
+                />
+              </label>
+            ))}
+          </AscensionProgressFieldset>
           <div>
             <span>Lv.</span>
             <input
@@ -161,13 +198,43 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
           <FaAngleDoubleDown />
         </span>
         <div>
-          <AscensionProgress
-            fieldsetName={`desired-${character.name}`}
-            legend={`${character.name}'s desired ascension progress:`}
-            value={character.ascension.desired}
-            onChange={changeDesiredAscensionProgress}
+          <AscensionProgressFieldset
             disabled={!character.enabled || lockAscension || lockDesired}
-          />
+          >
+            <legend className="visuallyhidden">{`${character.name}'s desired ascension:`}</legend>
+            <label data-title="Unascended">
+              <input
+                type="radio"
+                name={`ascension-progress-desired-${character.name}`}
+                value={0}
+                checked={character.ascension.desired === 0}
+                onChange={changeDesiredAscensionProgress}
+                disabled={character.ascension.current > 0}
+                className="visuallyhidden"
+              />
+              <span className="visuallyhidden">Unascended</span>
+              <AscensionStar className="fulfilled" />
+            </label>
+            {[...Array(6).keys()].map((v) => (
+              <label data-title={`Ascension ${v + 1}`} key={v}>
+                <input
+                  type="radio"
+                  name={`ascension-progress-desired-${character.name}`}
+                  value={v + 1}
+                  checked={character.ascension.desired === v + 1}
+                  onChange={changeDesiredAscensionProgress}
+                  disabled={character.ascension.current > v + 1}
+                  className="visuallyhidden"
+                />
+                <span className="visuallyhidden">{`Ascension ${v + 1}`}</span>
+                <AscensionStar
+                  className={
+                    character.ascension.desired >= v + 1 ? 'fulfilled' : ''
+                  }
+                />
+              </label>
+            ))}
+          </AscensionProgressFieldset>
           <div>
             <span>Lv.</span>
             <input

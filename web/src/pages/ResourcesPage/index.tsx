@@ -46,7 +46,7 @@ const renderResourceListItem = (resource: Resource, key: number): JSX.Element =>
     />
   )
 
-const Resources: React.FC = () => {
+const ResourcesPage: React.FC = () => {
   const [category, setCategory] = useState<ResourceType | null>(null)
 
   const categorySelection = (base: ResourceType) => {
@@ -108,4 +108,4 @@ const Resources: React.FC = () => {
   )
 }
 
-export default Resources
+export default ResourcesPage

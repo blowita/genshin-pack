@@ -1,2 +1,2 @@
-export { default as Characters } from './Characters'
-export { default as Resources } from './Resources'
+export { default as CharactersPage } from './CharactersPage'
+export { default as ResourcesPage } from './ResourcesPage'

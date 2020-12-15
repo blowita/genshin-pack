@@ -47,6 +47,61 @@ export const CharacterName = styled.span`
   margin-right: 0.3rem;
 `
 
+export const CharacterToggle = styled.label`
+  position: relative;
+  display: block;
+
+  width: 2rem;
+  height: 1.2rem;
+
+  span {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    cursor: pointer;
+    background-color: #cccccc;
+    border-radius: 0.6rem;
+
+    transition: 0.4s;
+
+    ::before {
+      position: absolute;
+      content: '';
+
+      height: 0.8rem;
+      width: 0.8rem;
+      left: 0.2rem;
+      bottom: 0.2rem;
+
+      background-color: white;
+      border-radius: 50%;
+
+      transition: 0.4s;
+    }
+  }
+
+  input:checked + span {
+    background-color: #5e916c;
+  }
+
+  input:checked + span:before {
+    transform: translateX(0.8rem);
+  }
+
+  input:disabled + span {
+    opacity: 0.2;
+  }
+
+  input:focus + span,
+  span:hover {
+    box-shadow: 0 0 0.8rem #5e916c;
+  }
+`
+
 export const Filler = styled.div`
   flex-grow: 1;
 `
@@ -193,6 +248,75 @@ export const LevelProgress = styled.fieldset`
 
   > span {
     text-align: center;
+  }
+`
+
+export const AscensionProgressFieldset = styled.fieldset`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  border: none;
+  border-radius: 0.3em;
+
+  label {
+    display: flex;
+    flex-direction: row;
+
+    svg {
+      cursor: pointer;
+
+      color: #555555;
+
+      width: 1em;
+      height: 1em;
+    }
+
+    input:checked ~ svg {
+      color: white;
+    }
+
+    input:disabled ~ svg {
+      opacity: 0.6;
+    }
+
+    :hover svg {
+      color: white;
+      transform: scale(1.2);
+    }
+
+    .fulfilled {
+      color: white;
+    }
+
+    &[data-title]:after {
+      top: -1.8em;
+
+      white-space: nowrap;
+
+      background-color: white;
+      color: black;
+      padding: 0 0.2em;
+      border-radius: 0.3em;
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  label + label {
+    margin-left: 0.2em;
+  }
+
+  label:first-of-type svg {
+    visibility: hidden;
+  }
+
+  :disabled svg {
+    opacity: 0.5;
+  }
+
+  :focus-within {
+    box-shadow: 0 0 0.8em #5e916c;
   }
 `
 

@@ -2,7 +2,7 @@ import {
   Character as CharacterInfo,
   characters,
   ElementType,
-} from '../data/characters'
+} from '../../data/characters'
 
 import { createEntityStore } from './store'
 
@@ -27,25 +27,30 @@ interface TravelerTalentProgress {
   [ElementType.Pyro]: TalentProgress
 }
 
-export interface CharacterState {
+interface CharacterState {
+  formatVersion: string
   enabled: boolean
   ascension: ProgressCounter
   level: ProgressCounter
   travelerCurrentElement: ElementType | null
   talentLevels: TalentProgress | TravelerTalentProgress
 }
+
 export type CharacterEntity = CharacterInfo & CharacterState
 
-const generateCharacter = (name: string): CharacterEntity => {
-  const character = characters.find((c) => c.name === name)
+const currentFormatVersion = '1.0'
+
+const generateCharacter = (id: string): CharacterEntity => {
+  const character = characters.find((c) => c.id === id)
 
   if (!character) {
-    throw new Error(`Character ${name} doesn't exist`)
+    throw new Error(`Character with id ${id} doesn't exist`)
   }
 
-  if (name !== 'Traveler') {
+  if (character.name !== 'Traveler') {
     return {
       ...character,
+      formatVersion: currentFormatVersion,
       enabled: false,
       ascension: { current: 0, desired: 0 },
       level: { current: 1, desired: 1 },
@@ -59,6 +64,7 @@ const generateCharacter = (name: string): CharacterEntity => {
   } else {
     return {
       ...character,
+      formatVersion: currentFormatVersion,
       enabled: false,
       ascension: { current: 0, desired: 0 },
       level: { current: 1, desired: 1 },
@@ -105,11 +111,14 @@ const generateCharacter = (name: string): CharacterEntity => {
 }
 
 interface CharacterStorage extends CharacterState {
+  id: string
   name: string
 }
 
 const preLocalStorageSet = (value: CharacterEntity): CharacterStorage => ({
+  id: value.id,
   name: value.name,
+  formatVersion: value.formatVersion,
   enabled: value.enabled,
   ascension: value.ascension,
   level: value.level,
@@ -117,24 +126,64 @@ const preLocalStorageSet = (value: CharacterEntity): CharacterStorage => ({
   talentLevels: value.talentLevels,
 })
 
+interface CharacterStorage1v0 {
+  id: string
+  name: string
+  formatVersion: number
+  enabled: boolean
+  ascension: ProgressCounter
+  level: ProgressCounter
+  travelerCurrentElement: ElementType | null
+  talentLevels: TalentProgress | TravelerTalentProgress
+}
+
+type DeprecatedCharacterStorageTypes = CharacterStorage1v0
+
+const fixFormatVersion = (
+  parsed: DeprecatedCharacterStorageTypes | CharacterStorage | undefined
+): CharacterStorage => {
+  if (!parsed) {
+    throw new Error('Unable to parse stored data for a character')
+  }
+  if (parsed.formatVersion) {
+    let bumped: DeprecatedCharacterStorageTypes | CharacterStorage | undefined
+    switch (parsed.formatVersion) {
+      case currentFormatVersion:
+        return parsed as CharacterStorage
+      case '1.0': {
+        const deprecated = parsed as CharacterStorage1v0
+        bumped = {
+          ...deprecated,
+          formatVersion: '1.1',
+        }
+        break
+      }
+    }
+    return fixFormatVersion(bumped)
+  }
+  throw new Error(
+    `Unable to parse stored data for character with id ${parsed.id}`
+  )
+}
+
 const postLocalStorageGet = (parsed: CharacterStorage): CharacterEntity => {
-  const characterInfo = characters.find((i) => i.name === parsed.name)
+  const characterInfo = characters.find((i) => i.id === parsed.id)
 
   if (!characterInfo) {
     throw new Error(
-      `Unable to parse character ${parsed.name} data from localStorage`
+      `Unable to parse stored data for character with id ${parsed.id}`
     )
   }
 
   return {
+    ...fixFormatVersion(parsed),
     ...characterInfo,
-    ...parsed,
   }
 }
 
 export default createEntityStore<CharacterEntity, CharacterStorage>(
   'character',
-  (name) => generateCharacter(name),
+  generateCharacter,
   preLocalStorageSet,
   postLocalStorageGet
 )

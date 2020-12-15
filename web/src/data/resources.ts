@@ -15,7 +15,7 @@ export interface Resource {
   imageUrl: string
 }
 
-export const resources = [
+export const resources: Resource[] = [
   {
     sortId: 0,
     name: 'Mora',
@@ -1048,4 +1048,4 @@ export const resources = [
     imageUrl:
       'https://static.wikia.nocookie.net/gensin-impact/images/4/47/Item_Grain_of_Aerosiderite.png',
   },
-] as Resource[]
+]

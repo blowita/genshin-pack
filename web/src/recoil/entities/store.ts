@@ -38,7 +38,7 @@ export function createEntityStore<E, F>(
   postLocalStorageGet: (parsed: F) => E
 ): EntityStore<E> {
   if (UNWRAP_STORE.has(name)) {
-    throw new Error(`Entity store ${name} already defined`)
+    console.warn(`Entity store ${name} was redefined`)
   }
 
   const localStorageEffect: AtomEffect<E> = ({ node, setSelf, onSet }) => {
