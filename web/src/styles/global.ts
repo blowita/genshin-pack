@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   * {
@@ -63,4 +63,4 @@ export default createGlobalStyle`
     transition: opacity 0.2s ease-out 0.5s,
       visibility 0.2s ease-out 0.5s;
   }
-`
+`;

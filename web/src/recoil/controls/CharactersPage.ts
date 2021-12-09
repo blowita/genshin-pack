@@ -1,51 +1,51 @@
-import { atom } from 'recoil'
+import { atom } from "recoil";
 
-import { localStorageEffect } from '../helper'
+import { localStorageEffect } from "../helper";
 
 export const hideUncheckedCheckbox = atom({
-  key: '@GenshinPack/CharactersPage/hideUncheckedCheckbox',
+  key: "@GenshinPack/CharactersPage/hideUncheckedCheckbox",
   default: false,
   effects_UNSTABLE: [
     localStorageEffect({
-      key: '@GenshinPack/CharactersPage__hideUncheckedCheckbox',
+      key: "@GenshinPack/CharactersPage__hideUncheckedCheckbox",
       restorer: (value, defaultValue) =>
-        typeof value === 'boolean' ? value : defaultValue,
+        typeof value === "boolean" ? value : defaultValue,
     }),
   ],
-})
+});
 
 export const lockCharactersCheckbox = atom({
-  key: '@GenshinPack/CharactersPage/lockCharactersCheckbox',
+  key: "@GenshinPack/CharactersPage/lockCharactersCheckbox",
   default: false,
   effects_UNSTABLE: [
     localStorageEffect({
-      key: '@GenshinPack/CharactersPage__lockCharactersCheckbox',
+      key: "@GenshinPack/CharactersPage__lockCharactersCheckbox",
       restorer: (value, defaultValue) =>
-        typeof value === 'boolean' ? value : defaultValue,
+        typeof value === "boolean" ? value : defaultValue,
     }),
   ],
-})
+});
 
 export const lockAscensionsCheckbox = atom({
-  key: '@GenshinPack/CharactersPage/lockAscensionsCheckbox',
+  key: "@GenshinPack/CharactersPage/lockAscensionsCheckbox",
   default: false,
   effects_UNSTABLE: [
     localStorageEffect({
-      key: '@GenshinPack/CharactersPage__lockAscensionsCheckbox',
+      key: "@GenshinPack/CharactersPage__lockAscensionsCheckbox",
       restorer: (value, defaultValue) =>
-        typeof value === 'boolean' ? value : defaultValue,
+        typeof value === "boolean" ? value : defaultValue,
     }),
   ],
-})
+});
 
 export const lockDesiredCheckbox = atom({
-  key: '@GenshinPack/CharactersPage/lockDesiredCheckbox',
+  key: "@GenshinPack/CharactersPage/lockDesiredCheckbox",
   default: false,
   effects_UNSTABLE: [
     localStorageEffect({
-      key: '@GenshinPack/CharactersPage__lockDesiredCheckbox',
+      key: "@GenshinPack/CharactersPage__lockDesiredCheckbox",
       restorer: (value, defaultValue) =>
-        typeof value === 'boolean' ? value : defaultValue,
+        typeof value === "boolean" ? value : defaultValue,
     }),
   ],
-})
+});

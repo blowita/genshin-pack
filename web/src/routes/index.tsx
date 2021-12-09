@@ -1,9 +1,9 @@
-import React from 'react'
-import { HashRouter, Redirect, Route, Switch } from 'react-router-dom'
+import React from "react";
+import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
 
-import { Header } from '../layout'
+import { Header } from "../layout";
 
-import { CharactersPage, ResourcesPage } from '../pages'
+import { CharactersPage, ResourcesPage } from "../pages";
 
 const Routes: React.FC = () => (
   <HashRouter>
@@ -21,6 +21,6 @@ const Routes: React.FC = () => (
       <Redirect to="/" />
     </Switch>
   </HashRouter>
-)
+);
 
-export default Routes
+export default Routes;

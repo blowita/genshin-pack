@@ -2,52 +2,52 @@ import {
   Character as CharacterInfo,
   characters,
   ElementType,
-} from '../../data/characters'
+} from "../../data/characters";
 
-import { createEntityStore } from './store'
+import { createEntityStore } from "./store";
 
 interface ProgressCounter {
-  current: number
-  desired: number
+  current: number;
+  desired: number;
 }
 
 interface TalentProgress {
-  attack: ProgressCounter
-  skill: ProgressCounter
-  burst: ProgressCounter
+  attack: ProgressCounter;
+  skill: ProgressCounter;
+  burst: ProgressCounter;
 }
 
 interface TravelerTalentProgress {
-  [ElementType.Anemo]: TalentProgress
-  [ElementType.Cryo]: TalentProgress
-  [ElementType.Dendro]: TalentProgress
-  [ElementType.Electro]: TalentProgress
-  [ElementType.Geo]: TalentProgress
-  [ElementType.Hydro]: TalentProgress
-  [ElementType.Pyro]: TalentProgress
+  [ElementType.Anemo]: TalentProgress;
+  [ElementType.Cryo]: TalentProgress;
+  [ElementType.Dendro]: TalentProgress;
+  [ElementType.Electro]: TalentProgress;
+  [ElementType.Geo]: TalentProgress;
+  [ElementType.Hydro]: TalentProgress;
+  [ElementType.Pyro]: TalentProgress;
 }
 
 interface CharacterState {
-  formatVersion: string
-  enabled: boolean
-  ascension: ProgressCounter
-  level: ProgressCounter
-  travelerCurrentElement: ElementType | null
-  talentLevels: TalentProgress | TravelerTalentProgress
+  formatVersion: string;
+  enabled: boolean;
+  ascension: ProgressCounter;
+  level: ProgressCounter;
+  travelerCurrentElement: ElementType | null;
+  talentLevels: TalentProgress | TravelerTalentProgress;
 }
 
-export type CharacterEntity = CharacterInfo & CharacterState
+export type CharacterEntity = CharacterInfo & CharacterState;
 
-const currentFormatVersion = '1.0'
+const currentFormatVersion = "1.0";
 
 const generateCharacter = (id: string): CharacterEntity => {
-  const character = characters.find((c) => c.id === id)
+  const character = characters.find((c) => c.id === id);
 
   if (!character) {
-    throw new Error(`Character with id ${id} doesn't exist`)
+    throw new Error(`Character with id ${id} doesn't exist`);
   }
 
-  if (character.name !== 'Traveler') {
+  if (character.name !== "Traveler") {
     return {
       ...character,
       formatVersion: currentFormatVersion,
@@ -60,7 +60,7 @@ const generateCharacter = (id: string): CharacterEntity => {
         skill: { current: 1, desired: 1 },
         burst: { current: 1, desired: 1 },
       },
-    }
+    };
   } else {
     return {
       ...character,
@@ -106,13 +106,13 @@ const generateCharacter = (id: string): CharacterEntity => {
           burst: { current: 1, desired: 1 },
         },
       },
-    }
+    };
   }
-}
+};
 
 interface CharacterStorage extends CharacterState {
-  id: string
-  name: string
+  id: string;
+  name: string;
 }
 
 const preLocalStorageSet = (value: CharacterEntity): CharacterStorage => ({
@@ -124,66 +124,66 @@ const preLocalStorageSet = (value: CharacterEntity): CharacterStorage => ({
   level: value.level,
   travelerCurrentElement: value.travelerCurrentElement,
   talentLevels: value.talentLevels,
-})
+});
 
 interface CharacterStorage1v0 {
-  id: string
-  name: string
-  formatVersion: number
-  enabled: boolean
-  ascension: ProgressCounter
-  level: ProgressCounter
-  travelerCurrentElement: ElementType | null
-  talentLevels: TalentProgress | TravelerTalentProgress
+  id: string;
+  name: string;
+  formatVersion: number;
+  enabled: boolean;
+  ascension: ProgressCounter;
+  level: ProgressCounter;
+  travelerCurrentElement: ElementType | null;
+  talentLevels: TalentProgress | TravelerTalentProgress;
 }
 
-type DeprecatedCharacterStorageTypes = CharacterStorage1v0
+type DeprecatedCharacterStorageTypes = CharacterStorage1v0;
 
 const fixFormatVersion = (
   parsed: DeprecatedCharacterStorageTypes | CharacterStorage | undefined
 ): CharacterStorage => {
   if (!parsed) {
-    throw new Error('Unable to parse stored data for a character')
+    throw new Error("Unable to parse stored data for a character");
   }
   if (parsed.formatVersion) {
-    let bumped: DeprecatedCharacterStorageTypes | CharacterStorage | undefined
+    let bumped: DeprecatedCharacterStorageTypes | CharacterStorage | undefined;
     switch (parsed.formatVersion) {
       case currentFormatVersion:
-        return parsed as CharacterStorage
-      case '1.0': {
-        const deprecated = parsed as CharacterStorage1v0
+        return parsed as CharacterStorage;
+      case "1.0": {
+        const deprecated = parsed as CharacterStorage1v0;
         bumped = {
           ...deprecated,
-          formatVersion: '1.1',
-        }
-        break
+          formatVersion: "1.1",
+        };
+        break;
       }
     }
-    return fixFormatVersion(bumped)
+    return fixFormatVersion(bumped);
   }
   throw new Error(
     `Unable to parse stored data for character with id ${parsed.id}`
-  )
-}
+  );
+};
 
 const postLocalStorageGet = (parsed: CharacterStorage): CharacterEntity => {
-  const characterInfo = characters.find((i) => i.id === parsed.id)
+  const characterInfo = characters.find((i) => i.id === parsed.id);
 
   if (!characterInfo) {
     throw new Error(
       `Unable to parse stored data for character with id ${parsed.id}`
-    )
+    );
   }
 
   return {
     ...fixFormatVersion(parsed),
     ...characterInfo,
-  }
-}
+  };
+};
 
 export default createEntityStore<CharacterEntity, CharacterStorage>(
-  'character',
+  "character",
   generateCharacter,
   preLocalStorageSet,
   postLocalStorageGet
-)
+);

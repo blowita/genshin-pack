@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components";
 
 interface CoverProps {
-  resourceImageUrl: string
+  resourceImageUrl: string;
 }
 
 export const Container = styled.div`
@@ -13,7 +13,7 @@ export const Container = styled.div`
   border-radius: 0.3rem;
 
   background: white;
-`
+`;
 
 export const Cover = styled.div<CoverProps>`
   display: flex;
@@ -39,11 +39,11 @@ export const Cover = styled.div<CoverProps>`
   background-origin: content-box;
 
   background-color: #6faacc;
-`
+`;
 
 export const Filler = styled.div`
   flex-grow: 1;
-`
+`;
 
 export const Stars = styled.div`
   display: flex;
@@ -55,7 +55,7 @@ export const Stars = styled.div`
 
   color: #ffcc00;
   font-size: 0.9rem;
-`
+`;
 
 export const Counter = styled.div`
   display: flex;
@@ -92,4 +92,4 @@ export const Counter = styled.div`
       color: green;
     }
   }
-`
+`;

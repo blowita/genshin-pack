@@ -1,19 +1,19 @@
-import React, { useCallback } from 'react'
+import React, { useCallback } from "react";
 
-import { FaAngleDoubleDown, FaForward } from 'react-icons/fa'
-import { useRecoilValue } from 'recoil'
+import { FaAngleDoubleDown, FaForward } from "react-icons/fa";
+import { useRecoilValue } from "recoil";
 
-import { ReactComponent as AscensionStar } from '../../assets/AscensionStar.svg'
+import { ReactComponent as AscensionStar } from "../../assets/AscensionStar.svg";
 
-import { characterStore } from '../../recoil/entities'
+import { characterStore } from "../../recoil/entities";
 
 import {
   lockAscensionsCheckbox,
   lockCharactersCheckbox,
   lockDesiredCheckbox,
-} from '../../recoil/controls/CharactersPage'
+} from "../../recoil/controls/CharactersPage";
 
-import CharacterAvatar from '../CharacterAvatar'
+import CharacterAvatar from "../CharacterAvatar";
 
 import {
   Avatar,
@@ -21,66 +21,67 @@ import {
   CharacterElement,
   CharacterInfo,
   CharacterName,
+  CharacterNameTooltip,
   CharacterToggle,
   CharacterWeapon,
   Container,
   Filler,
   LevelProgress,
   Talents,
-} from './styles'
+} from "./styles";
 
-const ascensionLimits = [20, 40, 50, 60, 70, 80, 90]
+const ascensionLimits = [20, 40, 50, 60, 70, 80, 90];
 
-const isLevel = /^[1-9][0-9]*$/
+const isLevel = /^[1-9][0-9]*$/;
 
 interface CharacterProgressProps {
-  characterId: string
+  characterId: string;
 }
 
 const CharacterProgress: React.FC<CharacterProgressProps> = ({
   characterId,
 }) => {
-  const character = characterStore.useEntityValue(characterId)
-  const patchCharacter = characterStore.usePatchEntity(characterId)
+  const character = characterStore.useEntityValue(characterId);
+  const patchCharacter = characterStore.usePatchEntity(characterId);
 
-  const lockAscension = useRecoilValue(lockAscensionsCheckbox)
-  const lockCharacter = useRecoilValue(lockCharactersCheckbox)
-  const lockDesired = useRecoilValue(lockDesiredCheckbox)
+  const lockAscension = useRecoilValue(lockAscensionsCheckbox);
+  const lockCharacter = useRecoilValue(lockCharactersCheckbox);
+  const lockDesired = useRecoilValue(lockDesiredCheckbox);
 
   const toggleEnabled = useCallback(() => {
-    patchCharacter({ enabled: !character.enabled })
-  }, [character, patchCharacter])
+    patchCharacter({ enabled: !character.enabled });
+  }, [character, patchCharacter]);
 
   const changeAscensionProgress = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
-      const current = Number(event.target.value)
+      const current = Number(event.target.value);
       patchCharacter({
         ascension: {
           current,
           desired: Math.max(current, character.ascension.desired),
         },
-      })
+      });
     },
     [character, patchCharacter]
-  )
+  );
 
   const changeDesiredAscensionProgress = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
-      const desired = Number(event.target.value)
+      const desired = Number(event.target.value);
       patchCharacter({
         ascension: {
           ...character.ascension,
           desired: Math.max(character.ascension.current, desired),
         },
-      })
+      });
     },
     [character, patchCharacter]
-  )
+  );
 
   const changeCurrentLevel = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
       if (isLevel.test(event.target.value)) {
-        const current = Number(event.target.value)
+        const current = Number(event.target.value);
         patchCharacter({
           level: {
             current: Math.min(
@@ -90,16 +91,16 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
             ),
             desired: Math.min(Math.max(current, character.level.desired), 90),
           },
-        })
+        });
       }
     },
     [character, patchCharacter]
-  )
+  );
 
   const changeDesiredLevel = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
       if (isLevel.test(event.target.value)) {
-        const desired = Number(event.target.value)
+        const desired = Number(event.target.value);
         patchCharacter({
           level: {
             ...character.level,
@@ -109,16 +110,17 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
               90
             ),
           },
-        })
+        });
       }
     },
     [character, patchCharacter]
-  )
+  );
 
   return (
     <Container enabled={character.enabled}>
       <CharacterInfo>
         <CharacterName>{character.name}</CharacterName>
+        <CharacterNameTooltip>{character.name}</CharacterNameTooltip>
         <CharacterToggle>
           <input
             aria-label={`Toggle tracking of ${character.name}`}
@@ -173,7 +175,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
                 <span className="visuallyhidden">{`Ascension ${v + 1}`}</span>
                 <AscensionStar
                   className={
-                    character.ascension.current >= v + 1 ? 'fulfilled' : ''
+                    character.ascension.current >= v + 1 ? "fulfilled" : ""
                   }
                 />
               </label>
@@ -229,7 +231,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
                 <span className="visuallyhidden">{`Ascension ${v + 1}`}</span>
                 <AscensionStar
                   className={
-                    character.ascension.desired >= v + 1 ? 'fulfilled' : ''
+                    character.ascension.desired >= v + 1 ? "fulfilled" : ""
                   }
                 />
               </label>
@@ -327,7 +329,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
         </div>
       </Talents>
     </Container>
-  )
-}
+  );
+};
 
-export default CharacterProgress
+export default CharacterProgress;

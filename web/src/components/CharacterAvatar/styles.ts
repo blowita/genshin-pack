@@ -1,24 +1,25 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components";
 
 interface CharacterAvatarProps {
-  characterImageUrl: string
-  characterRarity: number
+  characterImageUrl: string;
+  characterRarity: number;
+  characterColab: boolean;
 }
 
-const handleRarityType = (rarity: number): string => {
+const handleRarityType = (rarity: number, colab: boolean): string => {
   switch (rarity) {
     case 5:
-      return '#cc9000'
+      return colab ? "#a84432" : "#cc9000";
     case 4:
-      return '#886faa'
+      return "#886faa";
     case 3:
-      return '#6faacc'
+      return "#6faacc";
     case 2:
-      return '#6faa88'
+      return "#6faa88";
     default:
-      return '#aaaaaa'
+      return "#aaaaaa";
   }
-}
+};
 
 export const Container = styled.div<CharacterAvatarProps>`
   display: flex;
@@ -41,7 +42,8 @@ export const Container = styled.div<CharacterAvatarProps>`
   background-position: top center;
   background-origin: content-box;
 
-  background-color: ${(props) => handleRarityType(props.characterRarity)};
+  background-color: ${(props) =>
+    handleRarityType(props.characterRarity, props.characterColab)};
 
   > div {
     font-size: 0.7em;
@@ -49,4 +51,4 @@ export const Container = styled.div<CharacterAvatarProps>`
     padding: 0.1em;
     border-radius: 0.3em;
   }
-`
+`;

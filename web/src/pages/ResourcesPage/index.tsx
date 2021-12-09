@@ -1,35 +1,35 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useState } from "react";
 
-import FlatList from 'flatlist-react'
+import FlatList from "flatlist-react";
 import {
   GiBookCover,
   GiDroplets,
   GiSwordSmithing,
   GiSwordwoman,
-} from 'react-icons/gi'
+} from "react-icons/gi";
 
-import { MoraCounter, ResourceCounter } from '../../components'
+import { MoraCounter, ResourceCounter } from "../../components";
 
-import { Resource, resources, ResourceType } from '../../data/resources'
+import { Resource, resources, ResourceType } from "../../data/resources";
 
-import { Categories, CategoryButton, Container, Content } from './styles'
+import { Categories, CategoryButton, Container, Content } from "./styles";
 
-let moraStock = 0
+let moraStock = 0;
 
-const moraTarget = Math.floor(Math.random() * 100000000)
+const moraTarget = Math.floor(Math.random() * 100000000);
 
 const stocks = resources.map((item) => ({
   name: item.name,
   stock: 0,
-}))
+}));
 
 const targets = resources.map((item) => ({
   name: item.name,
   target: Math.floor(Math.random() * 999),
-}))
+}));
 
 const renderResourceListItem = (resource: Resource, key: number): JSX.Element =>
-  resource.name === 'Mora' ? (
+  resource.name === "Mora" ? (
     <MoraCounter
       count={moraStock}
       setCount={(value) => (moraStock = value)}
@@ -44,19 +44,19 @@ const renderResourceListItem = (resource: Resource, key: number): JSX.Element =>
       target={targets[key].target}
       key={key}
     />
-  )
+  );
 
 const ResourcesPage: React.FC = () => {
-  const [category, setCategory] = useState<ResourceType | null>(null)
+  const [category, setCategory] = useState<ResourceType | null>(null);
 
   const categorySelection = (base: ResourceType) => {
-    return () => setCategory((category) => (category !== base ? base : null))
-  }
+    return () => setCategory((category) => (category !== base ? base : null));
+  };
 
   const filter = useCallback(
     (item: Resource) => (category ? item.type === category : true),
     [category]
-  )
+  );
 
   return (
     <Container>
@@ -100,12 +100,12 @@ const ResourcesPage: React.FC = () => {
           renderItem={renderResourceListItem}
           wrapperHtmlTag="div"
           renderWhenEmpty={() => <span>No items available.</span>}
-          sortBy={['sortId']}
+          sortBy={["sortId"]}
           filterBy={filter}
         />
       </Content>
     </Container>
-  )
-}
+  );
+};
 
-export default ResourcesPage
+export default ResourcesPage;

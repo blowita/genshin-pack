@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import { useCallback } from 'react'
+import { useCallback } from "react";
 
 /* Reference: https://github.com/facebookexperimental/Recoil/issues/746 */
 
@@ -13,23 +13,23 @@ import {
   useRecoilCallback,
   useRecoilValue,
   useSetRecoilState,
-} from 'recoil'
+} from "recoil";
 
 export interface EntityStore<E> {
-  name: string
-  usePutEntity: () => (key: string, entity: E) => void
-  useEntityValue: (key: string) => E
-  useEntityProperty: <P extends keyof E>(key: string, property: P) => void
-  useEntityList: (keys: string[]) => E[]
-  useSetEntity: (key: string) => (updater: E | ((current: E) => E)) => void
-  usePatchEntity: (key: string) => (patch: Partial<E>) => void
+  name: string;
+  usePutEntity: () => (key: string, entity: E) => void;
+  useEntityValue: (key: string) => E;
+  useEntityProperty: <P extends keyof E>(key: string, property: P) => void;
+  useEntityList: (keys: string[]) => E[];
+  useSetEntity: (key: string) => (updater: E | ((current: E) => E)) => void;
+  usePatchEntity: (key: string) => (patch: Partial<E>) => void;
 }
 
 interface StoreInternals {
-  family: (key: string) => RecoilState<any>
+  family: (key: string) => RecoilState<any>;
 }
 
-const UNWRAP_STORE = new Map<string, StoreInternals>()
+const UNWRAP_STORE = new Map<string, StoreInternals>();
 
 export function createEntityStore<E, F>(
   name: string,
@@ -38,128 +38,128 @@ export function createEntityStore<E, F>(
   postLocalStorageGet: (parsed: F) => E
 ): EntityStore<E> {
   if (UNWRAP_STORE.has(name)) {
-    console.warn(`Entity store ${name} was redefined`)
+    console.warn(`Entity store ${name} was redefined`);
   }
 
   const localStorageEffect: AtomEffect<E> = ({ node, setSelf, onSet }) => {
-    const savedValue = localStorage.getItem(node.key)
+    const savedValue = localStorage.getItem(node.key);
     if (savedValue) {
-      setSelf(postLocalStorageGet(JSON.parse(savedValue)))
+      setSelf(postLocalStorageGet(JSON.parse(savedValue)));
     }
 
     onSet((newValue: E | DefaultValue | null) => {
       if (!newValue || newValue instanceof DefaultValue) {
-        localStorage.removeItem(node.key)
+        localStorage.removeItem(node.key);
       } else {
         localStorage.setItem(
           node.key,
           JSON.stringify(preLocalStorageSet(newValue))
-        )
+        );
       }
-    })
-  }
+    });
+  };
 
   const family = atomFamily<E, string>({
     key: `@GenshinPack/${name}`,
     default: defaultValueFallbackFunction,
     effects_UNSTABLE: [localStorageEffect],
-  })
+  });
 
   const listSelectorFamily = selectorFamily({
     key: `@GenshinPack/${name}/list`,
     get: (keys: string[]) => ({ get }) => {
       const toEntity = (key: string) => {
-        const value = get(family(key))
+        const value = get(family(key));
 
         if (!value) {
-          throw new Error(`${name} with key ${key} doesn't exist`)
+          throw new Error(`${name} with key ${key} doesn't exist`);
         }
 
-        return value
-      }
-      return keys.map(toEntity)
+        return value;
+      };
+      return keys.map(toEntity);
     },
-  })
+  });
 
   const propertySelectorFamily = selectorFamily({
     key: `@GenshinPack/${name}/property`,
     get: ([key, property]: [string, keyof E]) => ({ get }) => {
-      const entity = get(family(key))
+      const entity = get(family(key));
 
       if (!entity) {
-        throw new Error(`${name} with key ${key} doesn't exist`)
+        throw new Error(`${name} with key ${key} doesn't exist`);
       }
 
-      return entity[property]
+      return entity[property];
     },
-  })
+  });
 
-  UNWRAP_STORE.set(name, { family })
+  UNWRAP_STORE.set(name, { family });
 
   const usePutEntity = () => {
     const put = useRecoilCallback(
       ({ set }) => (key: string, entity: E) => {
-        set(family(key), entity)
+        set(family(key), entity);
       },
       []
-    )
-    return put
-  }
+    );
+    return put;
+  };
 
   const useEntityValue = (key: string) => {
-    const value = useRecoilValue(family(key))
+    const value = useRecoilValue(family(key));
 
     if (!value) {
-      throw new Error(`${name} with key ${key} doesn't exist`)
+      throw new Error(`${name} with key ${key} doesn't exist`);
     }
 
-    return value
-  }
+    return value;
+  };
 
   const useEntityProperty = <P extends keyof E>(key: string, property: P) => {
-    return useRecoilValue(propertySelectorFamily([key, property])) as E[P]
-  }
+    return useRecoilValue(propertySelectorFamily([key, property])) as E[P];
+  };
 
   const useEntityList = (keys: string[]) =>
-    useRecoilValue(listSelectorFamily(keys))
+    useRecoilValue(listSelectorFamily(keys));
 
   const useSetEntity = (key: string) => {
-    const set = useSetRecoilState(family(key))
+    const set = useSetRecoilState(family(key));
     const setEntity = useCallback(
       (updater: E | ((current: E) => E)) => {
         const update = (current: E | null) => {
           if (!current) {
-            throw new Error(`${name} with key ${key} doesn't exist`)
+            throw new Error(`${name} with key ${key} doesn't exist`);
           }
 
-          return typeof updater === 'function'
+          return typeof updater === "function"
             ? (updater as any)(current)
-            : updater
-        }
-        set(update)
+            : updater;
+        };
+        set(update);
       },
       [key, set]
-    )
-    return setEntity
-  }
+    );
+    return setEntity;
+  };
 
   const usePatchEntity = (key: string) => {
-    const set = useSetEntity(key)
+    const set = useSetEntity(key);
     const patch = useCallback(
       (patch: Partial<E>) => {
         const merge = (current: E | null) => {
           if (!current) {
-            throw new Error(`${name} with key ${key} doesn't exist`)
+            throw new Error(`${name} with key ${key} doesn't exist`);
           }
 
-          return { ...current, ...patch }
-        }
-        set(merge)
+          return { ...current, ...patch };
+        };
+        set(merge);
       },
       [key, set]
-    )
-    return patch
-  }
+    );
+    return patch;
+  };
 
   return {
     name,
@@ -169,5 +169,5 @@ export function createEntityStore<E, F>(
     useEntityList,
     useSetEntity,
     usePatchEntity,
-  }
+  };
 }

@@ -1,67 +1,69 @@
-import React, { useCallback } from 'react'
+import React, { useCallback } from "react";
 
-import FlatList from 'flatlist-react'
-import { useRecoilState } from 'recoil'
+import FlatList from "flatlist-react";
+import { useRecoilState } from "recoil";
 
-import { CharacterProgressCard } from '../../components'
+import { CharacterProgressCard } from "../../components";
 
-import { characters } from '../../data/characters'
+import { characters } from "../../data/characters";
 
 import {
   hideUncheckedCheckbox,
   lockAscensionsCheckbox,
   lockCharactersCheckbox,
   lockDesiredCheckbox,
-} from '../../recoil/controls/CharactersPage'
-import { characterStore, CharacterEntity } from '../../recoil/entities'
+} from "../../recoil/controls/CharactersPage";
+import { characterStore, CharacterEntity } from "../../recoil/entities";
 
-import { Container, Content, Controls } from './styles'
+import { Container, Content, Controls } from "./styles";
 
-const characterIdList = characters.map((c) => c.id)
+const characterIdList = characters.map((c) => c.id);
 
 const renderCharacterProgressCard = (
   character: CharacterEntity,
   key: number
-): JSX.Element => <CharacterProgressCard characterId={character.id} key={key} />
+): JSX.Element => (
+  <CharacterProgressCard characterId={character.id} key={key} />
+);
 
 const CharactersPage: React.FC = () => {
-  const characterList = characterStore.useEntityList(characterIdList)
+  const characterList = characterStore.useEntityList(characterIdList);
 
   const [hideUnchecked, setHideUnchecked] = useRecoilState(
     hideUncheckedCheckbox
-  )
+  );
   const [lockAscensions, setLockAscensions] = useRecoilState(
     lockAscensionsCheckbox
-  )
+  );
   const [lockCharacters, setLockCharacters] = useRecoilState(
     lockCharactersCheckbox
-  )
-  const [lockDesired, setLockDesired] = useRecoilState(lockDesiredCheckbox)
+  );
+  const [lockDesired, setLockDesired] = useRecoilState(lockDesiredCheckbox);
 
   const toggleHideUnchecked = useCallback(
     () => setHideUnchecked((value) => !value),
     [setHideUnchecked]
-  )
+  );
 
   const toggleLockCharacters = useCallback(
     () => setLockCharacters((value) => !value),
     [setLockCharacters]
-  )
+  );
 
   const toggleLockAscensions = useCallback(
     () => setLockAscensions((value) => !value),
     [setLockAscensions]
-  )
+  );
 
   const toggleLockDesired = useCallback(
     () => setLockDesired((value) => !value),
     [setLockDesired]
-  )
+  );
 
   const filter = useCallback(
     (character: CharacterEntity) => !hideUnchecked || character.enabled,
     [hideUnchecked]
-  )
+  );
 
   return (
     <Container>
@@ -105,12 +107,12 @@ const CharactersPage: React.FC = () => {
           renderItem={renderCharacterProgressCard}
           wrapperHtmlTag="div"
           renderWhenEmpty={() => <span>No items available.</span>}
-          sortBy={['sortId']}
+          sortBy={["sortId"]}
           filterBy={filter}
         />
       </Content>
     </Container>
-  )
-}
+  );
+};
 
-export default CharactersPage
+export default CharactersPage;

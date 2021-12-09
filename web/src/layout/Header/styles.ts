@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Container = styled.header`
   nav {
@@ -39,7 +39,7 @@ export const Container = styled.header`
             color: #888888;
           }
 
-          &[aria-current='page'] {
+          &[aria-current="page"] {
             background-color: inherit;
             border-radius: 0 0.3rem 0 0.3rem;
           }
@@ -62,4 +62,4 @@ export const Container = styled.header`
       }
     }
   }
-`
+`;

@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import { shade } from 'polished'
+import { shade } from "polished";
 
 interface CategoryButtonProps {
-  selected: boolean
+  selected: boolean;
 }
 
 export const Container = styled.div`
@@ -12,13 +12,13 @@ export const Container = styled.div`
   align-items: center;
 
   padding: 1rem;
-`
+`;
 
 export const Categories = styled.div`
   > button + button {
     margin-left: 0.3rem;
   }
-`
+`;
 
 export const CategoryButton = styled.button<CategoryButtonProps>`
   width: 3rem;
@@ -27,11 +27,11 @@ export const CategoryButton = styled.button<CategoryButtonProps>`
   border-radius: 0.3rem;
 
   background-color: ${(props) =>
-    props.selected ? shade(0.2, '#33ff33') : shade(0.2, '#c0c0c0')};
+    props.selected ? shade(0.2, "#33ff33") : shade(0.2, "#c0c0c0")};
 
   &:hover,
   &:focus {
-    background-color: ${(props) => (props.selected ? '#33ff33' : '#c0c0c0')};
+    background-color: ${(props) => (props.selected ? "#33ff33" : "#c0c0c0")};
   }
 
   &[data-title]:after {
@@ -48,7 +48,7 @@ export const CategoryButton = styled.button<CategoryButtonProps>`
     text-align: center;
     font-size: 1rem;
   }
-`
+`;
 
 export const Content = styled.div`
   margin: -0.5rem;
@@ -64,4 +64,4 @@ export const Content = styled.div`
       margin: 0.5rem;
     }
   }
-`
+`;

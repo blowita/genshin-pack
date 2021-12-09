@@ -1,23 +1,23 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 
-import { GrUpgrade } from 'react-icons/gr'
-import { TiMinus, TiPlus } from 'react-icons/ti'
+import { GrUpgrade } from "react-icons/gr";
+import { TiMinus, TiPlus } from "react-icons/ti";
 
-import { Resource } from '../../data/resources'
+import { Resource } from "../../data/resources";
 
-import RarityDisplay from '../RarityDisplay'
+import RarityDisplay from "../RarityDisplay";
 
-import { Actions, Container, Counter, Cover, Filler } from './styles'
+import { Actions, Container, Counter, Cover, Filler } from "./styles";
 
-const upgradable = false
+const upgradable = false;
 
-const integerRegexp = /^[0-9]*$/
+const integerRegexp = /^[0-9]*$/;
 
 interface ResourceCounterProps {
-  resource: Resource
-  count?: number
-  setCount: (count: number) => void
-  target?: number
+  resource: Resource;
+  count?: number;
+  setCount: (count: number) => void;
+  target?: number;
 }
 
 const ResourceCounter: React.FC<ResourceCounterProps> = ({
@@ -26,33 +26,36 @@ const ResourceCounter: React.FC<ResourceCounterProps> = ({
   setCount,
   target,
 }) => {
-  const [counter, setCounter] = useState(count || 0)
-  const [hideButtons, setHideButtons] = useState(true)
+  const [counter, setCounter] = useState(count || 0);
+  const [hideButtons, setHideButtons] = useState(true);
 
-  const name = `${resource.name} (${resource.type} - rarity ${resource.rarity})`
+  const name = `${resource.name} (${resource.type} - rarity ${resource.rarity})`;
 
   const increment = useCallback(() => {
-    return setCounter((c) => Math.min(c + 1, 9999))
-  }, [])
+    return setCounter((c) => Math.min(c + 1, 9999));
+  }, []);
 
-  const decrement = useCallback(() => setCounter((c) => Math.max(c - 1, 0)), [])
+  const decrement = useCallback(
+    () => setCounter((c) => Math.max(c - 1, 0)),
+    []
+  );
 
   const changeCounter = useCallback((e) => {
     if (integerRegexp.test(e.target.value)) {
-      const input = Number(e.target.value)
+      const input = Number(e.target.value);
       if (input >= 0 && input < 10000) {
-        setCounter(input)
+        setCounter(input);
       }
     }
-  }, [])
+  }, []);
 
   const fulfilled = useMemo(() => {
-    return !target || counter >= target
-  }, [counter, target])
+    return !target || counter >= target;
+  }, [counter, target]);
 
   useEffect(() => {
-    setCount(counter)
-  }, [counter, setCount])
+    setCount(counter);
+  }, [counter, setCount]);
 
   return (
     <Container
@@ -103,14 +106,14 @@ const ResourceCounter: React.FC<ResourceCounterProps> = ({
         />
         <span>/</span>
         <span
-          className={fulfilled ? 'fulfilled' : 'required'}
+          className={fulfilled ? "fulfilled" : "required"}
           aria-label={`${name} required amount`}
         >
-          {target || '-'}
+          {target || "-"}
         </span>
       </Counter>
     </Container>
-  )
-}
+  );
+};
 
-export default ResourceCounter
+export default ResourceCounter;

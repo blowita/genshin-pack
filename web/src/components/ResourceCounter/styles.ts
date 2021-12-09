@@ -1,30 +1,30 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components";
 
-import { shade } from 'polished'
+import { shade } from "polished";
 
 interface CoverProps {
-  resourceImageUrl: string
-  resourceRarity: number
+  resourceImageUrl: string;
+  resourceRarity: number;
 }
 
 interface ActionsProps {
-  hidden: boolean
+  hidden: boolean;
 }
 
 const handleRarityType = (rarity: number): string => {
   switch (rarity) {
     case 5:
-      return '#cc9000'
+      return "#cc9000";
     case 4:
-      return '#886faa'
+      return "#886faa";
     case 3:
-      return '#6faacc'
+      return "#6faacc";
     case 2:
-      return '#6faa88'
+      return "#6faa88";
     default:
-      return '#aaaaaa'
+      return "#aaaaaa";
   }
-}
+};
 
 export const Container = styled.div`
   display: flex;
@@ -35,7 +35,7 @@ export const Container = styled.div`
   border-radius: 0.3rem;
 
   background: white;
-`
+`;
 
 export const Cover = styled.div<CoverProps>`
   display: flex;
@@ -67,7 +67,7 @@ export const Cover = styled.div<CoverProps>`
     margin-bottom: -0.1rem;
     font-size: 0.9rem;
   }
-`
+`;
 
 export const Actions = styled.div<ActionsProps>`
   display: flex;
@@ -94,7 +94,7 @@ export const Actions = styled.div<ActionsProps>`
     transition: background-color 0.2s;
 
     &.plus {
-      background: ${shade(0.2, '#33ff33')};
+      background: ${shade(0.2, "#33ff33")};
 
       &:hover,
       &:focus {
@@ -103,7 +103,7 @@ export const Actions = styled.div<ActionsProps>`
     }
 
     &.minus {
-      background: ${shade(0.2, '#ff3333')};
+      background: ${shade(0.2, "#ff3333")};
 
       &:hover,
       &:focus {
@@ -112,7 +112,7 @@ export const Actions = styled.div<ActionsProps>`
     }
 
     &.upgrade {
-      background: ${shade(0.2, '#33ffff')};
+      background: ${shade(0.2, "#33ffff")};
 
       &:hover,
       &:focus {
@@ -124,11 +124,11 @@ export const Actions = styled.div<ActionsProps>`
   button:not(:nth-of-type(1)):not(:nth-of-type(2)) {
     margin-top: 0.3rem;
   }
-`
+`;
 
 export const Filler = styled.div`
   flex-grow: 1;
-`
+`;
 
 export const Counter = styled.div`
   display: flex;
@@ -162,4 +162,4 @@ export const Counter = styled.div`
       color: green;
     }
   }
-`
+`;

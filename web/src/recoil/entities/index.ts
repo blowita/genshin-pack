@@ -1,4 +1,4 @@
-import characterStore from './characters'
-export * from './characters'
+import characterStore from "./characters";
+export * from "./characters";
 
-export { characterStore }
+export { characterStore };

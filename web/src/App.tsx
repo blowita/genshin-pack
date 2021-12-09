@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 
-import { RecoilRoot } from 'recoil'
+import { RecoilRoot } from "recoil";
 
-import Routes from './routes'
+import Routes from "./routes";
 
-import GlobalStyle from './styles/global'
+import GlobalStyle from "./styles/global";
 
 const App: React.FC = () => (
   <>
@@ -13,6 +13,6 @@ const App: React.FC = () => (
       <Routes />
     </RecoilRoot>
   </>
-)
+);
 
-export default App
+export default App;
