@@ -1,11 +1,18 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useMemo } from "react";
 
 import { FaAngleDoubleDown, FaForward } from "react-icons/fa";
 import { useRecoilValue } from "recoil";
 
 import { ReactComponent as AscensionStar } from "../../assets/AscensionStar.svg";
 
-import { CharacterEntity, characterStore } from "../../recoil/entities";
+import { ElementType } from "../../data/characters";
+
+import {
+  CharacterEntity,
+  characterStore,
+  TalentProgress,
+  TravelerTalentProgress,
+} from "../../recoil/entities";
 
 import {
   lockAscensionsCheckbox,
@@ -31,8 +38,10 @@ import {
 } from "./styles";
 
 const ascensionLimits = [20, 40, 50, 60, 70, 80, 90];
+const talentLimits = [1, 1, 2, 4, 6, 8, 10];
 
 const isLevel = /^[1-9][0-9]*$/;
+const isTalentLevel = /^(10)|[1-9]$/;
 
 interface CharacterProgressProps {
   characterId: string;
@@ -55,13 +64,16 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
   const changeAscensionProgress = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
       const current = Number(event.target.value);
-      const patch = {
+      let patch = {
         ascension: {
           current,
           desired: Math.max(current, character.ascension.desired),
         },
         level: {
           ...character.level,
+        },
+        talentLevels: {
+          ...character.talentLevels,
         },
       };
       if (ascensionLimits[current] < patch.level.current) {
@@ -73,6 +85,203 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
       if (patch.level.desired < ascensionLimits[patch.ascension.desired - 1]) {
         patch.level.desired = ascensionLimits[patch.ascension.desired - 1];
       }
+      if (character.name === "Traveler") {
+        const talents = patch.talentLevels as TravelerTalentProgress;
+        patch = {
+          ...patch,
+          talentLevels: {
+            [ElementType.Anemo]: {
+              attack: {
+                ...talents[ElementType.Anemo].attack,
+                current: Math.min(
+                  talents[ElementType.Anemo].attack.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+              skill: {
+                ...talents[ElementType.Anemo].skill,
+                current: Math.min(
+                  talents[ElementType.Anemo].skill.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+              burst: {
+                ...talents[ElementType.Anemo].burst,
+                current: Math.min(
+                  talents[ElementType.Anemo].burst.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+            },
+            [ElementType.Cryo]: {
+              attack: {
+                ...talents[ElementType.Cryo].attack,
+                current: Math.min(
+                  talents[ElementType.Cryo].attack.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+              skill: {
+                ...talents[ElementType.Cryo].skill,
+                current: Math.min(
+                  talents[ElementType.Cryo].skill.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+              burst: {
+                ...talents[ElementType.Cryo].burst,
+                current: Math.min(
+                  talents[ElementType.Cryo].burst.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+            },
+            [ElementType.Dendro]: {
+              attack: {
+                ...talents[ElementType.Dendro].attack,
+                current: Math.min(
+                  talents[ElementType.Dendro].attack.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+              skill: {
+                ...talents[ElementType.Dendro].skill,
+                current: Math.min(
+                  talents[ElementType.Dendro].skill.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+              burst: {
+                ...talents[ElementType.Dendro].burst,
+                current: Math.min(
+                  talents[ElementType.Dendro].burst.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+            },
+            [ElementType.Electro]: {
+              attack: {
+                ...talents[ElementType.Electro].attack,
+                current: Math.min(
+                  talents[ElementType.Electro].attack.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+              skill: {
+                ...talents[ElementType.Electro].skill,
+                current: Math.min(
+                  talents[ElementType.Electro].skill.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+              burst: {
+                ...talents[ElementType.Electro].burst,
+                current: Math.min(
+                  talents[ElementType.Electro].burst.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+            },
+            [ElementType.Geo]: {
+              attack: {
+                ...talents[ElementType.Geo].attack,
+                current: Math.min(
+                  talents[ElementType.Geo].attack.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+              skill: {
+                ...talents[ElementType.Geo].skill,
+                current: Math.min(
+                  talents[ElementType.Geo].skill.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+              burst: {
+                ...talents[ElementType.Geo].burst,
+                current: Math.min(
+                  talents[ElementType.Geo].burst.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+            },
+            [ElementType.Hydro]: {
+              attack: {
+                ...talents[ElementType.Hydro].attack,
+                current: Math.min(
+                  talents[ElementType.Hydro].attack.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+              skill: {
+                ...talents[ElementType.Hydro].skill,
+                current: Math.min(
+                  talents[ElementType.Hydro].skill.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+              burst: {
+                ...talents[ElementType.Hydro].burst,
+                current: Math.min(
+                  talents[ElementType.Hydro].burst.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+            },
+            [ElementType.Pyro]: {
+              attack: {
+                ...talents[ElementType.Pyro].attack,
+                current: Math.min(
+                  talents[ElementType.Pyro].attack.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+              skill: {
+                ...talents[ElementType.Pyro].skill,
+                current: Math.min(
+                  talents[ElementType.Pyro].skill.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+              burst: {
+                ...talents[ElementType.Pyro].burst,
+                current: Math.min(
+                  talents[ElementType.Pyro].burst.current,
+                  talentLimits[patch.ascension.current]
+                ),
+              },
+            },
+          },
+        };
+      } else {
+        const talents = patch.talentLevels as TalentProgress;
+        patch = {
+          ...patch,
+          talentLevels: {
+            attack: {
+              ...talents.attack,
+              current: Math.min(
+                talents.attack.current,
+                talentLimits[patch.ascension.current]
+              ),
+            },
+            skill: {
+              ...talents.skill,
+              current: Math.min(
+                talents.skill.current,
+                talentLimits[patch.ascension.current]
+              ),
+            },
+            burst: {
+              ...talents.burst,
+              current: Math.min(
+                talents.burst.current,
+                talentLimits[patch.ascension.current]
+              ),
+            },
+          },
+        };
+      }
       patchCharacter(patch);
     },
     [character, patchCharacter]
@@ -81,7 +290,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
   const changeDesiredAscensionProgress = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
       const desired = Number(event.target.value);
-      const patch = {
+      let patch = {
         ascension: {
           ...character.ascension,
           desired: Math.max(character.ascension.current, desired),
@@ -89,12 +298,212 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
         level: {
           ...character.level,
         },
+        talentLevels: {
+          ...character.talentLevels,
+        },
       };
       if (ascensionLimits[desired] < patch.level.desired) {
         patch.level.desired = ascensionLimits[desired];
       }
       if (desired > 0 && patch.level.desired < ascensionLimits[desired - 1]) {
         patch.level.desired = ascensionLimits[desired - 1];
+      }
+      if (character.name === "Traveler") {
+        const talents = patch.talentLevels as TravelerTalentProgress;
+        patch = {
+          ...patch,
+          talentLevels: {
+            [ElementType.Anemo]: {
+              attack: {
+                ...talents[ElementType.Anemo].attack,
+                desired: Math.min(
+                  talents[ElementType.Anemo].attack.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+              skill: {
+                ...talents[ElementType.Anemo].skill,
+                desired: Math.min(
+                  talents[ElementType.Anemo].skill.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+              burst: {
+                ...talents[ElementType.Anemo].burst,
+                desired: Math.min(
+                  talents[ElementType.Anemo].burst.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+            },
+            [ElementType.Cryo]: {
+              attack: {
+                ...talents[ElementType.Cryo].attack,
+                desired: Math.min(
+                  talents[ElementType.Cryo].attack.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+              skill: {
+                ...talents[ElementType.Cryo].skill,
+                desired: Math.min(
+                  talents[ElementType.Cryo].skill.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+              burst: {
+                ...talents[ElementType.Cryo].burst,
+                desired: Math.min(
+                  talents[ElementType.Cryo].burst.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+            },
+            [ElementType.Dendro]: {
+              attack: {
+                ...talents[ElementType.Dendro].attack,
+                desired: Math.min(
+                  talents[ElementType.Dendro].attack.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+              skill: {
+                ...talents[ElementType.Dendro].skill,
+                desired: Math.min(
+                  talents[ElementType.Dendro].skill.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+              burst: {
+                ...talents[ElementType.Dendro].burst,
+                desired: Math.min(
+                  talents[ElementType.Dendro].burst.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+            },
+            [ElementType.Electro]: {
+              attack: {
+                ...talents[ElementType.Electro].attack,
+                desired: Math.min(
+                  talents[ElementType.Electro].attack.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+              skill: {
+                ...talents[ElementType.Electro].skill,
+                desired: Math.min(
+                  talents[ElementType.Electro].skill.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+              burst: {
+                ...talents[ElementType.Electro].burst,
+                desired: Math.min(
+                  talents[ElementType.Electro].burst.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+            },
+            [ElementType.Geo]: {
+              attack: {
+                ...talents[ElementType.Geo].attack,
+                desired: Math.min(
+                  talents[ElementType.Geo].attack.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+              skill: {
+                ...talents[ElementType.Geo].skill,
+                desired: Math.min(
+                  talents[ElementType.Geo].skill.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+              burst: {
+                ...talents[ElementType.Geo].burst,
+                desired: Math.min(
+                  talents[ElementType.Geo].burst.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+            },
+            [ElementType.Hydro]: {
+              attack: {
+                ...talents[ElementType.Hydro].attack,
+                desired: Math.min(
+                  talents[ElementType.Hydro].attack.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+              skill: {
+                ...talents[ElementType.Hydro].skill,
+                desired: Math.min(
+                  talents[ElementType.Hydro].skill.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+              burst: {
+                ...talents[ElementType.Hydro].burst,
+                desired: Math.min(
+                  talents[ElementType.Hydro].burst.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+            },
+            [ElementType.Pyro]: {
+              attack: {
+                ...talents[ElementType.Pyro].attack,
+                desired: Math.min(
+                  talents[ElementType.Pyro].attack.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+              skill: {
+                ...talents[ElementType.Pyro].skill,
+                desired: Math.min(
+                  talents[ElementType.Pyro].skill.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+              burst: {
+                ...talents[ElementType.Pyro].burst,
+                desired: Math.min(
+                  talents[ElementType.Pyro].burst.desired,
+                  talentLimits[patch.ascension.desired]
+                ),
+              },
+            },
+          },
+        };
+      } else {
+        const talents = patch.talentLevels as TalentProgress;
+        patch = {
+          ...patch,
+          talentLevels: {
+            attack: {
+              ...talents.attack,
+              desired: Math.min(
+                talents.attack.desired,
+                talentLimits[patch.ascension.desired]
+              ),
+            },
+            skill: {
+              ...talents.skill,
+              desired: Math.min(
+                talents.skill.desired,
+                talentLimits[patch.ascension.desired]
+              ),
+            },
+            burst: {
+              ...talents.burst,
+              desired: Math.min(
+                talents.burst.desired,
+                talentLimits[patch.ascension.desired]
+              ),
+            },
+          },
+        };
       }
       patchCharacter(patch);
     },
@@ -147,6 +556,117 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
             ),
           },
         });
+      }
+    },
+    [character, patchCharacter]
+  );
+
+  const talentProgress = useMemo((): TalentProgress => {
+    if (character.name === "Traveler") {
+      const element = character.travelerCurrentElement as keyof TravelerTalentProgress;
+      const talents = character.talentLevels as TravelerTalentProgress;
+      return talents[element];
+    } else {
+      return character.talentLevels as TalentProgress;
+    }
+  }, [character]);
+
+  const changeCurrentTalentProgress = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      if (isTalentLevel.test(event.target.value)) {
+        const talentKey = event.target.name as keyof TalentProgress;
+        const current = Number(event.target.value);
+        let patch: Partial<CharacterEntity>;
+        let talent: TalentProgress;
+        if (character.name === "Traveler") {
+          const element = character.travelerCurrentElement as keyof TravelerTalentProgress;
+          const talents = character.talentLevels as TravelerTalentProgress;
+          patch = {
+            talentLevels: {
+              ...talents,
+              [element]: {
+                ...talents[element],
+                [talentKey]: {
+                  current: Math.min(
+                    current,
+                    talentLimits[character.ascension.current]
+                  ),
+                  desired: Math.max(
+                    Math.min(
+                      current,
+                      talentLimits[character.ascension.current]
+                    ),
+                    talents[element][talentKey].desired
+                  ),
+                },
+              },
+            },
+          };
+        } else {
+          talent = character.talentLevels as TalentProgress;
+          patch = {
+            talentLevels: {
+              ...talent,
+              [talentKey]: {
+                current: Math.min(
+                  current,
+                  talentLimits[character.ascension.current]
+                ),
+                desired: Math.max(
+                  Math.min(current, talentLimits[character.ascension.current]),
+                  talent[talentKey].desired
+                ),
+              },
+            },
+          };
+        }
+        patchCharacter(patch);
+      }
+    },
+    [character, patchCharacter]
+  );
+
+  const changeDesiredTalentProgress = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      if (isTalentLevel.test(event.target.value)) {
+        const talentKey = event.target.name as keyof TalentProgress;
+        const desired = Number(event.target.value);
+        let patch: Partial<CharacterEntity>;
+        let talent: TalentProgress;
+        if (character.name === "Traveler") {
+          const element = character.travelerCurrentElement as keyof TravelerTalentProgress;
+          const talents = character.talentLevels as TravelerTalentProgress;
+          patch = {
+            talentLevels: {
+              ...talents,
+              [element]: {
+                ...talents[element],
+                [talentKey]: {
+                  ...talents[element].attack,
+                  desired: Math.max(
+                    talents[element][talentKey].current,
+                    Math.min(desired, talentLimits[character.ascension.desired])
+                  ),
+                },
+              },
+            },
+          };
+        } else {
+          talent = character.talentLevels as TalentProgress;
+          patch = {
+            talentLevels: {
+              ...talent,
+              [talentKey]: {
+                ...talent[talentKey],
+                desired: Math.max(
+                  talent[talentKey].current,
+                  Math.min(desired, talentLimits[character.ascension.desired])
+                ),
+              },
+            },
+          };
+        }
+        patchCharacter(patch);
       }
     },
     [character, patchCharacter]
@@ -295,11 +815,13 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
           <span>Attack</span>
           <input
             aria-label={`${character.name}'s attack talent current level`}
+            name="attack"
             type="number"
             min="1"
             max="10"
             step="1"
-            defaultValue={6}
+            value={talentProgress.attack.current}
+            onChange={changeCurrentTalentProgress}
             disabled={!character.enabled}
           />
           <span>
@@ -307,11 +829,13 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
           </span>
           <input
             aria-label={`${character.name}'s attack talent desired level`}
+            name="attack"
             type="number"
             min="1"
             max="10"
             step="1"
-            defaultValue={8}
+            value={talentProgress.attack.desired}
+            onChange={changeDesiredTalentProgress}
             disabled={!character.enabled || lockDesired}
           />
         </div>
@@ -319,11 +843,13 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
           <span>Skill</span>
           <input
             aria-label={`${character.name}'s elemental skill talent current level`}
+            name="skill"
             type="number"
             min="1"
             max="10"
             step="1"
-            defaultValue={6}
+            value={talentProgress.skill.current}
+            onChange={changeCurrentTalentProgress}
             disabled={!character.enabled}
           />
           <span>
@@ -331,11 +857,13 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
           </span>
           <input
             aria-label={`${character.name}'s elemental skill talent desired level`}
+            name="skill"
             type="number"
             min="1"
             max="10"
             step="1"
-            defaultValue={8}
+            value={talentProgress.skill.desired}
+            onChange={changeDesiredTalentProgress}
             disabled={!character.enabled || lockDesired}
           />
         </div>
@@ -343,11 +871,13 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
           <span>Burst</span>
           <input
             aria-label={`${character.name}'s elemental burst talent current level`}
+            name="burst"
             type="number"
             min="1"
             max="10"
             step="1"
-            defaultValue={6}
+            value={talentProgress.burst.current}
+            onChange={changeCurrentTalentProgress}
             disabled={!character.enabled}
           />
           <span>
@@ -355,11 +885,13 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
           </span>
           <input
             aria-label={`${character.name}'s elemental burst talent desired level`}
+            name="burst"
             type="number"
             min="1"
             max="10"
             step="1"
-            defaultValue={8}
+            value={talentProgress.burst.desired}
+            onChange={changeDesiredTalentProgress}
             disabled={!character.enabled || lockDesired}
           />
         </div>
