@@ -6,6 +6,7 @@ import { useRecoilValue } from "recoil";
 import { ReactComponent as AscensionStar } from "../../assets/AscensionStar.svg";
 
 import { ElementType } from "../../data/characters";
+import { ascensionLimits, talentLimits } from "../../data/levelingData";
 
 import {
   CharacterEntity,
@@ -36,9 +37,6 @@ import {
   LevelProgress,
   Talents,
 } from "./styles";
-
-const ascensionLimits = [20, 40, 50, 60, 70, 80, 90];
-const talentLimits = [1, 1, 2, 4, 6, 8, 10];
 
 const isLevel = /^[1-9][0-9]*$/;
 const isTalentLevel = /^(10)|[1-9]$/;

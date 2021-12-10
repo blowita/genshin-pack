@@ -91,7 +91,11 @@ export const expTable = [
   8362650,
 ];
 
+export const ascensionLimits = [20, 40, 50, 60, 70, 80, 90];
+
 export const ascensionCost = [0, 20000, 60000, 120000, 200000, 300000, 420000];
+
+export const talentLimits = [1, 1, 2, 4, 6, 8, 10];
 
 export const talentUpgradeCost = [
   0,
