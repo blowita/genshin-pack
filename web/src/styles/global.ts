@@ -8,10 +8,15 @@ export default createGlobalStyle`
     outline: 0;
   }
 
+  html {
+    overflow: hidden;
+  }
+
   body {
     background: #222222;
     color: white;
     -webkit-font-smoothing: antialiased;
+    height: 100vh;
   }
 
   body, input, button, span {
