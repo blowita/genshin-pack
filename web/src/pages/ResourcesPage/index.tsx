@@ -4,6 +4,7 @@ import FlatList from "flatlist-react";
 import {
   GiBookCover,
   GiDroplets,
+  GiFireFlower,
   GiSwordSmithing,
   GiSwordwoman,
 } from "react-icons/gi";
@@ -107,6 +108,14 @@ const ResourcesPage: React.FC = () => {
         >
           <GiSwordSmithing />
           <span className="visuallyhidden">Weapon Ascension</span>
+        </CategoryButton>
+        <CategoryButton
+          data-title="Local Specialty"
+          selected={category === ResourceType.LocalSpecialty}
+          onClick={categorySelection(ResourceType.LocalSpecialty)}
+        >
+          <GiFireFlower />
+          <span className="visuallyhidden">Local Specialty</span>
         </CategoryButton>
       </Categories>
       <Content>

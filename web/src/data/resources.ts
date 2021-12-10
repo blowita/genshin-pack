@@ -3,6 +3,7 @@ export enum ResourceType {
   CharacterExp = "Character EXP Material",
   CommonAscension = "Common Ascension Material",
   CommonCurrency = "Common Currency",
+  LocalSpecialty = "Local Specialty",
   TalentLevelUp = "Talent Level-Up Material",
   WeaponAscension = "Weapon Ascension Material",
 }
@@ -1447,5 +1448,205 @@ export const resources: Resource[] = [
     rarity: 2,
     imageUrl:
       "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Item_Mask_of_the_Wicked_Lieutenant.png",
+  },
+  {
+    sortId: 901,
+    name: "Calla Lily",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Item_Calla_Lily.png",
+  },
+  {
+    sortId: 902,
+    name: "Wolfhook",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Item_Wolfhook.png",
+  },
+  {
+    sortId: 903,
+    name: "Valberry",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Item_Valberry.png",
+  },
+  {
+    sortId: 904,
+    name: "Cecilia",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Cecilia.png",
+  },
+  {
+    sortId: 905,
+    name: "Windwheel Aster",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Windwheel_Aster.png",
+  },
+  {
+    sortId: 906,
+    name: "Philanemo Mushroom",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Philanemo_Mushroom.png",
+  },
+  {
+    sortId: 907,
+    name: "Small Lamp Grass",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Small_Lamp_Grass.png",
+  },
+  {
+    sortId: 908,
+    name: "Dandelion Seed",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Item_Dandelion_Seed.png",
+  },
+  {
+    sortId: 909,
+    name: "Jueyun Chili",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Item_Jueyun_Chili.png",
+  },
+  {
+    sortId: 910,
+    name: "Noctilucous Jade",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Noctilucous_Jade.png",
+  },
+  {
+    sortId: 911,
+    name: "Silk Flower",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Item_Silk_Flower.png",
+  },
+  {
+    sortId: 912,
+    name: "Glaze Lily",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Item_Glaze_Lily.png",
+  },
+  {
+    sortId: 913,
+    name: "Qingxin",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Item_Qingxin.png",
+  },
+  {
+    sortId: 914,
+    name: "Starconch",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Item_Starconch.png",
+  },
+  {
+    sortId: 915,
+    name: "Violetgrass",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Item_Violetgrass.png",
+  },
+  {
+    sortId: 916,
+    name: "Cor Lapis",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Item_Cor_Lapis.png",
+  },
+  {
+    sortId: 917,
+    name: "Onikabuto",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Onikabuto.png",
+  },
+  {
+    sortId: 918,
+    name: "Sakura Bloom",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Item_Sakura_Bloom.png",
+  },
+  {
+    sortId: 919,
+    name: "Crystal Marrow",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Crystal_Marrow.png",
+  },
+  {
+    sortId: 920,
+    name: "Dendobrium",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Item_Dendrobium.png",
+  },
+  {
+    sortId: 921,
+    name: "Naku Weed",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Item_Naku_Weed.png",
+  },
+  {
+    sortId: 922,
+    name: "Sea Ganoderma",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Item_Sea_Ganoderma.png",
+  },
+  {
+    sortId: 923,
+    name: "Sango Pearl",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Item_Sango_Pearl.png",
+  },
+  {
+    sortId: 924,
+    name: "Amakumo Fruit",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Amakumo_Fruit.png",
+  },
+  {
+    sortId: 925,
+    name: "Fluorescent Fungus",
+    type: ResourceType.LocalSpecialty,
+    rarity: 1,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Fluorescent_Fungus.png",
   },
 ];
