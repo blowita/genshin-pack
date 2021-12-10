@@ -5,7 +5,7 @@ import { useRecoilValue } from "recoil";
 
 import { ReactComponent as AscensionStar } from "../../assets/AscensionStar.svg";
 
-import { characterStore } from "../../recoil/entities";
+import { CharacterEntity, characterStore } from "../../recoil/entities";
 
 import {
   lockAscensionsCheckbox,
@@ -55,12 +55,25 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
   const changeAscensionProgress = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
       const current = Number(event.target.value);
-      patchCharacter({
+      const patch = {
         ascension: {
           current,
           desired: Math.max(current, character.ascension.desired),
         },
-      });
+        level: {
+          ...character.level,
+        },
+      };
+      if (ascensionLimits[current] < patch.level.current) {
+        patch.level.current = ascensionLimits[current];
+      }
+      if (current > 0 && patch.level.current < ascensionLimits[current - 1]) {
+        patch.level.current = ascensionLimits[current - 1];
+      }
+      if (patch.level.desired < ascensionLimits[patch.ascension.desired - 1]) {
+        patch.level.desired = ascensionLimits[patch.ascension.desired - 1];
+      }
+      patchCharacter(patch);
     },
     [character, patchCharacter]
   );
@@ -68,12 +81,22 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
   const changeDesiredAscensionProgress = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
       const desired = Number(event.target.value);
-      patchCharacter({
+      const patch = {
         ascension: {
           ...character.ascension,
           desired: Math.max(character.ascension.current, desired),
         },
-      });
+        level: {
+          ...character.level,
+        },
+      };
+      if (ascensionLimits[desired] < patch.level.desired) {
+        patch.level.desired = ascensionLimits[desired];
+      }
+      if (desired > 0 && patch.level.desired < ascensionLimits[desired - 1]) {
+        patch.level.desired = ascensionLimits[desired - 1];
+      }
+      patchCharacter(patch);
     },
     [character, patchCharacter]
   );
@@ -82,16 +105,24 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
     (event: React.ChangeEvent<HTMLInputElement>) => {
       if (isLevel.test(event.target.value)) {
         const current = Number(event.target.value);
-        patchCharacter({
+        const patch = {
           level: {
             current: Math.min(
-              current,
-              ascensionLimits[character.ascension.current],
-              90
+              Math.max(
+                current,
+                character.ascension.current > 0
+                  ? ascensionLimits[character.ascension.current - 1]
+                  : 1
+              ),
+              ascensionLimits[character.ascension.current]
             ),
-            desired: Math.min(Math.max(current, character.level.desired), 90),
+            desired: Math.min(
+              Math.max(current, character.level.desired),
+              ascensionLimits[character.ascension.desired]
+            ),
           },
-        });
+        };
+        patchCharacter(patch);
       }
     },
     [character, patchCharacter]
@@ -105,9 +136,14 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
           level: {
             ...character.level,
             desired: Math.min(
-              Math.max(character.level.current, desired),
-              ascensionLimits[character.ascension.desired],
-              90
+              Math.max(
+                character.level.current,
+                desired,
+                character.ascension.desired > 0
+                  ? ascensionLimits[character.ascension.desired - 1]
+                  : 1
+              ),
+              ascensionLimits[character.ascension.desired]
             ),
           },
         });
