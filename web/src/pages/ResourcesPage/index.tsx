@@ -8,7 +8,7 @@ import {
   GiSwordwoman,
 } from "react-icons/gi";
 
-import { MoraCounter, ResourceCounter } from "../../components";
+import { ExpCounter, MoraCounter, ResourceCounter } from "../../components";
 
 import { Resource, resources, ResourceType } from "../../data/resources";
 
@@ -26,22 +26,40 @@ const targets = resources.map((item) => ({
   target: Math.floor(Math.random() * 999),
 }));
 
-const renderResourceListItem = (resource: Resource, key: number): JSX.Element =>
-  resource.name === "Mora" ? (
-    <MoraCounter
-      count={moraStock}
-      setCount={(value) => (moraStock = value)}
-      key={key}
-    />
-  ) : (
-    <ResourceCounter
-      resource={resource}
-      count={stocks[key].stock}
-      setCount={(value) => (stocks[key].stock = value)}
-      target={targets[key].target}
-      key={key}
-    />
-  );
+const renderResourceListItem = (
+  resource: Resource,
+  key: number
+): JSX.Element => {
+  switch (resource.type) {
+    case ResourceType.CommonCurrency:
+      return (
+        <MoraCounter
+          count={moraStock}
+          setCount={(value) => (moraStock = value)}
+          key={key}
+        />
+      );
+    case ResourceType.CharacterExp:
+      return (
+        <ExpCounter
+          resource={resource}
+          count={stocks[key].stock}
+          setCount={(value) => (stocks[key].stock = value)}
+          key={key}
+        />
+      );
+    default:
+      return (
+        <ResourceCounter
+          resource={resource}
+          count={stocks[key].stock}
+          setCount={(value) => (stocks[key].stock = value)}
+          target={targets[key].target}
+          key={key}
+        />
+      );
+  }
+};
 
 const ResourcesPage: React.FC = () => {
   const [category, setCategory] = useState<ResourceType | null>(null);
