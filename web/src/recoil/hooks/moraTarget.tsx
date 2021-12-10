@@ -12,7 +12,11 @@ import {
   characters as charactersList,
   ElementType,
 } from "../../data/characters";
-import { expTable, ascensionCost } from "../../data/levelingData";
+import {
+  expTable,
+  ascensionCost,
+  talentUpgradeCost,
+} from "../../data/levelingData";
 
 const ids = charactersList.map((character) => character.id);
 
@@ -27,7 +31,10 @@ const calculateMoraForLeveling = (character: CharacterEntity): number => {
 };
 
 const calculateMoraForTalent = (progressCounter: ProgressCounter): number => {
-  return progressCounter.desired - progressCounter.current;
+  return (
+    talentUpgradeCost[progressCounter.desired - 1] -
+    talentUpgradeCost[progressCounter.current - 1]
+  );
 };
 
 const calculateMoraForTalents = (character: CharacterEntity): number => {

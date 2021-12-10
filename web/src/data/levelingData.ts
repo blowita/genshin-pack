@@ -92,3 +92,16 @@ export const expTable = [
 ];
 
 export const ascensionCost = [0, 20000, 60000, 120000, 200000, 300000, 420000];
+
+export const talentUpgradeCost = [
+  0,
+  12500,
+  30000,
+  55000,
+  85000,
+  122500,
+  242500,
+  502500,
+  952500,
+  1652500,
+];
