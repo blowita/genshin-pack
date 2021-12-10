@@ -6,26 +6,21 @@ import {
 
 import { createEntityStore } from "./store";
 
-interface ProgressCounter {
+export interface ProgressCounter {
   current: number;
   desired: number;
 }
 
-interface TalentProgress {
+export interface TalentProgress {
   attack: ProgressCounter;
   skill: ProgressCounter;
   burst: ProgressCounter;
 }
 
-interface TravelerTalentProgress {
-  [ElementType.Anemo]: TalentProgress;
-  [ElementType.Cryo]: TalentProgress;
-  [ElementType.Dendro]: TalentProgress;
-  [ElementType.Electro]: TalentProgress;
-  [ElementType.Geo]: TalentProgress;
-  [ElementType.Hydro]: TalentProgress;
-  [ElementType.Pyro]: TalentProgress;
-}
+export type TravelerTalentProgress = Omit<
+  Record<ElementType, TalentProgress>,
+  ElementType.Adaptative
+>;
 
 interface CharacterState {
   formatVersion: string;

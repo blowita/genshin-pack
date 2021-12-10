@@ -16,8 +16,6 @@ import { Categories, CategoryButton, Container, Content } from "./styles";
 
 let moraStock = 0;
 
-const moraTarget = Math.floor(Math.random() * 100000000);
-
 const stocks = resources.map((item) => ({
   name: item.name,
   stock: 0,
@@ -33,7 +31,6 @@ const renderResourceListItem = (resource: Resource, key: number): JSX.Element =>
     <MoraCounter
       count={moraStock}
       setCount={(value) => (moraStock = value)}
-      target={moraTarget}
       key={key}
     />
   ) : (

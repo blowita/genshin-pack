@@ -4,6 +4,8 @@ import { FaStar } from "react-icons/fa";
 
 import { resources } from "../../data/resources";
 
+import { useMoraTarget } from "../../recoil/hooks/moraTarget";
+
 import { Container, Counter, Cover, Filler, Stars } from "./styles";
 
 const name = `Mora`;
@@ -14,15 +16,12 @@ const integerRegexp = /^[0-9]*$/;
 interface MoraCounterProps {
   count?: number;
   setCount: (count: number) => void;
-  target?: number;
 }
 
-const MoraCounter: React.FC<MoraCounterProps> = ({
-  count,
-  setCount,
-  target,
-}) => {
+const MoraCounter: React.FC<MoraCounterProps> = ({ count, setCount }) => {
   const [counter, setCounter] = useState(count || 0);
+
+  const { mora: target } = useMoraTarget();
 
   const changeCounter = useCallback((e) => {
     if (integerRegexp.test(e.target.value)) {
