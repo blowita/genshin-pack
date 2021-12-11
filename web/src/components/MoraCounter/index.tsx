@@ -2,14 +2,13 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 
 import { FaStar } from "react-icons/fa";
 
-import { resources } from "../../data/resources";
+import { moraId, resources } from "../../data/resources";
 
 import { useMoraTarget } from "../../recoil/hooks/moraTarget";
 
 import { Container, Counter, Cover, Filler, Stars } from "./styles";
 
-const name = `Mora`;
-const resource = resources.find((item) => item.name === name);
+const resource = resources.find((item) => item.id === moraId);
 
 const integerRegexp = /^[0-9]*$/;
 

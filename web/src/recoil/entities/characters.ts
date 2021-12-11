@@ -2,6 +2,7 @@ import {
   Character as CharacterInfo,
   characters,
   ElementType,
+  travelerId,
 } from "../../data/characters";
 
 import { createEntityStore } from "./store";
@@ -42,21 +43,7 @@ const generateCharacter = (id: string): CharacterEntity => {
     throw new Error(`Character with id ${id} doesn't exist`);
   }
 
-  if (character.name !== "Traveler") {
-    return {
-      ...character,
-      formatVersion: currentFormatVersion,
-      enabled: false,
-      ascension: { current: 0, desired: 0 },
-      level: { current: 1, desired: 1 },
-      travelerCurrentElement: null,
-      talentLevels: {
-        attack: { current: 1, desired: 1 },
-        skill: { current: 1, desired: 1 },
-        burst: { current: 1, desired: 1 },
-      },
-    };
-  } else {
+  if (character.id === travelerId) {
     return {
       ...character,
       formatVersion: currentFormatVersion,
@@ -100,6 +87,20 @@ const generateCharacter = (id: string): CharacterEntity => {
           skill: { current: 1, desired: 1 },
           burst: { current: 1, desired: 1 },
         },
+      },
+    };
+  } else {
+    return {
+      ...character,
+      formatVersion: currentFormatVersion,
+      enabled: false,
+      ascension: { current: 0, desired: 0 },
+      level: { current: 1, desired: 1 },
+      travelerCurrentElement: null,
+      talentLevels: {
+        attack: { current: 1, desired: 1 },
+        skill: { current: 1, desired: 1 },
+        burst: { current: 1, desired: 1 },
       },
     };
   }

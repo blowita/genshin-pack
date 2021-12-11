@@ -17,9 +17,11 @@ export interface Resource {
   imageUrl: string;
 }
 
+export const moraId = "1c15e536-b45d-4932-98f8-441656ffa1ae";
+
 export const resources: Resource[] = [
   {
-    id: "1c15e536-b45d-4932-98f8-441656ffa1ae",
+    id: moraId,
     sortId: 0,
     name: "Mora",
     type: ResourceType.CommonCurrency,

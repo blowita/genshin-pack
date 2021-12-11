@@ -11,6 +11,7 @@ import {
 import {
   characters as charactersList,
   ElementType,
+  travelerId,
 } from "../../data/characters";
 import {
   expTable,
@@ -42,7 +43,7 @@ const calculateMoraForTalents = (character: CharacterEntity): number => {
   let skillMora = 0;
   let burstMora = 0;
 
-  if (character.name === "Traveler") {
+  if (character.id === travelerId) {
     const talentsProgress = character.talentLevels as TravelerTalentProgress;
 
     const elements = [

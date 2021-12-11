@@ -28,9 +28,11 @@ export interface Character {
   imageUrl: string;
 }
 
+export const travelerId = "4d4e3070-a6ba-4024-87fd-c6ce9b82a61f";
+
 export const characters: Character[] = [
   {
-    id: "4d4e3070-a6ba-4024-87fd-c6ce9b82a61f",
+    id: travelerId,
     sortId: 0,
     name: "Traveler",
     element: ElementType.Adaptative,
