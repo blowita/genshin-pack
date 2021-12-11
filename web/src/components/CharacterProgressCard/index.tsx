@@ -9,17 +9,16 @@ import { ElementType, travelerId } from "../../data/characters";
 import { ascensionLimits, talentLimits } from "../../data/levelingData";
 
 import {
+  lockAscensionsCheckbox,
+  lockCharactersCheckbox,
+  lockDesiredCheckbox,
+} from "../../recoil/controls/CharactersPage";
+import {
   CharacterEntity,
   characterStore,
   TalentProgress,
   TravelerTalentProgress,
 } from "../../recoil/entities";
-
-import {
-  lockAscensionsCheckbox,
-  lockCharactersCheckbox,
-  lockDesiredCheckbox,
-} from "../../recoil/controls/CharactersPage";
 
 import CharacterAvatar from "../CharacterAvatar";
 

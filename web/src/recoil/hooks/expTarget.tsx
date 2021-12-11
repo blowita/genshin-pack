@@ -2,10 +2,8 @@ import React from "react";
 
 import { CharacterEntity, characterStore } from "../entities";
 
-import { characters as charactersList } from "../../data/characters";
+import { characterIds } from "../../data/characters";
 import { expTable } from "../../data/levelingData";
-
-const ids = charactersList.map((character) => character.id);
 
 const calculateExpForCharacter = (character: CharacterEntity): number => {
   return (
@@ -15,7 +13,7 @@ const calculateExpForCharacter = (character: CharacterEntity): number => {
 };
 
 const useExpTarget = (rarity: number): { expBooks: number } => {
-  const characters = characterStore.useEntityList(ids);
+  const characters = characterStore.useEntityList(characterIds);
 
   const calculateExpTarget = (): number => {
     return characters.reduce((sum, character) => {

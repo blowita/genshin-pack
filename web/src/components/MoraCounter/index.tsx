@@ -1,43 +1,37 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useMemo } from "react";
 
 import { FaStar } from "react-icons/fa";
 
-import { moraId, resources } from "../../data/resources";
+import { moraId } from "../../data/resources";
 
+import { resourceStore } from "../../recoil/entities";
 import { useMoraTarget } from "../../recoil/hooks/moraTarget";
 
 import { Container, Counter, Cover, Filler, Stars } from "./styles";
 
-const resource = resources.find((item) => item.id === moraId);
-
 const integerRegexp = /^[0-9]*$/;
 
-interface MoraCounterProps {
-  count?: number;
-  setCount: (count: number) => void;
-}
-
-const MoraCounter: React.FC<MoraCounterProps> = ({ count, setCount }) => {
-  const [counter, setCounter] = useState(count || 0);
+const MoraCounter: React.FC = () => {
+  const resource = resourceStore.useEntityValue(moraId);
+  const patchResource = resourceStore.usePatchEntity(moraId);
 
   const { mora: target } = useMoraTarget();
 
-  const changeCounter = useCallback((e) => {
-    if (integerRegexp.test(e.target.value)) {
-      const input = Number(e.target.value);
-      if (input >= 0 && input < 1000000000) {
-        setCounter(input);
+  const changeCounter = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      if (integerRegexp.test(event.target.value)) {
+        const input = Number(event.target.value);
+        if (input >= 0 && input < 1000000000) {
+          patchResource({ stock: input });
+        }
       }
-    }
-  }, []);
+    },
+    [patchResource]
+  );
 
   const fulfilled = useMemo(() => {
-    return !target || counter >= target;
-  }, [counter, target]);
-
-  useEffect(() => {
-    setCount(counter);
-  }, [counter, setCount]);
+    return !target || resource.stock >= target;
+  }, [resource, target]);
 
   return (
     <Container>
@@ -51,14 +45,14 @@ const MoraCounter: React.FC<MoraCounterProps> = ({ count, setCount }) => {
       </Cover>
       <Counter>
         <input
-          value={counter}
+          value={resource.stock}
           onChange={changeCounter}
           size={7}
-          aria-label={`${name} stored amount`}
+          aria-label="Amount of Mora acquired."
         />
         <span
           className={fulfilled ? "fulfilled" : "required"}
-          aria-label={`${name} required amount`}
+          aria-label="Amount of Mora required."
         >
           {target || "-"}
         </span>

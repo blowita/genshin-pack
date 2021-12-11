@@ -1,4 +1,7 @@
 import characterStore from "./characters";
-export * from "./characters";
+import resourceStore from "./resources";
 
-export { characterStore };
+export * from "./characters";
+export * from "./resources";
+
+export { characterStore, resourceStore };

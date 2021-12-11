@@ -1857,3 +1857,5 @@ export const resources: Resource[] = [
       "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Fluorescent_Fungus.png",
   },
 ];
+
+export const resourceIds = resources.map((r) => r.id);

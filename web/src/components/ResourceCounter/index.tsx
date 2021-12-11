@@ -1,11 +1,11 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 
 import { GrUpgrade } from "react-icons/gr";
 import { TiMinus, TiPlus } from "react-icons/ti";
 
-import { Resource } from "../../data/resources";
-
 import RarityDisplay from "../RarityDisplay";
+
+import { resourceStore } from "../../recoil/entities";
 
 import { Actions, Container, Counter, Cover, Filler } from "./styles";
 
@@ -14,48 +14,47 @@ const upgradable = false;
 const integerRegexp = /^[0-9]*$/;
 
 interface ResourceCounterProps {
-  resource: Resource;
-  count?: number;
-  setCount: (count: number) => void;
-  target?: number;
+  resourceId: string;
 }
 
-const ResourceCounter: React.FC<ResourceCounterProps> = ({
-  resource,
-  count,
-  setCount,
-  target,
-}) => {
-  const [counter, setCounter] = useState(count || 0);
+const ResourceCounter: React.FC<ResourceCounterProps> = ({ resourceId }) => {
   const [hideButtons, setHideButtons] = useState(true);
 
-  const name = `${resource.name} (${resource.type} - rarity ${resource.rarity})`;
+  const resource = resourceStore.useEntityValue(resourceId);
+  const patchResource = resourceStore.usePatchEntity(resourceId);
 
-  const increment = useCallback(() => {
-    return setCounter((c) => Math.min(c + 1, 9999));
-  }, []);
+  const target = 0;
 
-  const decrement = useCallback(
-    () => setCounter((c) => Math.max(c - 1, 0)),
-    []
+  const increment = useCallback(
+    () => patchResource({ stock: Math.min(resource.stock + 1, 9999) }),
+    [patchResource, resource]
   );
 
-  const changeCounter = useCallback((e) => {
-    if (integerRegexp.test(e.target.value)) {
-      const input = Number(e.target.value);
-      if (input >= 0 && input < 10000) {
-        setCounter(input);
+  const decrement = useCallback(
+    () => patchResource({ stock: Math.max(resource.stock - 1, 0) }),
+    [patchResource, resource]
+  );
+
+  const changeCounter = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      if (integerRegexp.test(event.target.value)) {
+        const input = Number(event.target.value);
+        if (input >= 0 && input < 10000) {
+          patchResource({ stock: input });
+        }
       }
-    }
-  }, []);
+    },
+    [patchResource]
+  );
+
+  const name = useMemo(
+    () => `${resource.name} (${resource.type} - rarity ${resource.rarity})`,
+    [resource]
+  );
 
   const fulfilled = useMemo(() => {
-    return !target || counter >= target;
-  }, [counter, target]);
-
-  useEffect(() => {
-    setCount(counter);
-  }, [counter, setCount]);
+    return !target || resource.stock >= target;
+  }, [resource, target]);
 
   return (
     <Container
@@ -68,6 +67,7 @@ const ResourceCounter: React.FC<ResourceCounterProps> = ({
       >
         <Actions hidden={hideButtons}>
           <button
+            type="button"
             className="plus"
             tabIndex={-1}
             onClick={increment}
@@ -76,6 +76,7 @@ const ResourceCounter: React.FC<ResourceCounterProps> = ({
             <TiPlus />
           </button>
           <button
+            type="button"
             className="minus"
             tabIndex={-1}
             onClick={decrement}
@@ -85,6 +86,7 @@ const ResourceCounter: React.FC<ResourceCounterProps> = ({
           </button>
           {upgradable && (
             <button
+              type="button"
               className="upgrade"
               tabIndex={-1}
               onClick={() => null}
@@ -99,7 +101,7 @@ const ResourceCounter: React.FC<ResourceCounterProps> = ({
       </Cover>
       <Counter>
         <input
-          value={counter}
+          value={resource.stock}
           onChange={changeCounter}
           size={3}
           aria-label={`${name} stored amount`}

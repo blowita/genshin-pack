@@ -8,18 +8,12 @@ import {
   TravelerTalentProgress,
 } from "../entities";
 
-import {
-  characters as charactersList,
-  ElementType,
-  travelerId,
-} from "../../data/characters";
+import { characterIds, ElementType, travelerId } from "../../data/characters";
 import {
   expTable,
   ascensionCost,
   talentUpgradeCost,
 } from "../../data/levelingData";
-
-const ids = charactersList.map((character) => character.id);
 
 const calculateMoraForLeveling = (character: CharacterEntity): number => {
   return (
@@ -80,7 +74,7 @@ const calculateMoraForCharacter = (character: CharacterEntity): number => {
 };
 
 const useMoraTarget = (): { mora: number } => {
-  const characters = characterStore.useEntityList(ids);
+  const characters = characterStore.useEntityList(characterIds);
 
   const calculateMoraTarget = (): number => {
     return characters.reduce((sum, character) => {

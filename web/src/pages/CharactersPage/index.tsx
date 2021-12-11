@@ -5,7 +5,7 @@ import { useRecoilState } from "recoil";
 
 import { CharacterProgressCard } from "../../components";
 
-import { characters } from "../../data/characters";
+import { characterIds } from "../../data/characters";
 
 import {
   hideUncheckedCheckbox,
@@ -17,8 +17,6 @@ import { characterStore, CharacterEntity } from "../../recoil/entities";
 
 import { Container, Content, Controls } from "./styles";
 
-const characterIdList = characters.map((c) => c.id);
-
 const renderCharacterProgressCard = (
   character: CharacterEntity,
   key: number
@@ -27,7 +25,7 @@ const renderCharacterProgressCard = (
 );
 
 const CharactersPage: React.FC = () => {
-  const characterList = characterStore.useEntityList(characterIdList);
+  const characterList = characterStore.useEntityList(characterIds);
 
   const [hideUnchecked, setHideUnchecked] = useRecoilState(
     hideUncheckedCheckbox

@@ -494,3 +494,5 @@ export const characters: Character[] = [
       "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Character_Amber_Thumb.png",
   },
 ];
+
+export const characterIds = characters.map((c) => c.id);

@@ -15,50 +15,17 @@ import { Resource, resources, ResourceType } from "../../data/resources";
 
 import { Categories, CategoryButton, Container, Content } from "./styles";
 
-let moraStock = 0;
-
-const stocks = resources.map((item) => ({
-  name: item.name,
-  stock: 0,
-}));
-
-const targets = resources.map((item) => ({
-  name: item.name,
-  target: Math.floor(Math.random() * 999),
-}));
-
 const renderResourceListItem = (
   resource: Resource,
   key: number
 ): JSX.Element => {
   switch (resource.type) {
     case ResourceType.CommonCurrency:
-      return (
-        <MoraCounter
-          count={moraStock}
-          setCount={(value) => (moraStock = value)}
-          key={key}
-        />
-      );
+      return <MoraCounter key={key} />;
     case ResourceType.CharacterExp:
-      return (
-        <ExpCounter
-          resource={resource}
-          count={stocks[key].stock}
-          setCount={(value) => (stocks[key].stock = value)}
-          key={key}
-        />
-      );
+      return <ExpCounter resourceId={resource.id} key={key} />;
     default:
-      return (
-        <ResourceCounter
-          resource={resource}
-          count={stocks[key].stock}
-          setCount={(value) => (stocks[key].stock = value)}
-          target={targets[key].target}
-          key={key}
-        />
-      );
+      return <ResourceCounter resourceId={resource.id} key={key} />;
   }
 };
 
