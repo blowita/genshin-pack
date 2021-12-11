@@ -37,7 +37,14 @@ export const Container = styled.div`
   background: white;
 `;
 
-export const Cover = styled.div<CoverProps>`
+export const Cover = styled.div.attrs<CoverProps>(
+  ({ resourceImageUrl, resourceRarity }) => ({
+    style: {
+      backgroundImage: `url(${resourceImageUrl})`,
+      backgroundColor: handleRarityType(resourceRarity),
+    },
+  })
+)<CoverProps>`
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -50,17 +57,10 @@ export const Cover = styled.div<CoverProps>`
 
   padding: 0.3rem;
 
-  ${(props) =>
-    props.resourceImageUrl &&
-    css`
-      background-image: url(${props.resourceImageUrl});
-    `}
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   background-origin: content-box;
-
-  background-color: ${(props) => handleRarityType(props.resourceRarity)};
 
   > div:last-of-type {
     width: 100%;
