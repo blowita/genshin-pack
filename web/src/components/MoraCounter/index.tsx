@@ -2,7 +2,7 @@ import React, { useCallback, useMemo } from "react";
 
 import { FaStar } from "react-icons/fa";
 
-import { moraId } from "../../data/resources";
+import { ResourceId } from "../../data/resources";
 
 import { resourceStore } from "../../recoil/entities";
 import { useMoraTarget } from "../../recoil/hooks/moraTarget";
@@ -12,8 +12,8 @@ import { Container, Counter, Cover, Filler, Stars } from "./styles";
 const integerRegexp = /^[0-9]*$/;
 
 const MoraCounter: React.FC = () => {
-  const resource = resourceStore.useEntityValue(moraId);
-  const patchResource = resourceStore.usePatchEntity(moraId);
+  const resource = resourceStore.useEntityValue(ResourceId.Mora);
+  const patchResource = resourceStore.usePatchEntity(ResourceId.Mora);
 
   const { mora: target } = useMoraTarget();
 

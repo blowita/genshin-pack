@@ -8,6 +8,11 @@ export enum ResourceType {
   WeaponAscension = "Weapon Ascension Material",
 }
 
+export enum ResourceId {
+  Mora = "1c15e536-b45d-4932-98f8-441656ffa1ae",
+  CrownOfInsight = "048f3845-0790-4387-bd7b-2ba6aa58ea20",
+}
+
 export interface Resource {
   id: string;
   sortId: number;
@@ -17,11 +22,9 @@ export interface Resource {
   imageUrl: string;
 }
 
-export const moraId = "1c15e536-b45d-4932-98f8-441656ffa1ae";
-
 export const resources: Resource[] = [
   {
-    id: moraId,
+    id: ResourceId.Mora,
     sortId: 0,
     name: "Mora",
     type: ResourceType.CommonCurrency,
@@ -1116,7 +1119,7 @@ export const resources: Resource[] = [
     type: ResourceType.TalentLevelUp,
     rarity: 4,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Item_Teachings_of_Ballad.png",
+      "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Philosophies_of_Ballad.png",
   },
   {
     id: "b82d3c82-b809-4622-b59a-3f035a009b40",
@@ -1134,7 +1137,7 @@ export const resources: Resource[] = [
     type: ResourceType.TalentLevelUp,
     rarity: 2,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Philosophies_of_Ballad.png",
+      "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Item_Teachings_of_Ballad.png",
   },
   {
     id: "4fe154b0-ed95-4a88-9adb-347715a71e8d",
@@ -1299,7 +1302,7 @@ export const resources: Resource[] = [
       "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Item_Teachings_of_Light.png",
   },
   {
-    id: "048f3845-0790-4387-bd7b-2ba6aa58ea20",
+    id: ResourceId.CrownOfInsight,
     sortId: 591,
     name: "Crown of Insight",
     type: ResourceType.TalentLevelUp,

@@ -17,6 +17,11 @@ export enum WeaponType {
   Polearm = "Polearm",
 }
 
+export enum CharacterId {
+  Traveler = "4d4e3070-a6ba-4024-87fd-c6ce9b82a61f",
+  Thoma = "ce714228-5ee7-42f5-a7e4-9e05852914a5",
+}
+
 export interface Character {
   id: string;
   sortId: number;
@@ -28,11 +33,9 @@ export interface Character {
   imageUrl: string;
 }
 
-export const travelerId = "4d4e3070-a6ba-4024-87fd-c6ce9b82a61f";
-
 export const characters: Character[] = [
   {
-    id: travelerId,
+    id: CharacterId.Traveler,
     sortId: 0,
     name: "Traveler",
     element: ElementType.Adaptative,
@@ -43,7 +46,7 @@ export const characters: Character[] = [
       "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Character_Traveler_Thumb.png",
   },
   {
-    id: "ce714228-5ee7-42f5-a7e4-9e05852914a5",
+    id: CharacterId.Thoma,
     sortId: 84,
     name: "Thoma",
     element: ElementType.Pyro,

@@ -6,6 +6,7 @@ import { TiMinus, TiPlus } from "react-icons/ti";
 import RarityDisplay from "../RarityDisplay";
 
 import { resourceStore } from "../../recoil/entities";
+import { useResourceTarget } from "../../recoil/hooks/resourceTarget";
 
 import { Actions, Container, Counter, Cover, Filler } from "./styles";
 
@@ -23,7 +24,7 @@ const ResourceCounter: React.FC<ResourceCounterProps> = ({ resourceId }) => {
   const resource = resourceStore.useEntityValue(resourceId);
   const patchResource = resourceStore.usePatchEntity(resourceId);
 
-  const target = 0;
+  const { target } = useResourceTarget(resourceId);
 
   const increment = useCallback(
     () => patchResource({ stock: Math.min(resource.stock + 1, 9999) }),

@@ -1,8 +1,8 @@
 import {
   Character as CharacterInfo,
+  CharacterId,
   characters,
   ElementType,
-  travelerId,
 } from "../../data/characters";
 
 import { createEntityStore } from "./store";
@@ -43,7 +43,7 @@ const generateCharacter = (id: string): CharacterEntity => {
     throw new Error(`Character with id ${id} doesn't exist`);
   }
 
-  if (character.id === travelerId) {
+  if (character.id === CharacterId.Traveler) {
     return {
       ...character,
       formatVersion: currentFormatVersion,

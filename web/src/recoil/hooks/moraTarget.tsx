@@ -6,7 +6,7 @@ import {
   TravelerTalentProgress,
 } from "../entities";
 
-import { characterIds, ElementType, travelerId } from "../../data/characters";
+import { CharacterId, characterIds, ElementType } from "../../data/characters";
 import {
   expTable,
   ascensionCost,
@@ -35,7 +35,7 @@ const calculateMoraForTalents = (character: CharacterEntity): number => {
   let skillMora = 0;
   let burstMora = 0;
 
-  if (character.id === travelerId) {
+  if (character.id === CharacterId.Traveler) {
     const talentsProgress = character.talentLevels as TravelerTalentProgress;
 
     const elements = [

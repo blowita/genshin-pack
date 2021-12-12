@@ -5,7 +5,7 @@ import { useRecoilValue } from "recoil";
 
 import { ReactComponent as AscensionStar } from "../../assets/AscensionStar.svg";
 
-import { ElementType, travelerId } from "../../data/characters";
+import { CharacterId, ElementType } from "../../data/characters";
 import { ascensionLimits, talentLimits } from "../../data/levelingData";
 
 import {
@@ -82,7 +82,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
       if (patch.level.desired < ascensionLimits[patch.ascension.desired - 1]) {
         patch.level.desired = ascensionLimits[patch.ascension.desired - 1];
       }
-      if (character.id === travelerId) {
+      if (character.id === CharacterId.Traveler) {
         const talents = patch.talentLevels as TravelerTalentProgress;
         patch = {
           ...patch,
@@ -305,7 +305,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
       if (desired > 0 && patch.level.desired < ascensionLimits[desired - 1]) {
         patch.level.desired = ascensionLimits[desired - 1];
       }
-      if (character.id === travelerId) {
+      if (character.id === CharacterId.Traveler) {
         const talents = patch.talentLevels as TravelerTalentProgress;
         patch = {
           ...patch,
@@ -559,7 +559,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
   );
 
   const talentProgress = useMemo((): TalentProgress => {
-    if (character.id === travelerId) {
+    if (character.id === CharacterId.Traveler) {
       const element = character.travelerCurrentElement as keyof TravelerTalentProgress;
       const talents = character.talentLevels as TravelerTalentProgress;
       return talents[element];
@@ -575,7 +575,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
         const current = Number(event.target.value);
         let patch: Partial<CharacterEntity>;
         let talent: TalentProgress;
-        if (character.id === travelerId) {
+        if (character.id === CharacterId.Traveler) {
           const element = character.travelerCurrentElement as keyof TravelerTalentProgress;
           const talents = character.talentLevels as TravelerTalentProgress;
           patch = {
@@ -630,7 +630,7 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
         const desired = Number(event.target.value);
         let patch: Partial<CharacterEntity>;
         let talent: TalentProgress;
-        if (character.id === travelerId) {
+        if (character.id === CharacterId.Traveler) {
           const element = character.travelerCurrentElement as keyof TravelerTalentProgress;
           const talents = character.talentLevels as TravelerTalentProgress;
           patch = {
