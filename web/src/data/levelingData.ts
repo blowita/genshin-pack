@@ -136,81 +136,72 @@ type CharacterResourcesMapping = Record<string, ResourcesMapping>;
 export const characterResourcesMapping = {
   [CharacterId.Traveler]: {
     ascension: {
-      // ResourceType.CharacterAscension
-      "c88006ba-b5e1-4590-9dc2-9bbd96372e6a": [0, 1, 1, 1, 1, 1, 1],
-      "72b955d1-45de-4bc2-8e6e-cfb12a2c7e4b": [0, 0, 3, 9, 9, 9, 9],
-      "daeacbd8-ee72-439a-9185-44cf1d4fe0e4": [0, 0, 0, 0, 3, 9, 9],
-      "0dd1b0ea-0903-473c-bebf-fdf140da4200": [0, 0, 0, 0, 0, 0, 6],
-      // ResourceType.LocalSpecialty
-      "d4046eaa-cabc-4964-87fc-d2ff8818be92": [0, 3, 13, 33, 63, 108, 168],
-      // ResourceType.CommonAscension
-      "01017501-c8f9-414f-bae3-49de240cd66d": [0, 3, 18, 18, 18, 18, 18],
-      "202312e1-90a4-4f42-97ad-f2abddb02dd8": [0, 0, 0, 12, 30, 30, 30],
-      "f2691f69-b517-4d99-8676-393f88c6c96b": [0, 0, 0, 0, 0, 12, 36],
+      [ResourceId.BrilliantDiamondSliver]: [0, 1, 1, 1, 1, 1, 1],
+      [ResourceId.BrilliantDiamondFragment]: [0, 0, 3, 9, 9, 9, 9],
+      [ResourceId.BrilliantDiamondChunk]: [0, 0, 0, 0, 3, 9, 9],
+      [ResourceId.BrilliantDiamondGemstone]: [0, 0, 0, 0, 0, 0, 6],
+      [ResourceId.WindwheelAster]: [0, 3, 13, 33, 63, 108, 168],
+      [ResourceId.DamagedMask]: [0, 3, 18, 18, 18, 18, 18],
+      [ResourceId.StainedMask]: [0, 0, 0, 12, 30, 30, 30],
+      [ResourceId.OminousMask]: [0, 0, 0, 0, 0, 12, 36],
     },
     talents: {
       [ElementType.Anemo]: {
-        // ResourceType.CommonAscension
-        "805f5d24-3125-4f7a-9dcf-b847db68f159": {
+        [ResourceId.DiviningScroll]: {
           attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
           skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
           burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
         },
-        "867000d4-38e0-4479-9b68-70f6a5815355": {
+        [ResourceId.SealedScroll]: {
           attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
           skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
           burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
         },
-        "73f5400b-57a6-41b3-92da-4060089e09cc": {
+        [ResourceId.ForbiddenCurseScroll]: {
           attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
           skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
           burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
         },
-        // ResourceType.TalentLevelUp (Books rarity 2)
-        "89295394-2833-448e-a711-5b579f2cd094": {
+        [ResourceId.TeachingsOfFreedom]: {
           attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
           skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
           burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
         },
-        // ResourceType.TalentLevelUp (Books rarity 3)
-        "a94aee18-6e37-4308-b570-f7f3f7e4a799": {
+        [ResourceId.GuideToFreedom]: {
           attack: [0, 0, 0, 0, 6, 6, 6, 6, 6, 6],
           skill: [0, 0, 0, 0, 6, 6, 6, 6, 6, 6],
           burst: [0, 0, 0, 0, 6, 6, 6, 6, 6, 6],
         },
-        "6b88e6ee-966f-482c-8152-3f9a65cecd95": {
+        [ResourceId.GuideToResistance]: {
           attack: [0, 0, 2, 2, 2, 11, 11, 11, 11, 11],
           skill: [0, 0, 2, 2, 2, 11, 11, 11, 11, 11],
           burst: [0, 0, 2, 2, 2, 11, 11, 11, 11, 11],
         },
-        "b82d3c82-b809-4622-b59a-3f035a009b40": {
+        [ResourceId.GuideToBallad]: {
           attack: [0, 0, 0, 4, 4, 4, 4, 4, 4, 4],
           skill: [0, 0, 0, 4, 4, 4, 4, 4, 4, 4],
           burst: [0, 0, 0, 4, 4, 4, 4, 4, 4, 4],
         },
-        // ResourceType.TalentLevelUp (Books rarity 4)
-        "70dc1c5e-fa86-4461-8b79-8118eb469470": {
+        [ResourceId.PhilosophiesOfFreedom]: {
           attack: [0, 0, 0, 0, 0, 0, 0, 6, 6, 6],
           skill: [0, 0, 0, 0, 0, 0, 0, 6, 6, 6],
           burst: [0, 0, 0, 0, 0, 0, 0, 6, 6, 6],
         },
-        "9654c0a1-8023-4991-a4e0-e2e20a0eb7de": {
+        [ResourceId.PhilosophiesOfResistance]: {
           attack: [0, 0, 0, 0, 0, 0, 0, 0, 12, 12],
           skill: [0, 0, 0, 0, 0, 0, 0, 0, 12, 12],
           burst: [0, 0, 0, 0, 0, 0, 0, 0, 12, 12],
         },
-        "1121fb80-96d6-40fb-b3c4-65b78b97def2": {
+        [ResourceId.PhilosophiesOfBallad]: {
           attack: [0, 0, 0, 0, 0, 0, 4, 4, 4, 20],
           skill: [0, 0, 0, 0, 0, 0, 4, 4, 4, 20],
           burst: [0, 0, 0, 0, 0, 0, 4, 4, 4, 20],
         },
-        // ResourceType.TalentLevelUp Boss
-        "b1669fd0-f362-4f15-ac2f-09ecbba07b97": {
+        [ResourceId.DvalinsSigh]: {
           attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
           skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
           burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
         },
-        // ResourceType.TalentLevelUp Crown
         [ResourceId.CrownOfInsight]: {
           attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
           skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
@@ -220,67 +211,61 @@ export const characterResourcesMapping = {
       [ElementType.Cryo]: undefined,
       [ElementType.Dendro]: undefined,
       [ElementType.Electro]: {
-        // ResourceType.CommonAscension
-        "4d8cdb1b-4a74-4d9f-8138-c9c27cf706ed": {
+        [ResourceId.OldHandguard]: {
           attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
           skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
           burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
         },
-        "7e9b3018-a410-4f0a-bf6a-a74a5b848c79": {
+        [ResourceId.KageuchiHandguard]: {
           attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
           skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
           burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
         },
-        "650b3317-0dd3-4e6d-98ff-fc204dd11b15": {
+        [ResourceId.FamedHandguard]: {
           attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
           skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
           burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
         },
-        // ResourceType.TalentLevelUp (Books rarity 2)
-        "7a183023-12e1-401b-aaa8-86463beaa79b": {
+        [ResourceId.TeachingsOfTransience]: {
           attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
           skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
           burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
         },
-        // ResourceType.TalentLevelUp (Books rarity 3)
-        "a7c40e1d-d21a-4d4c-9969-4c49cfb207d3": {
+        [ResourceId.GuideToTransience]: {
           attack: [0, 0, 0, 0, 6, 6, 6, 6, 6, 6],
           skill: [0, 0, 0, 0, 6, 6, 6, 6, 6, 6],
           burst: [0, 0, 0, 0, 6, 6, 6, 6, 6, 6],
         },
-        "dd735759-bf3f-4237-a003-f9b0b648e0ad": {
+        [ResourceId.GuideToElegance]: {
           attack: [0, 0, 2, 2, 2, 11, 11, 11, 11, 11],
           skill: [0, 0, 2, 2, 2, 11, 11, 11, 11, 11],
           burst: [0, 0, 2, 2, 2, 11, 11, 11, 11, 11],
         },
-        "79e6d524-fef9-4ed3-909f-3cb864610b72": {
+        [ResourceId.GuideToLight]: {
           attack: [0, 0, 0, 4, 4, 4, 4, 4, 4, 4],
           skill: [0, 0, 0, 4, 4, 4, 4, 4, 4, 4],
           burst: [0, 0, 0, 4, 4, 4, 4, 4, 4, 4],
         },
-        // ResourceType.TalentLevelUp (Books rarity 4)
-        "1977ddfe-00ef-43bd-9a08-9e49118cead0": {
+        [ResourceId.PhilosophiesOfTransience]: {
           attack: [0, 0, 0, 0, 0, 0, 0, 6, 6, 6],
           skill: [0, 0, 0, 0, 0, 0, 0, 6, 6, 6],
           burst: [0, 0, 0, 0, 0, 0, 0, 6, 6, 6],
         },
-        "babf7860-723b-4c6a-9e25-3c15b83a89a6": {
+        [ResourceId.PhilosophiesOfElegance]: {
           attack: [0, 0, 0, 0, 0, 0, 0, 0, 12, 12],
           skill: [0, 0, 0, 0, 0, 0, 0, 0, 12, 12],
           burst: [0, 0, 0, 0, 0, 0, 0, 0, 12, 12],
         },
-        "5fb093aa-0fc7-4d60-ad42-28b44679d717": {
+        [ResourceId.PhilosophiesOfLight]: {
           attack: [0, 0, 0, 0, 0, 0, 4, 4, 4, 20],
           skill: [0, 0, 0, 0, 0, 0, 4, 4, 4, 20],
           burst: [0, 0, 0, 0, 0, 0, 4, 4, 4, 20],
         },
-        // ResourceType.TalentLevelUp Boss
-        "5180192e-7e6a-4b23-9c6b-fe19dee4b88a": {
+        [ResourceId.DragonLordsCrown]: {
           attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
           skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
           burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
         },
-        // ResourceType.TalentLevelUp Crown
         [ResourceId.CrownOfInsight]: {
           attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
           skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
@@ -288,67 +273,116 @@ export const characterResourcesMapping = {
         },
       },
       [ElementType.Geo]: {
-        // ResourceType.CommonAscension
-        "805f5d24-3125-4f7a-9dcf-b847db68f159": {
+        [ResourceId.DiviningScroll]: {
           attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+          skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        },
+        [ResourceId.SealedScroll]: {
+          attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+          skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        },
+        [ResourceId.ForbiddenCurseScroll]: {
+          attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+          skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        },
+        [ResourceId.FirmArrowhead]: {
+          attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
           burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
         },
-        "867000d4-38e0-4479-9b68-70f6a5815355": {
-          attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        [ResourceId.SharpArrowhead]: {
+          attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
           burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
         },
-        "73f5400b-57a6-41b3-92da-4060089e09cc": {
-          attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        [ResourceId.WeatheredArrowhead]: {
+          attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
           burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
         },
-        // ResourceType.TalentLevelUp (Books rarity 2)
-        "89295394-2833-448e-a711-5b579f2cd094": {
+        [ResourceId.TeachingsOfFreedom]: {
           attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+          skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        },
+        [ResourceId.TeachingsOfProsperity]: {
+          attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
           burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
         },
-        // ResourceType.TalentLevelUp (Books rarity 3)
-        "a94aee18-6e37-4308-b570-f7f3f7e4a799": {
+        [ResourceId.GuideToFreedom]: {
           attack: [0, 0, 0, 0, 6, 6, 6, 6, 6, 6],
+          skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        },
+        [ResourceId.GuideToResistance]: {
+          attack: [0, 0, 2, 2, 2, 11, 11, 11, 11, 11],
+          skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        },
+        [ResourceId.GuideToBallad]: {
+          attack: [0, 0, 0, 4, 4, 4, 4, 4, 4, 4],
+          skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        },
+        [ResourceId.GuideToProsperity]: {
+          attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           skill: [0, 0, 0, 0, 6, 6, 6, 6, 6, 6],
           burst: [0, 0, 0, 0, 6, 6, 6, 6, 6, 6],
         },
-        "6b88e6ee-966f-482c-8152-3f9a65cecd95": {
-          attack: [0, 0, 2, 2, 2, 11, 11, 11, 11, 11],
+        [ResourceId.GuideToDiligence]: {
+          attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           skill: [0, 0, 2, 2, 2, 11, 11, 11, 11, 11],
           burst: [0, 0, 2, 2, 2, 11, 11, 11, 11, 11],
         },
-        "b82d3c82-b809-4622-b59a-3f035a009b40": {
-          attack: [0, 0, 0, 4, 4, 4, 4, 4, 4, 4],
+        [ResourceId.GuideToGold]: {
+          attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           skill: [0, 0, 0, 4, 4, 4, 4, 4, 4, 4],
           burst: [0, 0, 0, 4, 4, 4, 4, 4, 4, 4],
         },
-        // ResourceType.TalentLevelUp (Books rarity 4)
-        "70dc1c5e-fa86-4461-8b79-8118eb469470": {
+        [ResourceId.PhilosophiesOfFreedom]: {
           attack: [0, 0, 0, 0, 0, 0, 0, 6, 6, 6],
+          skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        },
+        [ResourceId.PhilosophiesOfResistance]: {
+          attack: [0, 0, 0, 0, 0, 0, 0, 0, 12, 12],
+          skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        },
+        [ResourceId.PhilosophiesOfBallad]: {
+          attack: [0, 0, 0, 0, 0, 0, 4, 4, 4, 20],
+          skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        },
+        [ResourceId.PhilosophiesOfProsperity]: {
+          attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           skill: [0, 0, 0, 0, 0, 0, 0, 6, 6, 6],
           burst: [0, 0, 0, 0, 0, 0, 0, 6, 6, 6],
         },
-        "9654c0a1-8023-4991-a4e0-e2e20a0eb7de": {
-          attack: [0, 0, 0, 0, 0, 0, 0, 0, 12, 12],
+        [ResourceId.PhilosophiesOfDiligence]: {
+          attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           skill: [0, 0, 0, 0, 0, 0, 0, 0, 12, 12],
           burst: [0, 0, 0, 0, 0, 0, 0, 0, 12, 12],
         },
-        "1121fb80-96d6-40fb-b3c4-65b78b97def2": {
-          attack: [0, 0, 0, 0, 0, 0, 4, 4, 4, 20],
+        [ResourceId.PhilosophiesOfGold]: {
+          attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           skill: [0, 0, 0, 0, 0, 0, 4, 4, 4, 20],
           burst: [0, 0, 0, 0, 0, 0, 4, 4, 4, 20],
         },
-        // ResourceType.TalentLevelUp Boss
-        "b1669fd0-f362-4f15-ac2f-09ecbba07b97": {
+        [ResourceId.DvalinsSigh]: {
           attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+          skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        },
+        [ResourceId.TailOfBoreas]: {
+          attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
           burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
         },
-        // ResourceType.TalentLevelUp Crown
         [ResourceId.CrownOfInsight]: {
           attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
           skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
@@ -361,61 +395,52 @@ export const characterResourcesMapping = {
   },
   [CharacterId.Thoma]: {
     ascension: {
-      // ResourceType.CharacterAscension
-      "4424a041-1ae1-4f4e-9688-eb478d60177d": [0, 0, 2, 6, 14, 26, 46],
-      "7cc35603-3bdb-4bbf-a190-8a9c65bdf687": [0, 1, 1, 1, 1, 1, 1],
-      "7c722573-c512-4a1b-b26e-7f3a92d8a8df": [0, 0, 3, 9, 9, 9, 9],
-      "51aa9fd3-5bea-47cc-90e3-d83c727e2fd3": [0, 0, 0, 0, 3, 9, 9],
-      "16d49bf8-03f8-4a91-8228-efaa8501518d": [0, 0, 0, 0, 0, 0, 6],
-      // ResourceType.LocalSpecialty
-      "c46875e1-5800-4eab-b858-6b887fb863c0": [0, 3, 13, 33, 63, 108, 168],
-      // ResourceType.CommonAscension
-      "6dc63deb-2b12-4c4e-b7c8-038ee95084b0": [0, 3, 18, 18, 18, 18, 18],
-      "6648e162-f681-4025-99c6-10c06aa0223f": [0, 0, 0, 12, 30, 30, 30],
-      "b53674e9-3f59-401c-b41c-ce4e39d23ea9": [0, 0, 0, 0, 0, 12, 36],
+      [ResourceId.SmolderingPearl]: [0, 0, 2, 6, 14, 26, 46],
+      [ResourceId.AgnidusAgateSliver]: [0, 1, 1, 1, 1, 1, 1],
+      [ResourceId.AgnidusAgateFragment]: [0, 0, 3, 9, 9, 9, 9],
+      [ResourceId.AgnidusAgateChunk]: [0, 0, 0, 0, 3, 9, 9],
+      [ResourceId.AgnidusAgateGemstone]: [0, 0, 0, 0, 0, 0, 6],
+      [ResourceId.FluorescentFungus]: [0, 3, 13, 33, 63, 108, 168],
+      [ResourceId.TreasureHoarderInsignia]: [0, 3, 18, 18, 18, 18, 18],
+      [ResourceId.SilverRavenInsignia]: [0, 0, 0, 12, 30, 30, 30],
+      [ResourceId.GoldenRavenInsignia]: [0, 0, 0, 0, 0, 12, 36],
     },
     talents: {
-      // ResourceType.CommonAscension
-      "6dc63deb-2b12-4c4e-b7c8-038ee95084b0": {
+      [ResourceId.TreasureHoarderInsignia]: {
         attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
         skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
         burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
       },
-      "6648e162-f681-4025-99c6-10c06aa0223f": {
+      [ResourceId.SilverRavenInsignia]: {
         attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
         skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
         burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
       },
-      "b53674e9-3f59-401c-b41c-ce4e39d23ea9": {
+      [ResourceId.GoldenRavenInsignia]: {
         attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
         skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
         burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
       },
-      // ResourceType.TalentLevelUp (Books rarity 2)
-      "7a183023-12e1-401b-aaa8-86463beaa79b": {
+      [ResourceId.TeachingsOfTransience]: {
         attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
         skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
         burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
       },
-      // ResourceType.TalentLevelUp (Books rarity 3)
-      "a7c40e1d-d21a-4d4c-9969-4c49cfb207d3": {
+      [ResourceId.GuideToTransience]: {
         attack: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
         skill: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
         burst: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
       },
-      // ResourceType.TalentLevelUp (Books rarity 4)
-      "1977ddfe-00ef-43bd-9a08-9e49118cead0": {
+      [ResourceId.PhilosophiesOfTransience]: {
         attack: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
         skill: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
         burst: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
       },
-      // ResourceType.TalentLevelUp Boss
-      "a17c2fc2-380f-4142-8c13-99845f2d3187": {
+      [ResourceId.HellfireButterfly]: {
         attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
         skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
         burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
       },
-      // ResourceType.TalentLevelUp Crown
       [ResourceId.CrownOfInsight]: {
         attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
