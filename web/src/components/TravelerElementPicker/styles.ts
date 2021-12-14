@@ -1,0 +1,105 @@
+import styled, { css } from "styled-components";
+
+import { shade } from "polished";
+
+import { ElementType } from "../../data/characters";
+
+interface CharacterElementAttrs {
+  "data-title": ElementType;
+}
+
+export const Container = styled.div`
+  position: relative;
+`;
+
+export const Button = styled.button`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  background-color: transparent;
+  color: white;
+  border-radius: 0.5rem;
+
+  :focus {
+    box-shadow: 0 0 0.8rem #5e916c;
+  }
+`;
+
+const elementImageUrls: Record<ElementType, string> = {
+  [ElementType.Adaptative]: "",
+  [ElementType.Anemo]:
+    "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
+  [ElementType.Cryo]:
+    "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
+  [ElementType.Dendro]:
+    "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
+  [ElementType.Electro]:
+    "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
+  [ElementType.Geo]:
+    "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png",
+  [ElementType.Hydro]:
+    "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
+  [ElementType.Pyro]:
+    "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+};
+
+const getElementImageUrl = (element: ElementType): string =>
+  elementImageUrls[element];
+
+export const CharacterElement = styled.div.attrs(
+  ({ "data-title": dataTitle }: CharacterElementAttrs) => ({
+    dataTitle: dataTitle || "",
+  })
+)`
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.2rem;
+
+  background-image: url(${(props) => getElementImageUrl(props.dataTitle)});
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-origin: content-box;
+
+  &[data-title]:after {
+    top: 1.5rem;
+    right: 1rem;
+
+    background-color: white;
+    color: black;
+    padding: 0 0.2rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+`;
+
+export const DropdownList = styled.div`
+  z-index: 100;
+  position: absolute;
+  top: 1.8rem;
+  left: -0.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.2rem;
+
+  background-color: #444;
+  border-radius: 0.5rem;
+
+  > button + button {
+    margin-top: 0.3rem;
+  }
+`;
+
+export const DropdownListItem = styled.button.attrs({ type: "button" })`
+  background-color: transparent;
+  width: 3rem;
+  border-radius: 0.5rem;
+
+  :focus-within {
+    box-shadow: 0 0 0.8em #5e916c;
+  }
+`;

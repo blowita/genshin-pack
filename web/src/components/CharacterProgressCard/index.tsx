@@ -21,6 +21,7 @@ import {
 } from "../../recoil/entities";
 
 import CharacterAvatar from "../CharacterAvatar";
+import TravelerElementPicker from "../TravelerElementPicker";
 
 import {
   Avatar,
@@ -686,9 +687,13 @@ const CharacterProgress: React.FC<CharacterProgressProps> = ({
           <span />
         </CharacterToggle>
         <Filler />
-        <CharacterElement data-title={character.element}>
-          <span className="visuallyhidden">{character.element}</span>
-        </CharacterElement>
+        {character.id === CharacterId.Traveler ? (
+          <TravelerElementPicker disabled={!character.enabled} />
+        ) : (
+          <CharacterElement data-title={character.element}>
+            <span className="visuallyhidden">{character.element}</span>
+          </CharacterElement>
+        )}
         <CharacterWeapon data-title={character.weapon}>
           <span className="visuallyhidden">{character.weapon}</span>
         </CharacterWeapon>
