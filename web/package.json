@@ -5,6 +5,7 @@
     "type": "git",
     "url": "git+https://github.com/blowita/genshin-pack.git"
   },
+  "homepage": "https://blowita.github.io/genshin-pack",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
