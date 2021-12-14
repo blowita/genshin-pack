@@ -7,6 +7,7 @@ import {
   GiFireFlower,
   GiSwordSmithing,
   GiSwordwoman,
+  GiTwoCoins,
 } from "react-icons/gi";
 
 import { ExpCounter, MoraCounter, ResourceCounter } from "../../components";
@@ -30,20 +31,36 @@ const renderResourceListItem = (
 };
 
 const ResourcesPage: React.FC = () => {
-  const [category, setCategory] = useState<ResourceType | null>(null);
+  const [category, setCategory] = useState<ResourceType | string | null>(null);
 
-  const categorySelection = (base: ResourceType) => {
+  const categorySelection = (base: ResourceType | string) => {
     return () => setCategory((category) => (category !== base ? base : null));
   };
 
   const filter = useCallback(
-    (item: Resource) => (category ? item.type === category : true),
+    (item: Resource) => {
+      if (category === "Mora and Exp") {
+        return (
+          item.type === ResourceType.CommonCurrency ||
+          item.type === ResourceType.CharacterExp
+        );
+      }
+      return category ? item.type === category : true;
+    },
     [category]
   );
 
   return (
     <Container>
       <Categories>
+        <CategoryButton
+          data-title="Mora and Exp"
+          selected={category === "Mora and Exp"}
+          onClick={categorySelection("Mora and Exp")}
+        >
+          <GiTwoCoins />
+          <span className="visuallyhidden">Mora and Exp</span>
+        </CategoryButton>
         <CategoryButton
           data-title="Monster Drops"
           selected={category === ResourceType.CommonAscension}

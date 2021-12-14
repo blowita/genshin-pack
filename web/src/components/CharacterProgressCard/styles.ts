@@ -189,7 +189,8 @@ export const CharacterElement = styled.div.attrs(
   background-origin: content-box;
 
   &[data-title]:after {
-    top: -1.8rem;
+    top: 1.5rem;
+    right: 1rem;
 
     background-color: white;
     color: black;
@@ -233,7 +234,8 @@ export const CharacterWeapon = styled.div.attrs(
   background-origin: content-box;
 
   &[data-title]:after {
-    top: -1.8rem;
+    top: 1.5rem;
+    right: 1rem;
 
     background-color: white;
     color: black;

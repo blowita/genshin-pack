@@ -52,25 +52,25 @@ export const CategoryButton = styled.button<CategoryButtonProps>`
 `;
 
 export const Content = styled.div`
-  margin: -0.5rem;
-  margin-top: 0.5rem;
   overflow-y: scroll;
   overflow-x: hidden;
   margin-bottom: 2.5rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
 
   ::-webkit-scrollbar {
-    width: 12px;
+    width: 1rem;
   }
 
   ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    border-radius: 0.9rem;
   }
 
   ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
+    border-radius: 0.9rem;
     background-color: #444;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.5);
   }
 
   > div {
@@ -78,6 +78,7 @@ export const Content = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: -0.5rem;
 
     > div {
       margin: 0.5rem;
