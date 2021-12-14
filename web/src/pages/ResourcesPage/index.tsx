@@ -106,6 +106,7 @@ const ResourcesPage: React.FC = () => {
         <FlatList
           list={resources}
           renderItem={renderResourceListItem}
+          renderOnScroll
           wrapperHtmlTag="div"
           renderWhenEmpty={() => <span>No items available.</span>}
           sortBy={["sortId"]}

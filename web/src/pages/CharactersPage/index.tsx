@@ -103,6 +103,7 @@ const CharactersPage: React.FC = () => {
         <FlatList
           list={characterList}
           renderItem={renderCharacterProgressCard}
+          renderOnScroll
           wrapperHtmlTag="div"
           renderWhenEmpty={() => <span>No items available.</span>}
           sortBy={["sortId"]}

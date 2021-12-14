@@ -16,6 +16,8 @@ export const Container = styled.div`
 `;
 
 export const Categories = styled.div`
+  margin-bottom: 1rem;
+
   > button + button {
     margin-left: 0.3rem;
   }
@@ -52,33 +54,37 @@ export const CategoryButton = styled.button<CategoryButtonProps>`
 `;
 
 export const Content = styled.div`
-  overflow-y: scroll;
-  overflow-x: hidden;
   margin-bottom: 2.5rem;
   padding-left: 1rem;
-  padding-top: 1rem;
-
-  ::-webkit-scrollbar {
-    width: 1rem;
-  }
-
-  ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.3);
-    border-radius: 0.9rem;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    border-radius: 0.9rem;
-    background-color: #444;
-    -webkit-box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.5);
-  }
+  height: calc(100vh - 8.25rem);
 
   > div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: flex-start;
     justify-content: center;
+    margin-left: -0.5rem;
     margin-top: -0.5rem;
+    height: 100%;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    ::-webkit-scrollbar {
+      width: 1rem;
+    }
+
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.3);
+      border-radius: 0.9rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 0.9rem;
+      background-color: #444;
+      -webkit-box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    }
 
     > div {
       margin: 0.5rem;
