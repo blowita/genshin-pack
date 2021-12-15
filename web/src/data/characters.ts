@@ -19,6 +19,8 @@ export enum WeaponType {
 
 export enum CharacterId {
   Traveler = "4d4e3070-a6ba-4024-87fd-c6ce9b82a61f",
+  AratakiItto = "ace0198e-11da-4078-8498-57bbd82cb177",
+  Gorou = "f263b932-3375-4b3d-bf45-5cd9db5f44d4",
   Thoma = "ce714228-5ee7-42f5-a7e4-9e05852914a5",
   SangonomiyaKokomi = "db8f3ec0-f645-4b35-bafe-d337e91a26de",
   RaidenShogun = "69d4be21-d4db-4bd5-aea9-6a7dcdbb7cfb",
@@ -86,8 +88,30 @@ export const characters: Character[] = [
       "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Character_Traveler_Thumb.png",
   },
   {
-    id: CharacterId.Thoma,
+    id: CharacterId.AratakiItto,
     sortId: 100,
+    name: "AratakiItto",
+    element: ElementType.Geo,
+    weapon: WeaponType.Claymore,
+    rarity: 5,
+    colab: false,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Character_Arataki_Itto_Thumb.png",
+  },
+  {
+    id: CharacterId.Gorou,
+    sortId: 200,
+    name: "Gorou",
+    element: ElementType.Geo,
+    weapon: WeaponType.Bow,
+    rarity: 4,
+    colab: false,
+    imageUrl:
+      "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Character_Gorou_Thumb.png",
+  },
+  {
+    id: CharacterId.Thoma,
+    sortId: 300,
     name: "Thoma",
     element: ElementType.Pyro,
     weapon: WeaponType.Polearm,
@@ -98,7 +122,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.SangonomiyaKokomi,
-    sortId: 200,
+    sortId: 400,
     name: "Sangonomiya Kokomi",
     element: ElementType.Hydro,
     weapon: WeaponType.Catalyst,
@@ -109,7 +133,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.RaidenShogun,
-    sortId: 300,
+    sortId: 500,
     name: "Raiden Shogun",
     element: ElementType.Electro,
     weapon: WeaponType.Polearm,
@@ -120,7 +144,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.KujouSara,
-    sortId: 400,
+    sortId: 600,
     name: "Kujou Sara",
     element: ElementType.Electro,
     weapon: WeaponType.Bow,
@@ -131,7 +155,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Aloy,
-    sortId: 500,
+    sortId: 700,
     name: "Aloy",
     element: ElementType.Cryo,
     weapon: WeaponType.Bow,
@@ -142,7 +166,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.KamisatoAyaka,
-    sortId: 600,
+    sortId: 800,
     name: "Kamisato Ayaka",
     element: ElementType.Cryo,
     weapon: WeaponType.Sword,
@@ -153,7 +177,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Yoimiya,
-    sortId: 700,
+    sortId: 900,
     name: "Yoimiya",
     element: ElementType.Pyro,
     weapon: WeaponType.Bow,
@@ -164,7 +188,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Sayu,
-    sortId: 800,
+    sortId: 1000,
     name: "Sayu",
     element: ElementType.Anemo,
     weapon: WeaponType.Claymore,
@@ -175,7 +199,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.KaedeharaKazuha,
-    sortId: 900,
+    sortId: 1100,
     name: "Kaedehara Kazuha",
     element: ElementType.Anemo,
     weapon: WeaponType.Sword,
@@ -186,7 +210,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Eula,
-    sortId: 1000,
+    sortId: 1200,
     name: "Eula",
     element: ElementType.Cryo,
     weapon: WeaponType.Claymore,
@@ -197,7 +221,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Yanfei,
-    sortId: 1100,
+    sortId: 1300,
     name: "Yanfei",
     element: ElementType.Pyro,
     weapon: WeaponType.Catalyst,
@@ -208,7 +232,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Rosaria,
-    sortId: 1200,
+    sortId: 1400,
     name: "Rosaria",
     element: ElementType.Cryo,
     weapon: WeaponType.Polearm,
@@ -219,7 +243,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.HuTao,
-    sortId: 1300,
+    sortId: 1500,
     name: "Hu Tao",
     element: ElementType.Pyro,
     weapon: WeaponType.Polearm,
@@ -230,7 +254,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Xiao,
-    sortId: 1400,
+    sortId: 1600,
     name: "Xiao",
     element: ElementType.Anemo,
     weapon: WeaponType.Polearm,
@@ -241,7 +265,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Ganyu,
-    sortId: 1500,
+    sortId: 1700,
     name: "Ganyu",
     element: ElementType.Cryo,
     weapon: WeaponType.Bow,
@@ -252,7 +276,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Albedo,
-    sortId: 1600,
+    sortId: 1800,
     name: "Albedo",
     element: ElementType.Geo,
     weapon: WeaponType.Sword,
@@ -263,7 +287,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Zhongli,
-    sortId: 1700,
+    sortId: 1900,
     name: "Zhongli",
     element: ElementType.Geo,
     weapon: WeaponType.Polearm,
@@ -274,7 +298,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Xinyan,
-    sortId: 1800,
+    sortId: 2000,
     name: "Xinyan",
     element: ElementType.Pyro,
     weapon: WeaponType.Claymore,
@@ -285,7 +309,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Tartaglia,
-    sortId: 1900,
+    sortId: 2100,
     name: "Tartaglia",
     element: ElementType.Hydro,
     weapon: WeaponType.Bow,
@@ -296,7 +320,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Diona,
-    sortId: 2000,
+    sortId: 2200,
     name: "Diona",
     element: ElementType.Cryo,
     weapon: WeaponType.Bow,
@@ -307,7 +331,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Klee,
-    sortId: 2100,
+    sortId: 2300,
     name: "Klee",
     element: ElementType.Pyro,
     weapon: WeaponType.Catalyst,
@@ -318,7 +342,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Venti,
-    sortId: 2200,
+    sortId: 2400,
     name: "Venti",
     element: ElementType.Anemo,
     weapon: WeaponType.Bow,
@@ -329,7 +353,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Keqing,
-    sortId: 2300,
+    sortId: 2500,
     name: "Keqing",
     element: ElementType.Electro,
     weapon: WeaponType.Sword,
@@ -340,7 +364,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Mona,
-    sortId: 2400,
+    sortId: 2600,
     name: "Mona",
     element: ElementType.Hydro,
     weapon: WeaponType.Catalyst,
@@ -351,7 +375,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Qiqi,
-    sortId: 2500,
+    sortId: 2700,
     name: "Qiqi",
     element: ElementType.Cryo,
     weapon: WeaponType.Sword,
@@ -362,7 +386,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Diluc,
-    sortId: 2600,
+    sortId: 2800,
     name: "Diluc",
     element: ElementType.Pyro,
     weapon: WeaponType.Claymore,
@@ -373,7 +397,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Jean,
-    sortId: 2700,
+    sortId: 2900,
     name: "Jean",
     element: ElementType.Anemo,
     weapon: WeaponType.Sword,
@@ -384,7 +408,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Sucrose,
-    sortId: 2800,
+    sortId: 3000,
     name: "Sucrose",
     element: ElementType.Anemo,
     weapon: WeaponType.Catalyst,
@@ -395,7 +419,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Chongyun,
-    sortId: 2900,
+    sortId: 3100,
     name: "Chongyun",
     element: ElementType.Cryo,
     weapon: WeaponType.Claymore,
@@ -406,7 +430,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Noelle,
-    sortId: 3000,
+    sortId: 3200,
     name: "Noelle",
     element: ElementType.Geo,
     weapon: WeaponType.Claymore,
@@ -417,7 +441,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Bennett,
-    sortId: 3100,
+    sortId: 3300,
     name: "Bennett",
     element: ElementType.Pyro,
     weapon: WeaponType.Sword,
@@ -428,7 +452,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Fischl,
-    sortId: 3200,
+    sortId: 3400,
     name: "Fischl",
     element: ElementType.Electro,
     weapon: WeaponType.Bow,
@@ -439,7 +463,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Ningguang,
-    sortId: 3300,
+    sortId: 3500,
     name: "Ningguang",
     element: ElementType.Geo,
     weapon: WeaponType.Catalyst,
@@ -450,7 +474,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Xingqiu,
-    sortId: 3400,
+    sortId: 3600,
     name: "Xingqiu",
     element: ElementType.Hydro,
     weapon: WeaponType.Sword,
@@ -461,7 +485,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Beidou,
-    sortId: 3500,
+    sortId: 3700,
     name: "Beidou",
     element: ElementType.Electro,
     weapon: WeaponType.Claymore,
@@ -472,7 +496,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Xiangling,
-    sortId: 3600,
+    sortId: 3800,
     name: "Xiangling",
     element: ElementType.Pyro,
     weapon: WeaponType.Polearm,
@@ -483,7 +507,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Razor,
-    sortId: 3700,
+    sortId: 3900,
     name: "Razor",
     element: ElementType.Electro,
     weapon: WeaponType.Claymore,
@@ -494,7 +518,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Barbara,
-    sortId: 3800,
+    sortId: 4000,
     name: "Barbara",
     element: ElementType.Hydro,
     weapon: WeaponType.Catalyst,
@@ -505,7 +529,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Lisa,
-    sortId: 3900,
+    sortId: 4100,
     name: "Lisa",
     element: ElementType.Electro,
     weapon: WeaponType.Catalyst,
@@ -516,7 +540,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Kaeya,
-    sortId: 4000,
+    sortId: 4200,
     name: "Kaeya",
     element: ElementType.Cryo,
     weapon: WeaponType.Sword,
@@ -527,7 +551,7 @@ export const characters: Character[] = [
   },
   {
     id: CharacterId.Amber,
-    sortId: 4100,
+    sortId: 4300,
     name: "Amber",
     element: ElementType.Pyro,
     weapon: WeaponType.Bow,
