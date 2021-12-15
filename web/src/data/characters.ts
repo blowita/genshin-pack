@@ -90,7 +90,7 @@ export const characters: Character[] = [
   {
     id: CharacterId.AratakiItto,
     sortId: 100,
-    name: "AratakiItto",
+    name: "Arataki Itto",
     element: ElementType.Geo,
     weapon: WeaponType.Claymore,
     rarity: 5,
