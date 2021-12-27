@@ -153,20 +153,15 @@ export const Filler = styled.div`
 
 const elementImageUrls: Record<ElementType, string> = {
   [ElementType.Adaptative]: "",
-  [ElementType.Anemo]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
-  [ElementType.Cryo]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
+  [ElementType.Anemo]: "/genshin-pack/static/images/element/Element_Anemo.png",
+  [ElementType.Cryo]: "/genshin-pack/static/images/element/Element_Cryo.png",
   [ElementType.Dendro]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
+    "/genshin-pack/static/images/element/Element_Dendro.png",
   [ElementType.Electro]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
-  [ElementType.Geo]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png",
-  [ElementType.Hydro]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
-  [ElementType.Pyro]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+    "/genshin-pack/static/images/element/Element_Electro.png",
+  [ElementType.Geo]: "/genshin-pack/static/images/element/Element_Geo.png",
+  [ElementType.Hydro]: "/genshin-pack/static/images/element/Element_Hydro.png",
+  [ElementType.Pyro]: "/genshin-pack/static/images/element/Element_Pyro.png",
 };
 
 const getElementImageUrl = (element: ElementType): string =>
@@ -202,16 +197,14 @@ export const CharacterElement = styled.div.attrs(
 `;
 
 const weaponImageUrls: Record<WeaponType, string> = {
-  [WeaponType.Bow]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Weapon-class-bow-icon.png",
+  [WeaponType.Bow]: "/genshin-pack/static/images/weapon/WeaponType_Bow.png",
   [WeaponType.Catalyst]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Weapon-class-catalyst-icon.png",
+    "/genshin-pack/static/images/weapon/WeaponType_Catalyst.png",
   [WeaponType.Claymore]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Weapon-class-claymore-icon.png",
+    "/genshin-pack/static/images/weapon/WeaponType_Claymore.png",
   [WeaponType.Polearm]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Weapon-class-polearm-icon.png",
-  [WeaponType.Sword]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Weapon-class-sword-icon.png",
+    "/genshin-pack/static/images/weapon/WeaponType_Polearm.png",
+  [WeaponType.Sword]: "/genshin-pack/static/images/weapon/WeaponType_Sword.png",
 };
 
 const getWeaponImageUrl = (weapon: WeaponType): string =>

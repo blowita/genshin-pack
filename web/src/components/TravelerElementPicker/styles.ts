@@ -26,20 +26,15 @@ export const Button = styled.button`
 
 const elementImageUrls: Record<ElementType, string> = {
   [ElementType.Adaptative]: "",
-  [ElementType.Anemo]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Element_Anemo.png",
-  [ElementType.Cryo]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Element_Cryo.png",
+  [ElementType.Anemo]: "/genshin-pack/static/images/element/Element_Anemo.png",
+  [ElementType.Cryo]: "/genshin-pack/static/images/element/Element_Cryo.png",
   [ElementType.Dendro]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Element_Dendro.png",
+    "/genshin-pack/static/images/element/Element_Dendro.png",
   [ElementType.Electro]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Electro.png",
-  [ElementType.Geo]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Element_Geo.png",
-  [ElementType.Hydro]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Element_Hydro.png",
-  [ElementType.Pyro]:
-    "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Element_Pyro.png",
+    "/genshin-pack/static/images/element/Element_Electro.png",
+  [ElementType.Geo]: "/genshin-pack/static/images/element/Element_Geo.png",
+  [ElementType.Hydro]: "/genshin-pack/static/images/element/Element_Hydro.png",
+  [ElementType.Pyro]: "/genshin-pack/static/images/element/Element_Pyro.png",
 };
 
 const getElementImageUrl = (element: ElementType): string =>

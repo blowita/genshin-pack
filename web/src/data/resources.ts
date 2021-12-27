@@ -28,7 +28,7 @@ export enum ResourceId {
   BlackCrystalHorn = "a2a0aa5f-c2f4-4035-af39-3d51cc023fbf",
   BlackBronzeHorn = "4206e476-9691-4bfb-a17f-62829cd7ad08",
   HeavyHorn = "9ad00489-f34d-429b-888c-4e755837c28d",
-  LeyLineSprouts = "600b0385-4f16-4bf4-a04e-0487e6f220a3",
+  LeyLineSprout = "600b0385-4f16-4bf4-a04e-0487e6f220a3",
   DeadLeyLineLeaves = "54ba5266-d0be-4aea-8997-e667e994446b",
   DeadLeyLineBranch = "cdf1d705-92c3-408a-a4fd-35bce9e6c7ac",
   ChaosCore = "0d820a95-be82-43b7-a29a-4c5b27529e41",
@@ -231,8 +231,7 @@ export const resources: Resource[] = [
     name: "Mora",
     type: ResourceType.CommonCurrency,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Icon_Mora.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_Mora.png",
   },
   {
     id: ResourceId.HerosWit,
@@ -240,8 +239,7 @@ export const resources: Resource[] = [
     name: "Hero's Wit",
     type: ResourceType.CharacterExp,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/2/26/Item_Hero%27s_Wit.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_HerosWit.png",
   },
   {
     id: ResourceId.AdventurersExperience,
@@ -249,8 +247,7 @@ export const resources: Resource[] = [
     name: "Adventurer's Experience",
     type: ResourceType.CharacterExp,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Item_Adventurer%27s_Experience.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_AdventurersExperience.png",
   },
   {
     id: ResourceId.WanderersAdvice,
@@ -258,8 +255,7 @@ export const resources: Resource[] = [
     name: "Wanderer's Advice",
     type: ResourceType.CharacterExp,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Item_Wanderer%27s_Advice.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_WanderersAdvice.png",
   },
   {
     id: ResourceId.SlimeConcentrate,
@@ -267,8 +263,7 @@ export const resources: Resource[] = [
     name: "Slime Concentrate",
     type: ResourceType.CommonAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/d/d8/Item_Slime_Concentrate.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_SlimeConcentrate.png",
   },
   {
     id: ResourceId.SlimeSecretions,
@@ -276,8 +271,7 @@ export const resources: Resource[] = [
     name: "Slime Secretions",
     type: ResourceType.CommonAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Slime_Secretions.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_SlimeSecretions.png",
   },
   {
     id: ResourceId.SlimeCondensate,
@@ -285,8 +279,7 @@ export const resources: Resource[] = [
     name: "Slime Condensate",
     type: ResourceType.CommonAscension,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Item_Slime_Condensate.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_SlimeCondensate.png",
   },
   {
     id: ResourceId.OminousMask,
@@ -294,8 +287,7 @@ export const resources: Resource[] = [
     name: "Ominous Mask",
     type: ResourceType.CommonAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Item_Ominous_Mask.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_OminousMask.png",
   },
   {
     id: ResourceId.StainedMask,
@@ -303,8 +295,7 @@ export const resources: Resource[] = [
     name: "Stained Mask",
     type: ResourceType.CommonAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Stained_Mask.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_StainedMask.png",
   },
   {
     id: ResourceId.DamagedMask,
@@ -312,8 +303,7 @@ export const resources: Resource[] = [
     name: "Damaged Mask",
     type: ResourceType.CommonAscension,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Damaged_Mask.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_DamagedMask.png",
   },
   {
     id: ResourceId.ForbiddenCurseScroll,
@@ -321,8 +311,7 @@ export const resources: Resource[] = [
     name: "Forbidden Curse Scroll",
     type: ResourceType.CommonAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Item_Forbidden_Curse_Scroll.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_ForbiddenCurseScroll.png",
   },
   {
     id: ResourceId.SealedScroll,
@@ -330,8 +319,7 @@ export const resources: Resource[] = [
     name: "Sealed Scroll",
     type: ResourceType.CommonAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Item_Sealed_Scroll.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_SealedScroll.png",
   },
   {
     id: ResourceId.DiviningScroll,
@@ -339,8 +327,7 @@ export const resources: Resource[] = [
     name: "Divining Scroll",
     type: ResourceType.CommonAscension,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Item_Divining_Scroll.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_DiviningScroll.png",
   },
   {
     id: ResourceId.WeatheredArrowhead,
@@ -348,8 +335,7 @@ export const resources: Resource[] = [
     name: "Weathered Arrowhead",
     type: ResourceType.CommonAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/2/22/Item_Weathered_Arrowhead.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_WeatheredArrowhead.png",
   },
   {
     id: ResourceId.SharpArrowhead,
@@ -357,8 +343,7 @@ export const resources: Resource[] = [
     name: "Sharp Arrowhead",
     type: ResourceType.CommonAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Item_Sharp_Arrowhead.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_SharpArrowhead.png",
   },
   {
     id: ResourceId.FirmArrowhead,
@@ -366,8 +351,7 @@ export const resources: Resource[] = [
     name: "Firm Arrowhead",
     type: ResourceType.CommonAscension,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Firm_Arrowhead.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_FirmArrowhead.png",
   },
   {
     id: ResourceId.BlackCrystalHorn,
@@ -375,8 +359,7 @@ export const resources: Resource[] = [
     name: "Black Crystal Horn",
     type: ResourceType.CommonAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/6/64/Item_Black_Crystal_Horn.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_BlackCrystalHorn.png",
   },
   {
     id: ResourceId.BlackBronzeHorn,
@@ -384,8 +367,7 @@ export const resources: Resource[] = [
     name: "Black Bronze Horn",
     type: ResourceType.CommonAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Item_Black_Bronze_Horn.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_BlackBronzeHorn.png",
   },
   {
     id: ResourceId.HeavyHorn,
@@ -393,17 +375,15 @@ export const resources: Resource[] = [
     name: "Heavy Horn",
     type: ResourceType.CommonAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/c/c0/Item_Heavy_Horn.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_HeavyHorn.png",
   },
   {
-    id: ResourceId.LeyLineSprouts,
+    id: ResourceId.LeyLineSprout,
     sortId: 26,
-    name: "Ley Line Sprouts",
+    name: "Ley Line Sprout",
     type: ResourceType.CommonAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/7/76/Item_Ley_Line_Sprout.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_LeyLineSprout.png",
   },
   {
     id: ResourceId.DeadLeyLineLeaves,
@@ -411,8 +391,7 @@ export const resources: Resource[] = [
     name: "Dead Ley Line Leaves",
     type: ResourceType.CommonAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Dead_Ley_Line_Leaves.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_DeadLeyLineLeaves.png",
   },
   {
     id: ResourceId.DeadLeyLineBranch,
@@ -420,8 +399,7 @@ export const resources: Resource[] = [
     name: "Dead Ley Line Branch",
     type: ResourceType.CommonAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/7/77/Item_Dead_Ley_Line_Branch.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_DeadLeyLineBranch.png",
   },
   {
     id: ResourceId.ChaosCore,
@@ -429,8 +407,7 @@ export const resources: Resource[] = [
     name: "Chaos Core",
     type: ResourceType.CommonAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Item_Chaos_Core.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_ChaosCore.png",
   },
   {
     id: ResourceId.ChaosCircuit,
@@ -438,8 +415,7 @@ export const resources: Resource[] = [
     name: "Chaos Circuit",
     type: ResourceType.CommonAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Item_Chaos_Circuit.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_ChaosCircuit.png",
   },
   {
     id: ResourceId.ChaosDevice,
@@ -447,8 +423,7 @@ export const resources: Resource[] = [
     name: "Chaos Device",
     type: ResourceType.CommonAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Item_Chaos_Device.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_ChaosDevice.png",
   },
   {
     id: ResourceId.MistGrassWick,
@@ -456,8 +431,7 @@ export const resources: Resource[] = [
     name: "Mist Grass Wick",
     type: ResourceType.CommonAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Item_Mist_Grass_Wick.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_MistGrassWick.png",
   },
   {
     id: ResourceId.MistGrass,
@@ -465,8 +439,7 @@ export const resources: Resource[] = [
     name: "Mist Grass",
     type: ResourceType.CommonAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/7/73/Item_Mist_Grass.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_MistGrass.png",
   },
   {
     id: ResourceId.MistGrassPollen,
@@ -474,8 +447,7 @@ export const resources: Resource[] = [
     name: "Mist Grass Pollen",
     type: ResourceType.CommonAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Mist_Grass_Pollen.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_MistGrassPollen.png",
   },
   {
     id: ResourceId.InspectorsSacrificialKnife,
@@ -484,7 +456,7 @@ export const resources: Resource[] = [
     type: ResourceType.CommonAscension,
     rarity: 4,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Item_Inspector%27s_Sacrificial_Knife.png",
+      "/genshin-pack/static/images/item/Item_InspectorsSacrificialKnife.png",
   },
   {
     id: ResourceId.AgentsSacrificialKnife,
@@ -493,7 +465,7 @@ export const resources: Resource[] = [
     type: ResourceType.CommonAscension,
     rarity: 3,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/5/55/Item_Agent%27s_Sacrificial_Knife.png",
+      "/genshin-pack/static/images/item/Item_AgentsSacrificialKnife.png",
   },
   {
     id: ResourceId.HuntersSacrificialKnife,
@@ -502,7 +474,7 @@ export const resources: Resource[] = [
     type: ResourceType.CommonAscension,
     rarity: 2,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Hunter%27s_Sacrificial_Knife.png",
+      "/genshin-pack/static/images/item/Item_HuntersSacrificialKnife.png",
   },
   {
     id: ResourceId.LieutenantsInsignia,
@@ -510,8 +482,7 @@ export const resources: Resource[] = [
     name: "Lieutenant's Insignia",
     type: ResourceType.CommonAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/d/db/Item_Lieutenant%27s_Insignia.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_LieutenantsInsignia.png",
   },
   {
     id: ResourceId.SergeantsInsignia,
@@ -519,8 +490,7 @@ export const resources: Resource[] = [
     name: "Sergeant's Insignia",
     type: ResourceType.CommonAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Sergeant%27s_Insignia.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_SergeantsInsignia.png",
   },
   {
     id: ResourceId.RecruitsInsignia,
@@ -528,8 +498,7 @@ export const resources: Resource[] = [
     name: "Recruit's Insignia",
     type: ResourceType.CommonAscension,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Item_Recruit%27s_Insignia.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_RecruitsInsignia.png",
   },
   {
     id: ResourceId.GoldenRavenInsignia,
@@ -537,8 +506,7 @@ export const resources: Resource[] = [
     name: "Golden Raven Insignia",
     type: ResourceType.CommonAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Golden_Raven_Insignia.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_GoldenRavenInsignia.png",
   },
   {
     id: ResourceId.SilverRavenInsignia,
@@ -546,8 +514,7 @@ export const resources: Resource[] = [
     name: "Silver Raven Insignia",
     type: ResourceType.CommonAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Item_Silver_Raven_Insignia.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_SilverRavenInsignia.png",
   },
   {
     id: ResourceId.TreasureHoarderInsignia,
@@ -556,7 +523,7 @@ export const resources: Resource[] = [
     type: ResourceType.CommonAscension,
     rarity: 1,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Item_Treasure_Hoarder_Insignia.png",
+      "/genshin-pack/static/images/item/Item_TreasureHoarderInsignia.png",
   },
   {
     id: ResourceId.EnergyNectar,
@@ -564,8 +531,7 @@ export const resources: Resource[] = [
     name: "Energy Nectar",
     type: ResourceType.CommonAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Item_Energy_Nectar.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_EnergyNectar.png",
   },
   {
     id: ResourceId.ShimmeringNectar,
@@ -573,8 +539,7 @@ export const resources: Resource[] = [
     name: "Shimmering Nectar",
     type: ResourceType.CommonAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Item_Shimmering_Nectar.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_ShimmeringNectar.png",
   },
   {
     id: ResourceId.WhopperflowerNectar,
@@ -582,8 +547,7 @@ export const resources: Resource[] = [
     name: "Whopperflower Nectar",
     type: ResourceType.CommonAscension,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/8/8b/Item_Whopperflower_Nectar.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_WhopperflowerNectar.png",
   },
   {
     id: ResourceId.FossilizedBoneShard,
@@ -591,8 +555,7 @@ export const resources: Resource[] = [
     name: "Fossilized Bone Shard",
     type: ResourceType.CommonAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/6/60/Item_Fossilized_Bone_Shard.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_FossilizedBoneShard.png",
   },
   {
     id: ResourceId.SturdyBoneShard,
@@ -600,8 +563,7 @@ export const resources: Resource[] = [
     name: "Sturdy Bone Shard",
     type: ResourceType.CommonAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Item_Sturdy_Bone_Shard.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_SturdyBoneShard.png",
   },
   {
     id: ResourceId.FragileBoneShard,
@@ -609,8 +571,7 @@ export const resources: Resource[] = [
     name: "Fragile Bone Shard",
     type: ResourceType.CommonAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/e/e5/Item_Fragile_Bone_Shard.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_FragileBoneShard.png",
   },
   {
     id: ResourceId.FamedHandguard,
@@ -618,8 +579,7 @@ export const resources: Resource[] = [
     name: "Famed Handguard",
     type: ResourceType.CommonAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Item_Famed_Handguard.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_FamedHandguard.png",
   },
   {
     id: ResourceId.KageuchiHandguard,
@@ -627,8 +587,7 @@ export const resources: Resource[] = [
     name: "Kageuchi Handguard",
     type: ResourceType.CommonAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Kageuchi_Handguard.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_KageuchiHandguard.png",
   },
   {
     id: ResourceId.OldHandguard,
@@ -636,8 +595,7 @@ export const resources: Resource[] = [
     name: "Old Handguard",
     type: ResourceType.CommonAscension,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Item_Old_Handguard.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_OldHandguard.png",
   },
   {
     id: ResourceId.ChaosOculus,
@@ -645,8 +603,7 @@ export const resources: Resource[] = [
     name: "Chaos Oculus",
     type: ResourceType.CommonAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Item_Chaos_Oculus.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_ChaosOculus.png",
   },
   {
     id: ResourceId.ChaosAxis,
@@ -654,8 +611,7 @@ export const resources: Resource[] = [
     name: "Chaos Axis",
     type: ResourceType.CommonAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Item_Chaos_Axis.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_ChaosAxis.png",
   },
   {
     id: ResourceId.ChaosGear,
@@ -663,8 +619,7 @@ export const resources: Resource[] = [
     name: "Chaos Gear",
     type: ResourceType.CommonAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Chaos_Gear.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_ChaosGear.png",
   },
   {
     id: ResourceId.PolarizingPrism,
@@ -672,8 +627,7 @@ export const resources: Resource[] = [
     name: "Polarizing Prism",
     type: ResourceType.CommonAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Item_Polarizing_Prism.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_PolarizingPrism.png",
   },
   {
     id: ResourceId.CrystalPrism,
@@ -681,8 +635,7 @@ export const resources: Resource[] = [
     name: "Crystal Prism",
     type: ResourceType.CommonAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Item_Crystal_Prism.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_CrystalPrism.png",
   },
   {
     id: ResourceId.DismalPrism,
@@ -690,8 +643,7 @@ export const resources: Resource[] = [
     name: "Dismal Prism",
     type: ResourceType.CommonAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Item_Dismal_Prism.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_DismalPrism.png",
   },
   {
     id: ResourceId.SpectralNucleus,
@@ -699,8 +651,7 @@ export const resources: Resource[] = [
     name: "Spectral Nucleus",
     type: ResourceType.CommonAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/e/ea/Item_Spectral_Nucleus.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_SpectralNucleus.png",
   },
   {
     id: ResourceId.SpectralHeart,
@@ -708,8 +659,7 @@ export const resources: Resource[] = [
     name: "Spectral Heart",
     type: ResourceType.CommonAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Spectral_Heart.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_SpectralHeart.png",
   },
   {
     id: ResourceId.SpectralHusk,
@@ -717,8 +667,7 @@ export const resources: Resource[] = [
     name: "Spectral Husk",
     type: ResourceType.CommonAscension,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/d/d2/Item_Spectral_Husk.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_SpectralHusk.png",
   },
   {
     id: ResourceId.ConcealedTalon,
@@ -726,8 +675,7 @@ export const resources: Resource[] = [
     name: "Concealed Talon",
     type: ResourceType.CommonAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Item_Concealed_Talon.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_ConcealedTalon.png",
   },
   {
     id: ResourceId.ConcealedUnguis,
@@ -735,8 +683,7 @@ export const resources: Resource[] = [
     name: "Concealed Unguis",
     type: ResourceType.CommonAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/97/Item_Concealed_Unguis.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_ConcealedUnguis.png",
   },
   {
     id: ResourceId.ConcealedClaw,
@@ -744,8 +691,7 @@ export const resources: Resource[] = [
     name: "Concealed Claw",
     type: ResourceType.CommonAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Item_Concealed_Claw.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_ConcealedClaw.png",
   },
   {
     id: ResourceId.DvalinsPlume,
@@ -753,8 +699,7 @@ export const resources: Resource[] = [
     name: "Dvalin's Plume",
     type: ResourceType.TalentLevelUp,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Item_Dvalin%27s_Plume.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_DvalinsPlume.png",
   },
   {
     id: ResourceId.DvalinsClaw,
@@ -762,8 +707,7 @@ export const resources: Resource[] = [
     name: "Dvalin's Claw",
     type: ResourceType.TalentLevelUp,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Item_Dvalin%27s_Claw.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_DvalinsClaw.png",
   },
   {
     id: ResourceId.DvalinsSigh,
@@ -771,8 +715,7 @@ export const resources: Resource[] = [
     name: "Dvalin's Sigh",
     type: ResourceType.TalentLevelUp,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Item_Dvalin%27s_Sigh.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_DvalinsSigh.png",
   },
   {
     id: ResourceId.TailOfBoreas,
@@ -780,8 +723,7 @@ export const resources: Resource[] = [
     name: "Tail of Boreas",
     type: ResourceType.TalentLevelUp,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Item_Tail_of_Boreas.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_TailOfBoreas.png",
   },
   {
     id: ResourceId.RingOfBoreas,
@@ -789,8 +731,7 @@ export const resources: Resource[] = [
     name: "Ring of Boreas",
     type: ResourceType.TalentLevelUp,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/d/d6/Item_Ring_of_Boreas.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_RingOfBoreas.png",
   },
   {
     id: ResourceId.SpiritLocketOfBoreas,
@@ -798,8 +739,7 @@ export const resources: Resource[] = [
     name: "Spirit Locket of Boreas",
     type: ResourceType.TalentLevelUp,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Item_Spirit_Locket_of_Boreas.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_SpiritLocketOfBoreas.png",
   },
   {
     id: ResourceId.TuskOfMonocerosCaeli,
@@ -807,8 +747,7 @@ export const resources: Resource[] = [
     name: "Tusk of Monoceros Caeli",
     type: ResourceType.TalentLevelUp,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/1/1c/Item_Tusk_of_Monoceros_Caeli.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_TuskOfMonocerosCaeli.png",
   },
   {
     id: ResourceId.ShardOfAFoulLegacy,
@@ -816,8 +755,7 @@ export const resources: Resource[] = [
     name: "Shard of a Foul Legacy",
     type: ResourceType.TalentLevelUp,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Item_Shard_of_a_Foul_Legacy.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_ShardOfAFoulLegacy.png",
   },
   {
     id: ResourceId.ShadowOfTheWarrior,
@@ -825,8 +763,7 @@ export const resources: Resource[] = [
     name: "Shadow of the Warrior",
     type: ResourceType.TalentLevelUp,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Item_Shadow_of_the_Warrior.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_ShadowOfTheWarrior.png",
   },
   {
     id: ResourceId.DragonLordsCrown,
@@ -834,8 +771,7 @@ export const resources: Resource[] = [
     name: "Dragon Lord's Crown",
     type: ResourceType.TalentLevelUp,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Item_Dragon_Lord%27s_Crown.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_DragonLordsCrown.png",
   },
   {
     id: ResourceId.BloodjadeBranch,
@@ -843,8 +779,7 @@ export const resources: Resource[] = [
     name: "Bloodjade Branch",
     type: ResourceType.TalentLevelUp,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Item_Bloodjade_Branch.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_BloodjadeBranch.png",
   },
   {
     id: ResourceId.GildedScale,
@@ -852,8 +787,7 @@ export const resources: Resource[] = [
     name: "Gilded Scale",
     type: ResourceType.TalentLevelUp,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Item_Gilded_Scale.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_GildedScale.png",
   },
   {
     id: ResourceId.MoltenMoment,
@@ -861,8 +795,7 @@ export const resources: Resource[] = [
     name: "Molten Moment",
     type: ResourceType.TalentLevelUp,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/44/Item_Molten_Moment.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_MoltenMoment.png",
   },
   {
     id: ResourceId.HellfireButterfly,
@@ -870,8 +803,7 @@ export const resources: Resource[] = [
     name: "Hellfire Butterfly",
     type: ResourceType.TalentLevelUp,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/1/16/Item_Hellfire_Butterfly.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_HellfireButterfly.png",
   },
   {
     id: ResourceId.AshenHeart,
@@ -879,8 +811,7 @@ export const resources: Resource[] = [
     name: "Ashen Heart",
     type: ResourceType.TalentLevelUp,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Item_Ashen_Heart.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_AshenHeart.png",
   },
   {
     id: ResourceId.HurricaneSeed,
@@ -888,8 +819,7 @@ export const resources: Resource[] = [
     name: "Hurricane Seed",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Item_Hurricane_Seed.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_HurricaneSeed.png",
   },
   {
     id: ResourceId.LightningPrism,
@@ -897,8 +827,7 @@ export const resources: Resource[] = [
     name: "Lightning Prism",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Lightning_Prism.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_LightningPrism.png",
   },
   {
     id: ResourceId.BasaltPillar,
@@ -906,8 +835,7 @@ export const resources: Resource[] = [
     name: "Basalt Pillar",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/b/bc/Item_Basalt_Pillar.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_BasaltPillar.png",
   },
   {
     id: ResourceId.HoarfrostCore,
@@ -915,8 +843,7 @@ export const resources: Resource[] = [
     name: "Hoarfrost Core",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/b/b5/Item_Hoarfrost_Core.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_HoarfrostCore.png",
   },
   {
     id: ResourceId.EverflameSeed,
@@ -924,8 +851,7 @@ export const resources: Resource[] = [
     name: "Everflame Seed",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/b/b2/Item_Everflame_Seed.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_EverflameSeed.png",
   },
   {
     id: ResourceId.CleansingHeart,
@@ -933,8 +859,7 @@ export const resources: Resource[] = [
     name: "Cleansing Heart",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Item_Cleansing_Heart.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_CleansingHeart.png",
   },
   {
     id: ResourceId.JuvenileJade,
@@ -942,8 +867,7 @@ export const resources: Resource[] = [
     name: "Juvenile Jade",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/f/f1/Item_Juvenile_Jade.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_JuvenileJade.png",
   },
   {
     id: ResourceId.CrystallineBloom,
@@ -951,8 +875,7 @@ export const resources: Resource[] = [
     name: "Crystalline Bloom",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/d/dc/Item_Crystalline_Bloom.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_CrystallineBloom.png",
   },
   {
     id: ResourceId.MarionetteCore,
@@ -960,8 +883,7 @@ export const resources: Resource[] = [
     name: "Marionette Core",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Item_Marionette_Core.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_MarionetteCore.png",
   },
   {
     id: ResourceId.PerpetualHeart,
@@ -969,8 +891,7 @@ export const resources: Resource[] = [
     name: "Perpetual Heart",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Item_Perpetual_Heart.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_PerpetualHeart.png",
   },
   {
     id: ResourceId.SmolderingPearl,
@@ -978,8 +899,7 @@ export const resources: Resource[] = [
     name: "Smoldering Pearl",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Item_Smoldering_Pearl.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_SmolderingPearl.png",
   },
   {
     id: ResourceId.DewOfRepudiation,
@@ -987,8 +907,7 @@ export const resources: Resource[] = [
     name: "Dew of Repudiation",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Item_Dew_of_Repudiation.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_DewOfRepudiation.png",
   },
   {
     id: ResourceId.StormBeads,
@@ -996,8 +915,7 @@ export const resources: Resource[] = [
     name: "Storm Beads",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/2/28/Item_Storm_Beads.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_StormBeads.png",
   },
   {
     id: ResourceId.RiftbornRegalia,
@@ -1005,8 +923,7 @@ export const resources: Resource[] = [
     name: "Riftborn Regalia",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Item_Riftborn_Regalia.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_RiftbornRegalia.png",
   },
   {
     id: ResourceId.BrilliantDiamondGemstone,
@@ -1015,7 +932,7 @@ export const resources: Resource[] = [
     type: ResourceType.CharacterAscension,
     rarity: 5,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Item_Brilliant_Diamond_Gemstone.png",
+      "/genshin-pack/static/images/item/Item_BrilliantDiamondGemstone.png",
   },
   {
     id: ResourceId.BrilliantDiamondChunk,
@@ -1023,8 +940,7 @@ export const resources: Resource[] = [
     name: "Brilliant Diamond Chunk",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Item_Brilliant_Diamond_Chunk.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_BrilliantDiamondChunk.png",
   },
   {
     id: ResourceId.BrilliantDiamondFragment,
@@ -1033,7 +949,7 @@ export const resources: Resource[] = [
     type: ResourceType.CharacterAscension,
     rarity: 3,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Item_Brilliant_Diamond_Fragment.png",
+      "/genshin-pack/static/images/item/Item_BrilliantDiamondFragment.png",
   },
   {
     id: ResourceId.BrilliantDiamondSliver,
@@ -1042,7 +958,7 @@ export const resources: Resource[] = [
     type: ResourceType.CharacterAscension,
     rarity: 2,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Item_Brilliant_Diamond_Sliver.png",
+      "/genshin-pack/static/images/item/Item_BrilliantDiamondSliver.png",
   },
   {
     id: ResourceId.AgnidusAgateGemstone,
@@ -1050,8 +966,7 @@ export const resources: Resource[] = [
     name: "Agnidus Agate Gemstone",
     type: ResourceType.CharacterAscension,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Item_Agnidus_Agate_Gemstone.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_AgnidusAgateGemstone.png",
   },
   {
     id: ResourceId.AgnidusAgateChunk,
@@ -1059,8 +974,7 @@ export const resources: Resource[] = [
     name: "Agnidus Agate Chunk",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Item_Agnidus_Agate_Chunk.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_AgnidusAgateChunk.png",
   },
   {
     id: ResourceId.AgnidusAgateFragment,
@@ -1068,8 +982,7 @@ export const resources: Resource[] = [
     name: "Agnidus Agate Fragment",
     type: ResourceType.CharacterAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Item_Agnidus_Agate_Fragment.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_AgnidusAgateFragment.png",
   },
   {
     id: ResourceId.AgnidusAgateSliver,
@@ -1077,8 +990,7 @@ export const resources: Resource[] = [
     name: "Agnidus Agate Sliver",
     type: ResourceType.CharacterAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Agnidus_Agate_Sliver.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_AgnidusAgateSliver.png",
   },
   {
     id: ResourceId.VarunadaLazuriteGemstone,
@@ -1087,7 +999,7 @@ export const resources: Resource[] = [
     type: ResourceType.CharacterAscension,
     rarity: 5,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Item_Varunada_Lazurite_Gemstone.png",
+      "/genshin-pack/static/images/item/Item_VarunadaLazuriteGemstone.png",
   },
   {
     id: ResourceId.VarunadaLazuriteChunk,
@@ -1095,8 +1007,7 @@ export const resources: Resource[] = [
     name: "Varunada Lazurite Chunk",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/f/f4/Item_Varunada_Lazurite_Chunk.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_VarunadaLazuriteChunk.png",
   },
   {
     id: ResourceId.VarunadaLazuriteFragment,
@@ -1105,7 +1016,7 @@ export const resources: Resource[] = [
     type: ResourceType.CharacterAscension,
     rarity: 3,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Item_Varunada_Lazurite_Fragment.png",
+      "/genshin-pack/static/images/item/Item_VarunadaLazuriteFragment.png",
   },
   {
     id: ResourceId.VarunadaLazuriteSliver,
@@ -1114,7 +1025,7 @@ export const resources: Resource[] = [
     type: ResourceType.CharacterAscension,
     rarity: 2,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/f/f8/Item_Varunada_Lazurite_Sliver.png",
+      "/genshin-pack/static/images/item/Item_VarunadaLazuriteSliver.png",
   },
   {
     id: ResourceId.VajradaAmethystGemstone,
@@ -1123,7 +1034,7 @@ export const resources: Resource[] = [
     type: ResourceType.CharacterAscension,
     rarity: 5,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/b/be/Item_Vajrada_Amethyst_Gemstone.png",
+      "/genshin-pack/static/images/item/Item_VajradaAmethystGemstone.png",
   },
   {
     id: ResourceId.VajradaAmethystChunk,
@@ -1131,8 +1042,7 @@ export const resources: Resource[] = [
     name: "Vajrada Amethyst Chunk",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/c/c1/Item_Vajrada_Amethyst_Chunk.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_VajradaAmethystChunk.png",
   },
   {
     id: ResourceId.VajradaAmethystFragment,
@@ -1141,7 +1051,7 @@ export const resources: Resource[] = [
     type: ResourceType.CharacterAscension,
     rarity: 3,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Vajrada_Amethyst_Fragment.png",
+      "/genshin-pack/static/images/item/Item_VajradaAmethystFragment.png",
   },
   {
     id: ResourceId.VajradaAmethystSliver,
@@ -1149,8 +1059,7 @@ export const resources: Resource[] = [
     name: "Vajrada Amethyst Sliver",
     type: ResourceType.CharacterAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Item_Vajrada_Amethyst_Sliver.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_VajradaAmethystSliver.png",
   },
   {
     id: ResourceId.VayudaTurquoiseGemstone,
@@ -1159,7 +1068,7 @@ export const resources: Resource[] = [
     type: ResourceType.CharacterAscension,
     rarity: 5,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Vayuda_Turquoise_Gemstone.png",
+      "/genshin-pack/static/images/item/Item_VayudaTurquoiseGemstone.png",
   },
   {
     id: ResourceId.VayudaTurquoiseChunk,
@@ -1167,8 +1076,7 @@ export const resources: Resource[] = [
     name: "Vayuda Turquoise Chunk",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_Vayuda_Turquoise_Chunk.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_VayudaTurquoiseChunk.png",
   },
   {
     id: ResourceId.VayudaTurquoiseFragment,
@@ -1177,7 +1085,7 @@ export const resources: Resource[] = [
     type: ResourceType.CharacterAscension,
     rarity: 3,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Vayuda_Turquoise_Fragment.png",
+      "/genshin-pack/static/images/item/Item_VayudaTurquoiseFragment.png",
   },
   {
     id: ResourceId.VayudaTurquoiseSliver,
@@ -1185,8 +1093,7 @@ export const resources: Resource[] = [
     name: "Vayuda Turquoise Sliver",
     type: ResourceType.CharacterAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Item_Vayuda_Turquoise_Sliver.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_VayudaTurquoiseSliver.png",
   },
   {
     id: ResourceId.ShivadaJadeGemstone,
@@ -1194,8 +1101,7 @@ export const resources: Resource[] = [
     name: "Shivada Jade Gemstone",
     type: ResourceType.CharacterAscension,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Item_Shivada_Jade_Gemstone.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_ShivadaJadeGemstone.png",
   },
   {
     id: ResourceId.ShivadaJadeChunk,
@@ -1203,8 +1109,7 @@ export const resources: Resource[] = [
     name: "Shivada Jade Chunk",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Item_Shivada_Jade_Chunk.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_ShivadaJadeChunk.png",
   },
   {
     id: ResourceId.ShivadaJadeFragment,
@@ -1212,8 +1117,7 @@ export const resources: Resource[] = [
     name: "Shivada Jade Fragment",
     type: ResourceType.CharacterAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/9a/Item_Shivada_Jade_Fragment.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_ShivadaJadeFragment.png",
   },
   {
     id: ResourceId.ShivadaJadeSliver,
@@ -1221,8 +1125,7 @@ export const resources: Resource[] = [
     name: "Shivada Jade Sliver",
     type: ResourceType.CharacterAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/8/87/Item_Shivada_Jade_Sliver.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_ShivadaJadeSliver.png",
   },
   {
     id: ResourceId.PrithivaTopazGemstone,
@@ -1230,8 +1133,7 @@ export const resources: Resource[] = [
     name: "Prithiva Topaz Gemstone",
     type: ResourceType.CharacterAscension,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/e/eb/Item_Prithiva_Topaz_Gemstone.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_PrithivaTopazGemstone.png",
   },
   {
     id: ResourceId.PrithivaTopazChunk,
@@ -1239,8 +1141,7 @@ export const resources: Resource[] = [
     name: "Prithiva Topaz Chunk",
     type: ResourceType.CharacterAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Item_Prithiva_Topaz_Chunk.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_PrithivaTopazChunk.png",
   },
   {
     id: ResourceId.PrithivaTopazFragment,
@@ -1248,8 +1149,7 @@ export const resources: Resource[] = [
     name: "Prithiva Topaz Fragment",
     type: ResourceType.CharacterAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/3e/Item_Prithiva_Topaz_Fragment.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_PrithivaTopazFragment.png",
   },
   {
     id: ResourceId.PrithivaTopazSliver,
@@ -1257,8 +1157,7 @@ export const resources: Resource[] = [
     name: "Prithiva Topaz Sliver",
     type: ResourceType.CharacterAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_Prithiva_Topaz_Sliver.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_PrithivaTopazSliver.png",
   },
   {
     id: ResourceId.PhilosophiesOfFreedom,
@@ -1266,8 +1165,7 @@ export const resources: Resource[] = [
     name: "Philosophies of Freedom",
     type: ResourceType.TalentLevelUp,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/c/c4/Item_Philosophies_of_Freedom.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_PhilosophiesOfFreedom.png",
   },
   {
     id: ResourceId.GuideToFreedom,
@@ -1275,8 +1173,7 @@ export const resources: Resource[] = [
     name: "Guide to Freedom",
     type: ResourceType.TalentLevelUp,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/1/1a/Item_Guide_to_Freedom.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_GuideToFreedom.png",
   },
   {
     id: ResourceId.TeachingsOfFreedom,
@@ -1284,8 +1181,7 @@ export const resources: Resource[] = [
     name: "Teachings of Freedom",
     type: ResourceType.TalentLevelUp,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Item_Teachings_of_Freedom.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_TeachingsOfFreedom.png",
   },
   {
     id: ResourceId.PhilosophiesOfResistance,
@@ -1294,7 +1190,7 @@ export const resources: Resource[] = [
     type: ResourceType.TalentLevelUp,
     rarity: 4,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Item_Philosophies_of_Resistance.png",
+      "/genshin-pack/static/images/item/Item_PhilosophiesOfResistance.png",
   },
   {
     id: ResourceId.GuideToResistance,
@@ -1302,8 +1198,7 @@ export const resources: Resource[] = [
     name: "Guide to Resistance",
     type: ResourceType.TalentLevelUp,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Item_Guide_to_Resistance.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_GuideToResistance.png",
   },
   {
     id: ResourceId.TeachingsOfResistance,
@@ -1311,8 +1206,7 @@ export const resources: Resource[] = [
     name: "Teachings of Resistance",
     type: ResourceType.TalentLevelUp,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_Teachings_of_Resistance.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_TeachingsOfResistance.png",
   },
   {
     id: ResourceId.PhilosophiesOfBallad,
@@ -1320,8 +1214,7 @@ export const resources: Resource[] = [
     name: "Philosophies of Ballad",
     type: ResourceType.TalentLevelUp,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/7/7e/Item_Philosophies_of_Ballad.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_PhilosophiesOfBallad.png",
   },
   {
     id: ResourceId.GuideToBallad,
@@ -1329,8 +1222,7 @@ export const resources: Resource[] = [
     name: "Guide to Ballad",
     type: ResourceType.TalentLevelUp,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Item_Guide_to_Ballad.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_GuideToBallad.png",
   },
   {
     id: ResourceId.TeachingsOfBallad,
@@ -1338,8 +1230,7 @@ export const resources: Resource[] = [
     name: "Teachings of Ballad",
     type: ResourceType.TalentLevelUp,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Item_Teachings_of_Ballad.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_TeachingsOfBallad.png",
   },
   {
     id: ResourceId.PhilosophiesOfProsperity,
@@ -1348,7 +1239,7 @@ export const resources: Resource[] = [
     type: ResourceType.TalentLevelUp,
     rarity: 4,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/b/bd/Item_Philosophies_of_Prosperity.png",
+      "/genshin-pack/static/images/item/Item_PhilosophiesOfProsperity.png",
   },
   {
     id: ResourceId.GuideToProsperity,
@@ -1356,8 +1247,7 @@ export const resources: Resource[] = [
     name: "Guide to Prosperity",
     type: ResourceType.TalentLevelUp,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/6/67/Item_Guide_to_Prosperity.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_GuideToProsperity.png",
   },
   {
     id: ResourceId.TeachingsOfProsperity,
@@ -1365,8 +1255,7 @@ export const resources: Resource[] = [
     name: "Teachings of Prosperity",
     type: ResourceType.TalentLevelUp,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Item_Teachings_of_Prosperity.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_TeachingsOfProsperity.png",
   },
   {
     id: ResourceId.PhilosophiesOfDiligence,
@@ -1375,7 +1264,7 @@ export const resources: Resource[] = [
     type: ResourceType.TalentLevelUp,
     rarity: 4,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Item_Philosophies_of_Diligence.png",
+      "/genshin-pack/static/images/item/Item_PhilosophiesOfDiligence.png",
   },
   {
     id: ResourceId.GuideToDiligence,
@@ -1383,8 +1272,7 @@ export const resources: Resource[] = [
     name: "Guide to Diligence",
     type: ResourceType.TalentLevelUp,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Item_Guide_to_Diligence.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_GuideToDiligence.png",
   },
   {
     id: ResourceId.TeachingsOfDiligence,
@@ -1392,8 +1280,7 @@ export const resources: Resource[] = [
     name: "Teachings of Diligence",
     type: ResourceType.TalentLevelUp,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/a/a7/Item_Teachings_of_Diligence.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_TeachingsOfDiligence.png",
   },
   {
     id: ResourceId.PhilosophiesOfGold,
@@ -1401,8 +1288,7 @@ export const resources: Resource[] = [
     name: "Philosophies of Gold",
     type: ResourceType.TalentLevelUp,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/01/Item_Philosophies_of_Gold.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_PhilosophiesOfGold.png",
   },
   {
     id: ResourceId.GuideToGold,
@@ -1410,8 +1296,7 @@ export const resources: Resource[] = [
     name: "Guide to Gold",
     type: ResourceType.TalentLevelUp,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/43/Item_Guide_to_Gold.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_GuideToGold.png",
   },
   {
     id: ResourceId.TeachingsOfGold,
@@ -1419,8 +1304,7 @@ export const resources: Resource[] = [
     name: "Teachings of Gold",
     type: ResourceType.TalentLevelUp,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/7/7f/Item_Teachings_of_Gold.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_TeachingsOfGold.png",
   },
   {
     id: ResourceId.PhilosophiesOfTransience,
@@ -1429,7 +1313,7 @@ export const resources: Resource[] = [
     type: ResourceType.TalentLevelUp,
     rarity: 4,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Item_Philosophies_of_Transience.png",
+      "/genshin-pack/static/images/item/Item_PhilosophiesOfTransience.png",
   },
   {
     id: ResourceId.GuideToTransience,
@@ -1437,8 +1321,7 @@ export const resources: Resource[] = [
     name: "Guide to Transience",
     type: ResourceType.TalentLevelUp,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/b/b0/Item_Guide_to_Transience.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_GuideToTransience.png",
   },
   {
     id: ResourceId.TeachingsOfTransience,
@@ -1446,8 +1329,7 @@ export const resources: Resource[] = [
     name: "Teachings of Transience",
     type: ResourceType.TalentLevelUp,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/4e/Item_Teachings_of_Transience.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_TeachingsOfTransience.png",
   },
   {
     id: ResourceId.PhilosophiesOfElegance,
@@ -1456,7 +1338,7 @@ export const resources: Resource[] = [
     type: ResourceType.TalentLevelUp,
     rarity: 4,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Item_Philosophies_of_Elegance.png",
+      "/genshin-pack/static/images/item/Item_PhilosophiesOfElegance.png",
   },
   {
     id: ResourceId.GuideToElegance,
@@ -1464,8 +1346,7 @@ export const resources: Resource[] = [
     name: "Guide to Elegance",
     type: ResourceType.TalentLevelUp,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Item_Guide_to_Elegance.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_GuideToElegance.png",
   },
   {
     id: ResourceId.TeachingsOfElegance,
@@ -1473,8 +1354,7 @@ export const resources: Resource[] = [
     name: "Teachings of Elegance",
     type: ResourceType.TalentLevelUp,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/f/f2/Item_Teachings_of_Elegance.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_TeachingsOfElegance.png",
   },
   {
     id: ResourceId.PhilosophiesOfLight,
@@ -1482,8 +1362,7 @@ export const resources: Resource[] = [
     name: "Philosophies of Light",
     type: ResourceType.TalentLevelUp,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Item_Philosophies_of_Light.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_PhilosophiesOfLight.png",
   },
   {
     id: ResourceId.GuideToLight,
@@ -1491,8 +1370,7 @@ export const resources: Resource[] = [
     name: "Guide to Light",
     type: ResourceType.TalentLevelUp,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/f/fe/Item_Guide_to_Light.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_GuideToLight.png",
   },
   {
     id: ResourceId.TeachingsOfLight,
@@ -1500,8 +1378,7 @@ export const resources: Resource[] = [
     name: "Teachings of Light",
     type: ResourceType.TalentLevelUp,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/5/5e/Item_Teachings_of_Light.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_TeachingsOfLight.png",
   },
   {
     id: ResourceId.CrownOfInsight,
@@ -1509,8 +1386,7 @@ export const resources: Resource[] = [
     name: "Crown of Insight",
     type: ResourceType.TalentLevelUp,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Item_Crown_of_Insight.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_CrownOfInsight.png",
   },
   {
     id: ResourceId.ScatteredPieceOfDecarabiansDream,
@@ -1519,7 +1395,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 5,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Item_Scattered_Piece_of_Decarabian%27s_Dream.png",
+      "/genshin-pack/static/images/item/Item_ScatteredPieceOfDecarabiansDream.png",
   },
   {
     id: ResourceId.FragmentOfDecarabiansEpic,
@@ -1528,7 +1404,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 4,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Fragment_of_Decarabian%27s_Epic.png",
+      "/genshin-pack/static/images/item/Item_FragmentOfDecarabiansEpic.png",
   },
   {
     id: ResourceId.DebrisOfDecarabiansCity,
@@ -1537,7 +1413,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 3,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Item_Debris_of_Decarabian%27s_City.png",
+      "/genshin-pack/static/images/item/Item_DebrisOfDecarabiansCity.png",
   },
   {
     id: ResourceId.TileOfDecarabiansTower,
@@ -1546,7 +1422,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 2,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Item_Tile_of_Decarabian%27s_Tower.png",
+      "/genshin-pack/static/images/item/Item_TileOfDecarabiansTower.png",
   },
   {
     id: ResourceId.BorealWolfsNostalgia,
@@ -1554,8 +1430,7 @@ export const resources: Resource[] = [
     name: "Boreal Wolf's Nostalgia",
     type: ResourceType.WeaponAscension,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/e/e0/Item_Boreal_Wolf%27s_Nostalgia.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_BorealWolfsNostalgia.png",
   },
   {
     id: ResourceId.BorealWolfsBrokenFang,
@@ -1563,8 +1438,7 @@ export const resources: Resource[] = [
     name: "Boreal Wolf's Broken Fang",
     type: ResourceType.WeaponAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Boreal_Wolf%27s_Broken_Fang.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_BorealWolfsBrokenFang.png",
   },
   {
     id: ResourceId.BorealWolfsCrackedTooth,
@@ -1573,7 +1447,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 3,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Item_Boreal_Wolf%27s_Cracked_Tooth.png",
+      "/genshin-pack/static/images/item/Item_BorealWolfsCrackedTooth.png",
   },
   {
     id: ResourceId.BorealWolfsMilkTooth,
@@ -1581,8 +1455,7 @@ export const resources: Resource[] = [
     name: "Boreal Wolf's Milk Tooth",
     type: ResourceType.WeaponAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Item_Boreal_Wolf%27s_Milk_Tooth.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_BorealWolfsMilkTooth.png",
   },
   {
     id: ResourceId.DreamOfTheDandelionGladiator,
@@ -1591,7 +1464,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 5,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/b/b4/Item_Dream_of_the_Dandelion_Gladiator.png",
+      "/genshin-pack/static/images/item/Item_DreamOfTheDandelionGladiator.png",
   },
   {
     id: ResourceId.ShacklesOfTheDandelionGladiator,
@@ -1600,7 +1473,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 4,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Shackles_of_the_Dandelion_Gladiator.png",
+      "/genshin-pack/static/images/item/Item_ShacklesOfTheDandelionGladiator.png",
   },
   {
     id: ResourceId.ChainsOfTheDandelionGladiator,
@@ -1609,7 +1482,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 3,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/a/ad/Item_Chains_of_the_Dandelion_Gladiator.png",
+      "/genshin-pack/static/images/item/Item_ChainsOfTheDandelionGladiator.png",
   },
   {
     id: ResourceId.FettersOfTheDandelionGladiator,
@@ -1618,7 +1491,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 2,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Item_Fetters_of_the_Dandelion_Gladiator.png",
+      "/genshin-pack/static/images/item/Item_FettersOfTheDandelionGladiator.png",
   },
   {
     id: ResourceId.DivineBodyFromGuyun,
@@ -1626,8 +1499,7 @@ export const resources: Resource[] = [
     name: "Divine Body from Guyun",
     type: ResourceType.WeaponAscension,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/e/e8/Item_Divine_Body_from_Guyun.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_DivineBodyfromGuyun.png",
   },
   {
     id: ResourceId.RelicFromGuyun,
@@ -1635,8 +1507,7 @@ export const resources: Resource[] = [
     name: "Relic from Guyun",
     type: ResourceType.WeaponAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/94/Item_Relic_from_Guyun.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_RelicfromGuyun.png",
   },
   {
     id: ResourceId.LustrousStoneFromGuyun,
@@ -1645,7 +1516,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 3,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/c/cb/Item_Lustrous_Stone_from_Guyun.png",
+      "/genshin-pack/static/images/item/Item_LustrousStonefromGuyun.png",
   },
   {
     id: ResourceId.LuminousSandsFromGuyun,
@@ -1654,7 +1525,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 2,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Item_Luminous_Sands_from_Guyun.png",
+      "/genshin-pack/static/images/item/Item_LuminousSandsfromGuyun.png",
   },
   {
     id: ResourceId.MistVeiledPrimoElixir,
@@ -1662,8 +1533,7 @@ export const resources: Resource[] = [
     name: "Mist Veiled Primo Elixir",
     type: ResourceType.WeaponAscension,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Item_Mist_Veiled_Primo_Elixir.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_MistVeiledPrimoElixir.png",
   },
   {
     id: ResourceId.MistVeiledGoldElixir,
@@ -1671,8 +1541,7 @@ export const resources: Resource[] = [
     name: "Mist Veiled Gold Elixir",
     type: ResourceType.WeaponAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Mist_Veiled_Gold_Elixir.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_MistVeiledGoldElixir.png",
   },
   {
     id: ResourceId.MistVeiledMercuryElixir,
@@ -1681,7 +1550,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 3,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Mist_Veiled_Mercury_Elixir.png",
+      "/genshin-pack/static/images/item/Item_MistVeiledMercuryElixir.png",
   },
   {
     id: ResourceId.MistVeiledLeadElixir,
@@ -1689,8 +1558,7 @@ export const resources: Resource[] = [
     name: "Mist Veiled Lead Elixir",
     type: ResourceType.WeaponAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Mist_Veiled_Lead_Elixir.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_MistVeiledLeadElixir.png",
   },
   {
     id: ResourceId.ChunkOfAerosiderite,
@@ -1698,8 +1566,7 @@ export const resources: Resource[] = [
     name: "Chunk of Aerosiderite",
     type: ResourceType.WeaponAscension,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/48/Item_Chunk_of_Aerosiderite.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_ChunkOfAerosiderite.png",
   },
   {
     id: ResourceId.BitOfAerosiderite,
@@ -1707,8 +1574,7 @@ export const resources: Resource[] = [
     name: "Bit of Aerosiderite",
     type: ResourceType.WeaponAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Bit_of_Aerosiderite.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_BitOfAerosiderite.png",
   },
   {
     id: ResourceId.PieceOfAerosiderite,
@@ -1716,8 +1582,7 @@ export const resources: Resource[] = [
     name: "Piece of Aerosiderite",
     type: ResourceType.WeaponAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Item_Piece_of_Aerosiderite.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_PieceOfAerosiderite.png",
   },
   {
     id: ResourceId.GrainOfAerosiderite,
@@ -1725,8 +1590,7 @@ export const resources: Resource[] = [
     name: "Grain of Aerosiderite",
     type: ResourceType.WeaponAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/47/Item_Grain_of_Aerosiderite.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_GrainOfAerosiderite.png",
   },
   {
     id: ResourceId.GoldenBranchOfADistantSea,
@@ -1735,7 +1599,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 5,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/e/ee/Item_Golden_Branch_of_a_Distant_Sea.png",
+      "/genshin-pack/static/images/item/Item_GoldenBranchOfADistantSea.png",
   },
   {
     id: ResourceId.JadeBranchOfADistantSea,
@@ -1744,7 +1608,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 4,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/2/29/Item_Jade_Branch_of_a_Distant_Sea.png",
+      "/genshin-pack/static/images/item/Item_JadeBranchOfADistantSea.png",
   },
   {
     id: ResourceId.JeweledBranchOfADistantSea,
@@ -1753,7 +1617,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 3,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/1/19/Item_Jeweled_Branch_of_a_Distant_Sea.png",
+      "/genshin-pack/static/images/item/Item_JeweledBranchOfADistantSea.png",
   },
   {
     id: ResourceId.CoralBranchOfADistantSea,
@@ -1762,7 +1626,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 2,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/a/a6/Item_Coral_Branch_of_a_Distant_Sea.png",
+      "/genshin-pack/static/images/item/Item_CoralBranchOfADistantSea.png",
   },
   {
     id: ResourceId.NarukamisValor,
@@ -1770,8 +1634,7 @@ export const resources: Resource[] = [
     name: "Narukami's Valor",
     type: ResourceType.WeaponAscension,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Item_Narukami%27s_Valor.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_NarukamisValor.png",
   },
   {
     id: ResourceId.NarukamisAffection,
@@ -1779,8 +1642,7 @@ export const resources: Resource[] = [
     name: "Narukami's Affection",
     type: ResourceType.WeaponAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/f/f5/Item_Narukami%27s_Affection.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_NarukamisAffection.png",
   },
   {
     id: ResourceId.NarukamisJoy,
@@ -1788,8 +1650,7 @@ export const resources: Resource[] = [
     name: "Narukami's Joy",
     type: ResourceType.WeaponAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Item_Narukami%27s_Joy.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_NarukamisJoy.png",
   },
   {
     id: ResourceId.NarukamisWisdom,
@@ -1797,8 +1658,7 @@ export const resources: Resource[] = [
     name: "Narukami's Wisdom",
     type: ResourceType.WeaponAscension,
     rarity: 2,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Item_Narukami%27s_Wisdom.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_NarukamisWisdom.png",
   },
   {
     id: ResourceId.MaskOfTheKijin,
@@ -1806,8 +1666,7 @@ export const resources: Resource[] = [
     name: "Mask of the Kijin",
     type: ResourceType.WeaponAscension,
     rarity: 5,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Item_Mask_of_the_Kijin.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_MaskOfTheKijin.png",
   },
   {
     id: ResourceId.MaskOfTheOneHorned,
@@ -1815,8 +1674,7 @@ export const resources: Resource[] = [
     name: "Mask of the One-Horned",
     type: ResourceType.WeaponAscension,
     rarity: 4,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/a/a9/Item_Mask_of_the_One-Horned.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_MaskOfTheOneHorned.png",
   },
   {
     id: ResourceId.MaskOfTheTigersBite,
@@ -1824,8 +1682,7 @@ export const resources: Resource[] = [
     name: "Mask of the Tiger's Bite",
     type: ResourceType.WeaponAscension,
     rarity: 3,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/93/Item_Mask_of_the_Tiger%27s_Bite.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_MaskOfTheTigersBite.png",
   },
   {
     id: ResourceId.MaskOfTheWickedLieutenant,
@@ -1834,7 +1691,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 2,
     imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Item_Mask_of_the_Wicked_Lieutenant.png",
+      "/genshin-pack/static/images/item/Item_MaskOfTheWickedLieutenant.png",
   },
   {
     id: ResourceId.CallaLily,
@@ -1842,8 +1699,7 @@ export const resources: Resource[] = [
     name: "Calla Lily",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Item_Calla_Lily.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_CallaLily.png",
   },
   {
     id: ResourceId.Wolfhook,
@@ -1851,8 +1707,7 @@ export const resources: Resource[] = [
     name: "Wolfhook",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/5/57/Item_Wolfhook.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_Wolfhook.png",
   },
   {
     id: ResourceId.Valberry,
@@ -1860,8 +1715,7 @@ export const resources: Resource[] = [
     name: "Valberry",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Item_Valberry.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_Valberry.png",
   },
   {
     id: ResourceId.Cecilia,
@@ -1869,8 +1723,7 @@ export const resources: Resource[] = [
     name: "Cecilia",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Item_Cecilia.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_Cecilia.png",
   },
   {
     id: ResourceId.WindwheelAster,
@@ -1878,8 +1731,7 @@ export const resources: Resource[] = [
     name: "Windwheel Aster",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Item_Windwheel_Aster.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_WindwheelAster.png",
   },
   {
     id: ResourceId.PhilanemoMushroom,
@@ -1887,8 +1739,7 @@ export const resources: Resource[] = [
     name: "Philanemo Mushroom",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Philanemo_Mushroom.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_PhilanemoMushroom.png",
   },
   {
     id: ResourceId.SmallLampGrass,
@@ -1896,8 +1747,7 @@ export const resources: Resource[] = [
     name: "Small Lamp Grass",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Item_Small_Lamp_Grass.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_SmallLampGrass.png",
   },
   {
     id: ResourceId.DandelionSeed,
@@ -1905,8 +1755,7 @@ export const resources: Resource[] = [
     name: "Dandelion Seed",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/d/de/Item_Dandelion_Seed.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_DandelionSeed.png",
   },
   {
     id: ResourceId.JueyunChili,
@@ -1914,8 +1763,7 @@ export const resources: Resource[] = [
     name: "Jueyun Chili",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/1/13/Item_Jueyun_Chili.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_JueyunChili.png",
   },
   {
     id: ResourceId.NoctilucousJade,
@@ -1923,8 +1771,7 @@ export const resources: Resource[] = [
     name: "Noctilucous Jade",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/8/84/Item_Noctilucous_Jade.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_NoctilucousJade.png",
   },
   {
     id: ResourceId.SilkFlower,
@@ -1932,8 +1779,7 @@ export const resources: Resource[] = [
     name: "Silk Flower",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/37/Item_Silk_Flower.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_SilkFlower.png",
   },
   {
     id: ResourceId.GlazeLily,
@@ -1941,8 +1787,7 @@ export const resources: Resource[] = [
     name: "Glaze Lily",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/e/e1/Item_Glaze_Lily.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_GlazeLily.png",
   },
   {
     id: ResourceId.Qingxin,
@@ -1950,8 +1795,7 @@ export const resources: Resource[] = [
     name: "Qingxin",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/2/2d/Item_Qingxin.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_Qingxin.png",
   },
   {
     id: ResourceId.Starconch,
@@ -1959,8 +1803,7 @@ export const resources: Resource[] = [
     name: "Starconch",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/46/Item_Starconch.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_Starconch.png",
   },
   {
     id: ResourceId.Violetgrass,
@@ -1968,8 +1811,7 @@ export const resources: Resource[] = [
     name: "Violetgrass",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/5/5d/Item_Violetgrass.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_Violetgrass.png",
   },
   {
     id: ResourceId.CorLapis,
@@ -1977,8 +1819,7 @@ export const resources: Resource[] = [
     name: "Cor Lapis",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/a/aa/Item_Cor_Lapis.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_CorLapis.png",
   },
   {
     id: ResourceId.Onikabuto,
@@ -1986,8 +1827,7 @@ export const resources: Resource[] = [
     name: "Onikabuto",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Item_Onikabuto.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_Onikabuto.png",
   },
   {
     id: ResourceId.SakuraBloom,
@@ -1995,8 +1835,7 @@ export const resources: Resource[] = [
     name: "Sakura Bloom",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/3d/Item_Sakura_Bloom.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_SakuraBloom.png",
   },
   {
     id: ResourceId.CrystalMarrow,
@@ -2004,8 +1843,7 @@ export const resources: Resource[] = [
     name: "Crystal Marrow",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Crystal_Marrow.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_CrystalMarrow.png",
   },
   {
     id: ResourceId.Dendobrium,
@@ -2013,8 +1851,7 @@ export const resources: Resource[] = [
     name: "Dendobrium",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Item_Dendrobium.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_Dendrobium.png",
   },
   {
     id: ResourceId.NakuWeed,
@@ -2022,8 +1859,7 @@ export const resources: Resource[] = [
     name: "Naku Weed",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/a/ac/Item_Naku_Weed.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_NakuWeed.png",
   },
   {
     id: ResourceId.SeaGanoderma,
@@ -2031,8 +1867,7 @@ export const resources: Resource[] = [
     name: "Sea Ganoderma",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Item_Sea_Ganoderma.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_SeaGanoderma.png",
   },
   {
     id: ResourceId.SangoPearl,
@@ -2040,8 +1875,7 @@ export const resources: Resource[] = [
     name: "Sango Pearl",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Item_Sango_Pearl.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_SangoPearl.png",
   },
   {
     id: ResourceId.AmakumoFruit,
@@ -2049,8 +1883,7 @@ export const resources: Resource[] = [
     name: "Amakumo Fruit",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Item_Amakumo_Fruit.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_AmakumoFruit.png",
   },
   {
     id: ResourceId.FluorescentFungus,
@@ -2058,8 +1891,7 @@ export const resources: Resource[] = [
     name: "Fluorescent Fungus",
     type: ResourceType.LocalSpecialty,
     rarity: 1,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/0f/Item_Fluorescent_Fungus.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_FluorescentFungus.png",
   },
 ];
 

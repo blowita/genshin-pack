@@ -7,7 +7,7 @@ import { ResourceId } from "../../data/resources";
 import { resourceStore } from "../../recoil/entities";
 import { useMoraTarget } from "../../recoil/hooks/moraTarget";
 
-import { Container, Counter, Cover, Filler, Stars } from "./styles";
+import { Container, Counter, Cover, CoverImage, Filler, Stars } from "./styles";
 
 const integerRegexp = /^[0-9]*$/;
 
@@ -35,13 +35,15 @@ const MoraCounter: React.FC = () => {
 
   return (
     <Container>
-      <Cover resourceImageUrl={resource ? resource.imageUrl : ""}>
-        <Filler />
-        <Stars>
-          {[...Array(resource?.rarity).keys()].map((key) => (
-            <FaStar key={key} />
-          ))}
-        </Stars>
+      <Cover resourceRarity={resource.rarity}>
+        <CoverImage resourceImageUrl={resource ? resource.imageUrl : ""}>
+          <Filler />
+          <Stars>
+            {[...Array(resource?.rarity).keys()].map((key) => (
+              <FaStar key={key} />
+            ))}
+          </Stars>
+        </CoverImage>
       </Cover>
       <Counter>
         <input

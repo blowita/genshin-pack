@@ -4,7 +4,7 @@ import { characters } from "../../data/characters";
 
 import RarityDisplay from "../RarityDisplay";
 
-import { Container } from "./styles";
+import { Container, CharacterImage } from "./styles";
 
 interface CharacterAvatarProps {
   characterId: string;
@@ -15,18 +15,17 @@ const CharacterAvatar: React.FC<CharacterAvatarProps> = ({ characterId }) => {
 
   return character ? (
     <Container
-      characterImageUrl={character.imageUrl}
       characterRarity={character.rarity}
       characterColab={character.colab}
     >
-      <RarityDisplay rarity={character.rarity} />
+      <CharacterImage characterImageUrl={character.imageUrl}>
+        <RarityDisplay rarity={character.rarity} />
+      </CharacterImage>
     </Container>
   ) : (
-    <Container
-      characterImageUrl="https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Character_Yaoyao_Thumb.png"
-      characterRarity={0}
-      characterColab={false}
-    />
+    <Container characterRarity={0} characterColab={false}>
+      <CharacterImage characterImageUrl="/genshin-pack/static/images/avatar/Avatar_Unknown.png" />
+    </Container>
   );
 };
 

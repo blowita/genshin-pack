@@ -84,8 +84,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Sword,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Character_Traveler_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Traveler.png",
   },
   {
     id: CharacterId.AratakiItto,
@@ -95,8 +94,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Claymore,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/7/79/Character_Arataki_Itto_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_AratakiItto.png",
   },
   {
     id: CharacterId.Gorou,
@@ -106,8 +104,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Bow,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Character_Gorou_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Gorou.png",
   },
   {
     id: CharacterId.Thoma,
@@ -117,8 +114,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Polearm,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/8/8a/Character_Thoma_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Thoma.png",
   },
   {
     id: CharacterId.SangonomiyaKokomi,
@@ -128,8 +124,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Catalyst,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Character_Sangonomiya_Kokomi_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_SangonomiyaKokomi.png",
   },
   {
     id: CharacterId.RaidenShogun,
@@ -139,8 +134,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Polearm,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/5/52/Character_Raiden_Shogun_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_RaidenShogun.png",
   },
   {
     id: CharacterId.KujouSara,
@@ -150,8 +144,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Bow,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/96/Character_Kujou_Sara_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_KujouSara.png",
   },
   {
     id: CharacterId.Aloy,
@@ -161,8 +154,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Bow,
     rarity: 5,
     colab: true,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Character_Aloy_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Aloy.png",
   },
   {
     id: CharacterId.KamisatoAyaka,
@@ -172,8 +164,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Sword,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Character_Kamisato_Ayaka_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_KamisatoAyaka.png",
   },
   {
     id: CharacterId.Yoimiya,
@@ -183,8 +174,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Bow,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/05/Character_Yoimiya_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Yoimiya.png",
   },
   {
     id: CharacterId.Sayu,
@@ -194,8 +184,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Claymore,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/e/ec/Character_Sayu_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Sayu.png",
   },
   {
     id: CharacterId.KaedeharaKazuha,
@@ -205,8 +194,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Sword,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/f/f0/Character_Kaedehara_Kazuha_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_KaedeharaKazuha.png",
   },
   {
     id: CharacterId.Eula,
@@ -216,8 +204,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Claymore,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Character_Eula_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Eula.png",
   },
   {
     id: CharacterId.Yanfei,
@@ -227,8 +214,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Catalyst,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/1/1f/Character_Yanfei_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Yanfei.png",
   },
   {
     id: CharacterId.Rosaria,
@@ -238,8 +224,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Polearm,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Character_Rosaria_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Rosaria.png",
   },
   {
     id: CharacterId.HuTao,
@@ -249,8 +234,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Polearm,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Character_Hu_Tao_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_HuTao.png",
   },
   {
     id: CharacterId.Xiao,
@@ -260,8 +244,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Polearm,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Character_Xiao_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Xiao.png",
   },
   {
     id: CharacterId.Ganyu,
@@ -271,8 +254,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Bow,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Character_Ganyu_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Ganyu.png",
   },
   {
     id: CharacterId.Albedo,
@@ -282,8 +264,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Sword,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/00/Character_Albedo_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Albedo.png",
   },
   {
     id: CharacterId.Zhongli,
@@ -293,8 +274,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Polearm,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/c/c2/Character_Zhongli_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Zhongli.png",
   },
   {
     id: CharacterId.Xinyan,
@@ -304,8 +284,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Claymore,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/9d/Character_Xinyan_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Xinyan.png",
   },
   {
     id: CharacterId.Tartaglia,
@@ -315,8 +294,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Bow,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/5/53/Character_Tartaglia_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Tartaglia.png",
   },
   {
     id: CharacterId.Diona,
@@ -326,8 +304,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Bow,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/b/b9/Character_Diona_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Diona.png",
   },
   {
     id: CharacterId.Klee,
@@ -337,8 +314,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Catalyst,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/c/c3/Character_Klee_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Klee.png",
   },
   {
     id: CharacterId.Venti,
@@ -348,8 +324,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Bow,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/8/8d/Character_Venti_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Venti.png",
   },
   {
     id: CharacterId.Keqing,
@@ -359,8 +334,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Sword,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/06/Character_Keqing_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Keqing.png",
   },
   {
     id: CharacterId.Mona,
@@ -370,8 +344,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Catalyst,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Character_Mona_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Mona.png",
   },
   {
     id: CharacterId.Qiqi,
@@ -381,8 +354,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Sword,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/d/d5/Character_Qiqi_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Qiqi.png",
   },
   {
     id: CharacterId.Diluc,
@@ -392,8 +364,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Claymore,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Character_Diluc_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Diluc.png",
   },
   {
     id: CharacterId.Jean,
@@ -403,8 +374,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Sword,
     rarity: 5,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/8/89/Character_Jean_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Jean.png",
   },
   {
     id: CharacterId.Sucrose,
@@ -414,8 +384,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Catalyst,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Character_Sucrose_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Sucrose.png",
   },
   {
     id: CharacterId.Chongyun,
@@ -425,8 +394,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Claymore,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/6/68/Character_Chongyun_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Chongyun.png",
   },
   {
     id: CharacterId.Noelle,
@@ -436,8 +404,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Claymore,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Character_Noelle_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Noelle.png",
   },
   {
     id: CharacterId.Bennett,
@@ -447,8 +414,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Sword,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/7/7b/Character_Bennett_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Bennett.png",
   },
   {
     id: CharacterId.Fischl,
@@ -458,8 +424,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Bow,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/1/14/Character_Fischl_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Fischl.png",
   },
   {
     id: CharacterId.Ningguang,
@@ -469,8 +434,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Catalyst,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/2/2b/Character_Ningguang_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Ningguang.png",
   },
   {
     id: CharacterId.Xingqiu,
@@ -480,8 +444,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Sword,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Character_Xingqiu_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Xingqiu.png",
   },
   {
     id: CharacterId.Beidou,
@@ -491,8 +454,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Claymore,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/6/61/Character_Beidou_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Beidou.png",
   },
   {
     id: CharacterId.Xiangling,
@@ -502,8 +464,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Polearm,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Character_Xiangling_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Xiangling.png",
   },
   {
     id: CharacterId.Razor,
@@ -513,8 +474,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Claymore,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/1/1d/Character_Razor_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Razor.png",
   },
   {
     id: CharacterId.Barbara,
@@ -524,8 +484,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Catalyst,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Character_Barbara_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Barbara.png",
   },
   {
     id: CharacterId.Lisa,
@@ -535,8 +494,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Catalyst,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Character_Lisa_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Lisa.png",
   },
   {
     id: CharacterId.Kaeya,
@@ -546,8 +504,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Sword,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/33/Character_Kaeya_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Kaeya.png",
   },
   {
     id: CharacterId.Amber,
@@ -557,8 +514,7 @@ export const characters: Character[] = [
     weapon: WeaponType.Bow,
     rarity: 4,
     colab: false,
-    imageUrl:
-      "https://static.wikia.nocookie.net/gensin-impact/images/c/c6/Character_Amber_Thumb.png",
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Amber.png",
   },
 ];
 

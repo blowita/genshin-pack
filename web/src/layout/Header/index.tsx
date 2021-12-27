@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import { FaUsers } from "react-icons/fa";
 import { GiLightBackpack } from "react-icons/gi";
 
 import { Container } from "./styles";
@@ -19,7 +18,10 @@ const Header: React.FC = () => {
               aria-current={["/", "/characters"].includes(pathname) && "page"}
               data-title="Characters"
             >
-              <FaUsers />
+              <img
+                src="/genshin-pack/static/images/icon/Icon_Character_Dark.png"
+                alt="Character"
+              />
               <span className="visuallyhidden">Characters</span>
             </Link>
           </li>

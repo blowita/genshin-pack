@@ -3,8 +3,11 @@ import styled, { css } from "styled-components";
 import { shade } from "polished";
 
 interface CoverProps {
-  resourceImageUrl: string;
   resourceRarity: number;
+}
+
+interface CoverImageProps {
+  resourceImageUrl: string;
 }
 
 interface ActionsProps {
@@ -26,6 +29,21 @@ const handleRarityType = (rarity: number): string => {
   }
 };
 
+const handleRarityBackground = (rarity: number): string => {
+  switch (rarity) {
+    case 5:
+      return "/genshin-pack/static/images/background/BG_Rarity_5.png";
+    case 4:
+      return "/genshin-pack/static/images/background/BG_Rarity_4.png";
+    case 3:
+      return "/genshin-pack/static/images/background/BG_Rarity_3.png";
+    case 2:
+      return "/genshin-pack/static/images/background/BG_Rarity_2.png";
+    default:
+      return "/genshin-pack/static/images/background/BG_Rarity_1.png";
+  }
+};
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -37,30 +55,42 @@ export const Container = styled.div`
   background: white;
 `;
 
-export const Cover = styled.div.attrs<CoverProps>(
-  ({ resourceImageUrl, resourceRarity }) => ({
-    style: {
-      backgroundImage: `url(${resourceImageUrl})`,
-      backgroundColor: handleRarityType(resourceRarity),
-    },
+export const Cover = styled.div.attrs<CoverProps>(({ resourceRarity }) => ({
+  style: {
+    backgroundImage: `url(${handleRarityBackground(resourceRarity)})`,
+    backgroundColor: handleRarityType(resourceRarity),
+  },
+}))<CoverProps>`
+  display: flex;
+  flex-grow: 1;
+
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 1rem 1rem;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-origin: content-box;
+`;
+
+export const CoverImage = styled.div.attrs<CoverImageProps>(
+  ({ resourceImageUrl }) => ({
+    style: { backgroundImage: `url(${resourceImageUrl})` },
   })
-)<CoverProps>`
+)<CoverImageProps>`
   display: flex;
   flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
 
-  border-top-left-radius: 0.3rem;
-  border-top-right-radius: 0.3rem;
-  border-bottom-right-radius: 1rem 1rem;
-
-  padding: 0.3rem;
-
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   background-origin: content-box;
+
+  padding: 0.3rem;
 
   > div:last-of-type {
     width: 100%;

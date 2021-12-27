@@ -8,7 +8,14 @@ import RarityDisplay from "../RarityDisplay";
 import { resourceStore } from "../../recoil/entities";
 import { useResourceTarget } from "../../recoil/hooks/resourceTarget";
 
-import { Actions, Container, Counter, Cover, Filler } from "./styles";
+import {
+  Actions,
+  Container,
+  Counter,
+  Cover,
+  CoverImage,
+  Filler,
+} from "./styles";
 
 const upgradable = false;
 
@@ -62,43 +69,42 @@ const ResourceCounter: React.FC<ResourceCounterProps> = ({ resourceId }) => {
       onMouseEnter={() => setHideButtons(false)}
       onMouseLeave={() => setHideButtons(true)}
     >
-      <Cover
-        resourceImageUrl={resource.imageUrl}
-        resourceRarity={resource.rarity}
-      >
-        <Actions hidden={hideButtons}>
-          <button
-            type="button"
-            className="plus"
-            tabIndex={-1}
-            onClick={increment}
-            aria-label={`Increment ${name} stored amount`}
-          >
-            <TiPlus />
-          </button>
-          <button
-            type="button"
-            className="minus"
-            tabIndex={-1}
-            onClick={decrement}
-            aria-label={`Decrement ${name} stored amount`}
-          >
-            <TiMinus />
-          </button>
-          {upgradable && (
+      <Cover resourceRarity={resource.rarity}>
+        <CoverImage resourceImageUrl={resource.imageUrl}>
+          <Actions hidden={hideButtons}>
             <button
               type="button"
-              className="upgrade"
+              className="plus"
               tabIndex={-1}
-              onClick={() => null}
-              aria-label={`Show ${name} rarity upgrade screen`}
+              onClick={increment}
+              aria-label={`Increment ${name} stored amount`}
             >
-              <GrUpgrade />
+              <TiPlus />
             </button>
-          )}
-        </Actions>
-        <Filler />
-        <RarityDisplay rarity={resource.rarity} />
+            <button
+              type="button"
+              className="minus"
+              tabIndex={-1}
+              onClick={decrement}
+              aria-label={`Decrement ${name} stored amount`}
+            >
+              <TiMinus />
+            </button>
+            {upgradable && (
+              <button
+                type="button"
+                className="upgrade"
+                tabIndex={-1}
+                onClick={() => null}
+                aria-label={`Show ${name} rarity upgrade screen`}
+              >
+                <GrUpgrade />
+              </button>
+            )}
+          </Actions>
+          <Filler />
+          <RarityDisplay rarity={resource.rarity} />
+        </CoverImage>
       </Cover>
       <Counter>
         <input
