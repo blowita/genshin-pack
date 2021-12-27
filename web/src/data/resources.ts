@@ -1499,7 +1499,7 @@ export const resources: Resource[] = [
     name: "Divine Body from Guyun",
     type: ResourceType.WeaponAscension,
     rarity: 5,
-    imageUrl: "/genshin-pack/static/images/item/Item_DivineBodyfromGuyun.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_DivineBodyFromGuyun.png",
   },
   {
     id: ResourceId.RelicFromGuyun,
@@ -1507,7 +1507,7 @@ export const resources: Resource[] = [
     name: "Relic from Guyun",
     type: ResourceType.WeaponAscension,
     rarity: 4,
-    imageUrl: "/genshin-pack/static/images/item/Item_RelicfromGuyun.png",
+    imageUrl: "/genshin-pack/static/images/item/Item_RelicFromGuyun.png",
   },
   {
     id: ResourceId.LustrousStoneFromGuyun,
@@ -1516,7 +1516,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 3,
     imageUrl:
-      "/genshin-pack/static/images/item/Item_LustrousStonefromGuyun.png",
+      "/genshin-pack/static/images/item/Item_LustrousStoneFromGuyun.png",
   },
   {
     id: ResourceId.LuminousSandsFromGuyun,
@@ -1525,7 +1525,7 @@ export const resources: Resource[] = [
     type: ResourceType.WeaponAscension,
     rarity: 2,
     imageUrl:
-      "/genshin-pack/static/images/item/Item_LuminousSandsfromGuyun.png",
+      "/genshin-pack/static/images/item/Item_LuminousSandsFromGuyun.png",
   },
   {
     id: ResourceId.MistVeiledPrimoElixir,
