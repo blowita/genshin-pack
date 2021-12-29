@@ -18,9 +18,13 @@ export const Controls = styled.div`
 
   margin-bottom: 1rem;
 
-  height: 3rem;
   overflow-y: auto;
   overflow-x: hidden;
+  height: 3rem;
+
+  @media (max-width: 750px) {
+    height: 6rem;
+  }
 
   label {
     span {
@@ -36,7 +40,11 @@ export const Controls = styled.div`
 export const Content = styled.div`
   margin-bottom: 2.5rem;
   padding-left: 1rem;
-  height: calc(100vh - 8.5rem);
+  height: calc(100vh - 9rem);
+
+  @media (max-width: 750px) {
+    height: calc(100vh - 13rem);
+  }
 
   > div {
     display: flex;

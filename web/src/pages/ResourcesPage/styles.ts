@@ -56,7 +56,11 @@ export const CategoryButton = styled.button<CategoryButtonProps>`
 export const Content = styled.div`
   margin-bottom: 2.5rem;
   padding-left: 1rem;
-  height: calc(100vh - 8.25rem);
+  height: calc(100vh - 9rem);
+
+  @media (max-width: 750px) {
+    height: calc(100vh - 10rem);
+  }
 
   > div {
     display: flex;

@@ -1,9 +1,9 @@
 import React from "react";
 import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
 
-import { Header } from "../layout";
+import { Header, Footer } from "../layout";
 
-import { CharactersPage, ResourcesPage } from "../pages";
+import { CharactersPage, InfoPage, ResourcesPage } from "../pages";
 
 const Routes: React.FC = () => (
   <HashRouter>
@@ -15,11 +15,15 @@ const Routes: React.FC = () => (
       <Route exact path="/characters">
         <CharactersPage />
       </Route>
+      <Route exact path="/info">
+        <InfoPage />
+      </Route>
       <Route exact path="/resources">
         <ResourcesPage />
       </Route>
       <Redirect to="/" />
     </Switch>
+    <Footer />
   </HashRouter>
 );
 

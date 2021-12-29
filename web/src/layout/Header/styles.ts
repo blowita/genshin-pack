@@ -28,7 +28,9 @@ export const Container = styled.header`
           text-align: center;
           text-decoration: none;
 
-          background-color: #333333;
+          background-color: #333;
+          border-left: 1px solid #222;
+          border-right: 1px solid #222;
           border-radius: 0 0 0.3rem 0.3rem;
 
           :hover {
