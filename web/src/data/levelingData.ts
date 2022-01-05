@@ -393,6 +393,116 @@ export const characterResourcesMapping = {
       [ElementType.Pyro]: undefined,
     },
   },
+  [CharacterId.Shenhe]: {
+    ascension: {
+      [ResourceId.DragonheirsFalseFin]: [0, 0, 2, 6, 14, 26, 46],
+      [ResourceId.ShivadaJadeSliver]: [0, 1, 1, 1, 1, 1, 1],
+      [ResourceId.ShivadaJadeFragment]: [0, 0, 3, 9, 9, 9, 9],
+      [ResourceId.ShivadaJadeChunk]: [0, 0, 0, 0, 3, 9, 9],
+      [ResourceId.ShivadaJadeGemstone]: [0, 0, 0, 0, 0, 0, 6],
+      [ResourceId.Qingxin]: [0, 3, 13, 33, 63, 108, 168],
+      [ResourceId.WhopperflowerNectar]: [0, 3, 18, 18, 18, 18, 18],
+      [ResourceId.ShimmeringNectar]: [0, 0, 0, 12, 30, 30, 30],
+      [ResourceId.EnergyNectar]: [0, 0, 0, 0, 0, 12, 36],
+    },
+    talents: {
+      [ResourceId.WhopperflowerNectar]: {
+        attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+      },
+      [ResourceId.ShimmeringNectar]: {
+        attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+      },
+      [ResourceId.EnergyNectar]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+      },
+      [ResourceId.TeachingsOfProsperity]: {
+        attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      },
+      [ResourceId.GuideToProsperity]: {
+        attack: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        skill: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        burst: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+      },
+      [ResourceId.PhilosophiesOfProsperity]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+      },
+      [ResourceId.HellfireButterfly]: {
+        attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+      },
+      [ResourceId.CrownOfInsight]: {
+        attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      },
+    },
+  },
+  [CharacterId.YunJin]: {
+    ascension: {
+      [ResourceId.RiftbornRegalia]: [0, 0, 2, 6, 14, 26, 46],
+      [ResourceId.PrithivaTopazSliver]: [0, 1, 1, 1, 1, 1, 1],
+      [ResourceId.PrithivaTopazFragment]: [0, 0, 3, 9, 9, 9, 9],
+      [ResourceId.PrithivaTopazChunk]: [0, 0, 0, 0, 3, 9, 9],
+      [ResourceId.PrithivaTopazGemstone]: [0, 0, 0, 0, 0, 0, 6],
+      [ResourceId.GlazeLily]: [0, 3, 13, 33, 63, 108, 168],
+      [ResourceId.DamagedMask]: [0, 3, 18, 18, 18, 18, 18],
+      [ResourceId.StainedMask]: [0, 0, 0, 12, 30, 30, 30],
+      [ResourceId.OminousMask]: [0, 0, 0, 0, 0, 12, 36],
+    },
+    talents: {
+      [ResourceId.DamagedMask]: {
+        attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+      },
+      [ResourceId.StainedMask]: {
+        attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+      },
+      [ResourceId.OminousMask]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+      },
+      [ResourceId.TeachingsOfDiligence]: {
+        attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      },
+      [ResourceId.GuideToDiligence]: {
+        attack: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        skill: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        burst: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+      },
+      [ResourceId.PhilosophiesOfDiligence]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+      },
+      [ResourceId.AshenHeart]: {
+        attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+      },
+      [ResourceId.CrownOfInsight]: {
+        attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      },
+    },
+  },
   [CharacterId.AratakiItto]: {
     ascension: {
       [ResourceId.RiftbornRegalia]: [0, 0, 2, 6, 14, 26, 46],

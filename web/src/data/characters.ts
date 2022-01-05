@@ -19,6 +19,8 @@ export enum WeaponType {
 
 export enum CharacterId {
   Traveler = "4d4e3070-a6ba-4024-87fd-c6ce9b82a61f",
+  Shenhe = "b8823b39-4e4b-4328-b490-7590edfd3e8a",
+  YunJin = "818ceef1-9edd-4040-8619-d6abd2ccabb4",
   AratakiItto = "ace0198e-11da-4078-8498-57bbd82cb177",
   Gorou = "f263b932-3375-4b3d-bf45-5cd9db5f44d4",
   Thoma = "ce714228-5ee7-42f5-a7e4-9e05852914a5",
@@ -85,6 +87,26 @@ export const characters: Character[] = [
     rarity: 5,
     colab: false,
     imageUrl: "/genshin-pack/static/images/avatar/Avatar_Traveler.png",
+  },
+  {
+    id: CharacterId.Shenhe,
+    sortId: 98,
+    name: "Shenhe",
+    element: ElementType.Cryo,
+    weapon: WeaponType.Polearm,
+    rarity: 5,
+    colab: false,
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Shenhe.png",
+  },
+  {
+    id: CharacterId.YunJin,
+    sortId: 99,
+    name: "Yun Jin",
+    element: ElementType.Geo,
+    weapon: WeaponType.Polearm,
+    rarity: 4,
+    colab: false,
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_YunJin.png",
   },
   {
     id: CharacterId.AratakiItto,

@@ -96,6 +96,7 @@ export enum ResourceId {
   DewOfRepudiation = "cd93bce4-2fca-4c9a-b342-8c19c73d70ab",
   StormBeads = "2c86c4d5-6840-47f1-966f-e9d4f0c68e17",
   RiftbornRegalia = "58b0a9c6-f0e6-4e5e-89b7-17e8caf3d5ad",
+  DragonheirsFalseFin = "400083fe-7d44-430a-a3e2-df5482dc3916",
   BrilliantDiamondGemstone = "0dd1b0ea-0903-473c-bebf-fdf140da4200",
   BrilliantDiamondChunk = "daeacbd8-ee72-439a-9185-44cf1d4fe0e4",
   BrilliantDiamondFragment = "72b955d1-45de-4bc2-8e6e-cfb12a2c7e4b",
@@ -924,6 +925,14 @@ export const resources: Resource[] = [
     type: ResourceType.CharacterAscension,
     rarity: 4,
     imageUrl: "/genshin-pack/static/images/item/Item_RiftbornRegalia.png",
+  },
+  {
+    id: ResourceId.DragonheirsFalseFin,
+    sortId: 214,
+    name: "Dragonheir's False Fin",
+    type: ResourceType.CharacterAscension,
+    rarity: 4,
+    imageUrl: "/genshin-pack/static/images/item/Item_DragonheirsFalseFin.png",
   },
   {
     id: ResourceId.BrilliantDiamondGemstone,

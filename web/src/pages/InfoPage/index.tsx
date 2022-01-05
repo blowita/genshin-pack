@@ -91,8 +91,8 @@ const InfoPage: React.FC = () => {
         <section>
           <details>
             <summary>Roadmap</summary>
-            <p>Last updated: December 29th, 2021</p>
-            <p>Latest release: 1.0.1 - December 29th, 2021</p>
+            <p>Last updated: January 5th, 2022</p>
+            <p>Latest release: 1.0.2 - January 5th, 2022</p>
             <p>Coming soon:</p>
             <ul>
               <li>Search characters and resources by name (or regex)</li>
@@ -125,13 +125,37 @@ const InfoPage: React.FC = () => {
             <br />
             <p>Other:</p>
             <ul>
-              <li>SEO (Search Engine Optimization</li>
+              <li>SEO (Search Engine Optimization)</li>
               <li>Import/export data</li>
               <li>
                 Replace global state management (use zustand instead of
                 recoiljs)
               </li>
             </ul>
+          </details>
+        </section>
+        <section>
+          <details>
+            <summary>Version History</summary>
+            <p>1.0.2 - January 5th, 2022</p>
+            <ul>
+              <li>
+                Added Genshin Impact&apos;s version 2.4 new characters (Shenhe
+                and YunJin)
+              </li>
+            </ul>
+            <br />
+            <p>1.0.1 - December 29th, 2021</p>
+            <ul>
+              <li>Added privacy policy and information page</li>
+            </ul>
+            <br />
+            <p>1.0.0 - December 27th, 2021</p>
+            <ul>
+              <li>Released Genshin Pack&apos;s Character and Resource pages</li>
+              <li>Data matching Genshin Impact&apos;s version 2.3</li>
+            </ul>
+            <br />
           </details>
         </section>
         <section>
