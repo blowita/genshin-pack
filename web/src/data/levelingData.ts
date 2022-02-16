@@ -393,6 +393,61 @@ export const characterResourcesMapping = {
       [ElementType.Pyro]: undefined,
     },
   },
+  [CharacterId.YaeMiko]: {
+    ascension: {
+      [ResourceId.DragonheirsFalseFin]: [0, 0, 2, 6, 14, 26, 46],
+      [ResourceId.VajradaAmethystSliver]: [0, 1, 1, 1, 1, 1, 1],
+      [ResourceId.VajradaAmethystFragment]: [0, 0, 3, 9, 9, 9, 9],
+      [ResourceId.VajradaAmethystChunk]: [0, 0, 0, 0, 3, 9, 9],
+      [ResourceId.VajradaAmethystGemstone]: [0, 0, 0, 0, 0, 0, 6],
+      [ResourceId.SeaGanoderma]: [0, 3, 13, 33, 63, 108, 168],
+      [ResourceId.OldHandguard]: [0, 3, 18, 18, 18, 18, 18],
+      [ResourceId.KageuchiHandguard]: [0, 0, 0, 12, 30, 30, 30],
+      [ResourceId.FamedHandguard]: [0, 0, 0, 0, 0, 12, 36],
+    },
+    talents: {
+      [ResourceId.OldHandguard]: {
+        attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+      },
+      [ResourceId.KageuchiHandguard]: {
+        attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+      },
+      [ResourceId.FamedHandguard]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+      },
+      [ResourceId.TeachingsOfLight]: {
+        attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      },
+      [ResourceId.GuideToLight]: {
+        attack: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        skill: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        burst: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+      },
+      [ResourceId.PhilosophiesOfLight]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+      },
+      [ResourceId.TheMeaningOfAeons]: {
+        attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+      },
+      [ResourceId.CrownOfInsight]: {
+        attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      },
+    },
+  },
   [CharacterId.Shenhe]: {
     ascension: {
       [ResourceId.DragonheirsFalseFin]: [0, 0, 2, 6, 14, 26, 46],

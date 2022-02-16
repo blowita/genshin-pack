@@ -19,6 +19,7 @@ export enum WeaponType {
 
 export enum CharacterId {
   Traveler = "4d4e3070-a6ba-4024-87fd-c6ce9b82a61f",
+  YaeMiko = "0a221ece-4589-497a-8a19-34cd50882303",
   Shenhe = "b8823b39-4e4b-4328-b490-7590edfd3e8a",
   YunJin = "818ceef1-9edd-4040-8619-d6abd2ccabb4",
   AratakiItto = "ace0198e-11da-4078-8498-57bbd82cb177",
@@ -87,6 +88,16 @@ export const characters: Character[] = [
     rarity: 5,
     colab: false,
     imageUrl: "/genshin-pack/static/images/avatar/Avatar_Traveler.png",
+  },
+  {
+    id: CharacterId.YaeMiko,
+    sortId: 97,
+    name: "Yae Miko",
+    element: ElementType.Electro,
+    weapon: WeaponType.Catalyst,
+    rarity: 5,
+    colab: false,
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_YaeMiko.png",
   },
   {
     id: CharacterId.Shenhe,

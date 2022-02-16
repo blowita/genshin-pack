@@ -12,8 +12,8 @@ const InfoPage: React.FC = () => {
             <summary>About Genshin Pack</summary>
             <p>
               Genshin Pack is an open-source fan-made website for{" "}
-              <a href="https://genshin.mihoyo.com/">Genshin Impact</a> that aims
-              to help players plan their characters&apos; progress.
+              <a href="https://genshin.hoyoverse.com/">Genshin Impact</a> that
+              aims to help players plan their characters&apos; progress.
             </p>
           </details>
         </section>
@@ -22,12 +22,13 @@ const InfoPage: React.FC = () => {
             <summary>Disclaimer about Genshin Impact</summary>
             <p>
               Genshin Impact, game content and materials are trademarks and
-              copyrights of miHoYo.
+              copyrights of COGNOSPHERE.
             </p>
             <p>
               Images used in Genshin Pack were obtained from{" "}
               <a href="https://www.hoyolab.com/">HoYoLAB&apos;s tools</a> and
-              are stored locally in order to not impact miHoYo&apos;s services.
+              are stored locally in order to not impact COGNOSPHERE&apos;s
+              services.
             </p>
           </details>
         </section>
@@ -91,8 +92,8 @@ const InfoPage: React.FC = () => {
         <section>
           <details>
             <summary>Roadmap</summary>
-            <p>Last updated: January 5th, 2022</p>
-            <p>Latest release: 1.0.2 - January 5th, 2022</p>
+            <p>Last updated: February 16th, 2022</p>
+            <p>Latest release: 1.0.3 - February 16th, 2022</p>
             <p>Coming soon:</p>
             <ul>
               <li>Search characters and resources by name (or regex)</li>
@@ -137,6 +138,13 @@ const InfoPage: React.FC = () => {
         <section>
           <details>
             <summary>Version History</summary>
+            <p>1.0.3 - February 16th, 2022</p>
+            <ul>
+              <li>
+                Added Genshin Impact&apos;s version 2.5 new character (Yae Miko)
+              </li>
+            </ul>
+            <br />
             <p>1.0.2 - January 5th, 2022</p>
             <ul>
               <li>

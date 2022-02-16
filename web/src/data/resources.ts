@@ -82,6 +82,7 @@ export enum ResourceId {
   MoltenMoment = "b9442c60-5eb4-4298-ac47-c38ed5a6c26d",
   HellfireButterfly = "a17c2fc2-380f-4142-8c13-99845f2d3187",
   AshenHeart = "8ef58d0d-e402-4a05-8559-90e8522b4bae",
+  TheMeaningOfAeons = "ac5823ac-9d68-4eae-b712-3f843b5d5bf3",
   HurricaneSeed = "4a2e06a9-b2d5-4fdd-bd49-fe599ad44f96",
   LightningPrism = "ea454e41-81d7-47ff-b96a-93d2de25f98e",
   BasaltPillar = "b170ad0b-55e8-4eb8-84fb-ab7e64bf4f80",
@@ -813,6 +814,14 @@ export const resources: Resource[] = [
     type: ResourceType.TalentLevelUp,
     rarity: 5,
     imageUrl: "/genshin-pack/static/images/item/Item_AshenHeart.png",
+  },
+  {
+    id: ResourceId.TheMeaningOfAeons,
+    sortId: 115,
+    name: "The Meaning of Aeons",
+    type: ResourceType.TalentLevelUp,
+    rarity: 5,
+    imageUrl: "/genshin-pack/static/images/item/Item_TheMeaningOfAeons.png",
   },
   {
     id: ResourceId.HurricaneSeed,
