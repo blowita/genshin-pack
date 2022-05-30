@@ -1,7 +1,7 @@
 # Roadmap
 
-Last updated: February 16th, 2022
-Latest release: 1.0.3 - February 16th, 2022
+Last updated: May 31st, 2022
+Latest release: 1.0.4 - May 31st, 2022
 ## Coming soon:
 - Search characters and resources by name (or regex)
 - Filter characters (by element, weapon type and other options)
@@ -27,6 +27,9 @@ Latest release: 1.0.3 - February 16th, 2022
     recoiljs)
 
 ## Version History
+### 1.0.4 - May 31st, 2022
+- Added Genshin Impact's version 2.6 character (Kamisato Ayato)
+- Added Genshin Impact's version 2.7 new character (Yelan)
 ### 1.0.3 - February 16th, 2022
 - Added Genshin Impact's version 2.5 new character (Yae Miko)
 ### 1.0.2 - January 5th, 2022

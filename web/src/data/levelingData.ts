@@ -393,6 +393,116 @@ export const characterResourcesMapping = {
       [ElementType.Pyro]: undefined,
     },
   },
+  [CharacterId.Yelan]: {
+    ascension: {
+      [ResourceId.RunicFang]: [0, 0, 2, 6, 14, 26, 46],
+      [ResourceId.VarunadaLazuriteSliver]: [0, 1, 1, 1, 1, 1, 1],
+      [ResourceId.VarunadaLazuriteFragment]: [0, 0, 3, 9, 9, 9, 9],
+      [ResourceId.VarunadaLazuriteChunk]: [0, 0, 0, 0, 3, 9, 9],
+      [ResourceId.VarunadaLazuriteGemstone]: [0, 0, 0, 0, 0, 0, 6],
+      [ResourceId.Starconch]: [0, 3, 13, 33, 63, 108, 168],
+      [ResourceId.RecruitsInsignia]: [0, 3, 18, 18, 18, 18, 18],
+      [ResourceId.SergeantsInsignia]: [0, 0, 0, 12, 30, 30, 30],
+      [ResourceId.LieutenantsInsignia]: [0, 0, 0, 0, 0, 12, 36],
+    },
+    talents: {
+      [ResourceId.RecruitsInsignia]: {
+        attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+      },
+      [ResourceId.SergeantsInsignia]: {
+        attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+      },
+      [ResourceId.LieutenantsInsignia]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+      },
+      [ResourceId.TeachingsOfProsperity]: {
+        attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      },
+      [ResourceId.GuideToProsperity]: {
+        attack: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        skill: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        burst: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+      },
+      [ResourceId.PhilosophiesOfProsperity]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+      },
+      [ResourceId.GildedScale]: {
+        attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+      },
+      [ResourceId.CrownOfInsight]: {
+        attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      },
+    },
+  },
+  [CharacterId.KamisatoAyato]: {
+    ascension: {
+      [ResourceId.DewOfRepudiation]: [0, 0, 2, 6, 14, 26, 46],
+      [ResourceId.VarunadaLazuriteSliver]: [0, 1, 1, 1, 1, 1, 1],
+      [ResourceId.VarunadaLazuriteFragment]: [0, 0, 3, 9, 9, 9, 9],
+      [ResourceId.VarunadaLazuriteChunk]: [0, 0, 0, 0, 3, 9, 9],
+      [ResourceId.VarunadaLazuriteGemstone]: [0, 0, 0, 0, 0, 0, 6],
+      [ResourceId.SakuraBloom]: [0, 3, 13, 33, 63, 108, 168],
+      [ResourceId.OldHandguard]: [0, 3, 18, 18, 18, 18, 18],
+      [ResourceId.KageuchiHandguard]: [0, 0, 0, 12, 30, 30, 30],
+      [ResourceId.FamedHandguard]: [0, 0, 0, 0, 0, 12, 36],
+    },
+    talents: {
+      [ResourceId.OldHandguard]: {
+        attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+      },
+      [ResourceId.KageuchiHandguard]: {
+        attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+      },
+      [ResourceId.FamedHandguard]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+      },
+      [ResourceId.TeachingsOfElegance]: {
+        attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      },
+      [ResourceId.GuideToElegance]: {
+        attack: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        skill: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        burst: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+      },
+      [ResourceId.PhilosophiesOfElegance]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+      },
+      [ResourceId.MudraOfTheMaleficGeneral]: {
+        attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+      },
+      [ResourceId.CrownOfInsight]: {
+        attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      },
+    },
+  },
   [CharacterId.YaeMiko]: {
     ascension: {
       [ResourceId.DragonheirsFalseFin]: [0, 0, 2, 6, 14, 26, 46],

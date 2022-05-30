@@ -19,6 +19,8 @@ export enum WeaponType {
 
 export enum CharacterId {
   Traveler = "4d4e3070-a6ba-4024-87fd-c6ce9b82a61f",
+  Yelan = "614a688f-0df6-4fa7-8efe-62a4ee79cc9b",
+  KamisatoAyato = "88c63036-66b4-4b6a-8c96-abfbb7a2a359",
   YaeMiko = "0a221ece-4589-497a-8a19-34cd50882303",
   Shenhe = "b8823b39-4e4b-4328-b490-7590edfd3e8a",
   YunJin = "818ceef1-9edd-4040-8619-d6abd2ccabb4",
@@ -88,6 +90,26 @@ export const characters: Character[] = [
     rarity: 5,
     colab: false,
     imageUrl: "/genshin-pack/static/images/avatar/Avatar_Traveler.png",
+  },
+  {
+    id: CharacterId.Yelan,
+    sortId: 95,
+    name: "Yelan",
+    element: ElementType.Hydro,
+    weapon: WeaponType.Bow,
+    rarity: 5,
+    colab: false,
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Yelan.png",
+  },
+  {
+    id: CharacterId.KamisatoAyato,
+    sortId: 96,
+    name: "Kamisato Ayato",
+    element: ElementType.Hydro,
+    weapon: WeaponType.Sword,
+    rarity: 5,
+    colab: false,
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_KamisatoAyato.png",
   },
   {
     id: CharacterId.YaeMiko,

@@ -93,7 +93,7 @@ const InfoPage: React.FC = () => {
           <details>
             <summary>Roadmap</summary>
             <p>Last updated: February 16th, 2022</p>
-            <p>Latest release: 1.0.3 - February 16th, 2022</p>
+            <p>Latest release: 1.0.4 - May 31st, 2022</p>
             <p>Coming soon:</p>
             <ul>
               <li>Search characters and resources by name (or regex)</li>
@@ -138,6 +138,17 @@ const InfoPage: React.FC = () => {
         <section>
           <details>
             <summary>Version History</summary>
+            <p>1.0.4 - May 31st, 2022</p>
+            <ul>
+              <li>
+                Added Genshin Impact&apos;s version 2.6 new character (Kamisato
+                Ayato)
+              </li>
+              <li>
+                Added Genshin Impact&apos;s version 2.7 new character (Yelan)
+              </li>
+            </ul>
+            <br />
             <p>1.0.3 - February 16th, 2022</p>
             <ul>
               <li>
