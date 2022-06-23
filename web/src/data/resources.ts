@@ -83,6 +83,7 @@ export enum ResourceId {
   HellfireButterfly = "a17c2fc2-380f-4142-8c13-99845f2d3187",
   AshenHeart = "8ef58d0d-e402-4a05-8559-90e8522b4bae",
   MudraOfTheMaleficGeneral = "5aae7dfc-6da0-418a-8372-84944d87260d",
+  TearsOfTheCalamitousGod = "3e66e63c-7c4f-4d8c-9387-2c6cb582456a",
   TheMeaningOfAeons = "ac5823ac-9d68-4eae-b712-3f843b5d5bf3",
   HurricaneSeed = "4a2e06a9-b2d5-4fdd-bd49-fe599ad44f96",
   LightningPrism = "ea454e41-81d7-47ff-b96a-93d2de25f98e",
@@ -825,6 +826,15 @@ export const resources: Resource[] = [
     rarity: 5,
     imageUrl:
       "/genshin-pack/static/images/item/Item_MudraOfTheMaleficGeneral.png",
+  },
+  {
+    id: ResourceId.TearsOfTheCalamitousGod,
+    sortId: 116,
+    name: "Tears of the Calamitous God",
+    type: ResourceType.TalentLevelUp,
+    rarity: 5,
+    imageUrl:
+      "/genshin-pack/static/images/item/Item_TearsOfTheCalamitousGod.png",
   },
   {
     id: ResourceId.TheMeaningOfAeons,

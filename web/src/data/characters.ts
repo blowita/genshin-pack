@@ -19,6 +19,7 @@ export enum WeaponType {
 
 export enum CharacterId {
   Traveler = "4d4e3070-a6ba-4024-87fd-c6ce9b82a61f",
+  KukiShinobu = "8fdbb8cf-ff1a-43d4-9e36-b8dfe0eab74b",
   Yelan = "614a688f-0df6-4fa7-8efe-62a4ee79cc9b",
   KamisatoAyato = "88c63036-66b4-4b6a-8c96-abfbb7a2a359",
   YaeMiko = "0a221ece-4589-497a-8a19-34cd50882303",
@@ -90,6 +91,16 @@ export const characters: Character[] = [
     rarity: 5,
     colab: false,
     imageUrl: "/genshin-pack/static/images/avatar/Avatar_Traveler.png",
+  },
+  {
+    id: CharacterId.KukiShinobu,
+    sortId: 94,
+    name: "Kuki Shinobu",
+    element: ElementType.Electro,
+    weapon: WeaponType.Sword,
+    rarity: 4,
+    colab: false,
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_KukiShinobu.png",
   },
   {
     id: CharacterId.Yelan,

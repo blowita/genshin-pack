@@ -27,6 +27,8 @@ Latest release: 1.0.4 - May 31st, 2022
     recoiljs)
 
 ## Version History
+### 1.0.5 - June 22nd, 2022
+- Added Genshin Impact's version 2.7 new character (Kuki Shinobu)
 ### 1.0.4 - May 31st, 2022
 - Added Genshin Impact's version 2.6 character (Kamisato Ayato)
 - Added Genshin Impact's version 2.7 new character (Yelan)

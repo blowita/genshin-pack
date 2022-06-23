@@ -393,6 +393,61 @@ export const characterResourcesMapping = {
       [ElementType.Pyro]: undefined,
     },
   },
+  [CharacterId.KukiShinobu]: {
+    ascension: {
+      [ResourceId.RunicFang]: [0, 0, 2, 6, 14, 26, 46],
+      [ResourceId.VajradaAmethystSliver]: [0, 1, 1, 1, 1, 1, 1],
+      [ResourceId.VajradaAmethystFragment]: [0, 0, 3, 9, 9, 9, 9],
+      [ResourceId.VajradaAmethystChunk]: [0, 0, 0, 0, 3, 9, 9],
+      [ResourceId.VajradaAmethystGemstone]: [0, 0, 0, 0, 0, 0, 6],
+      [ResourceId.NakuWeed]: [0, 3, 13, 33, 63, 108, 168],
+      [ResourceId.SpectralHusk]: [0, 3, 18, 18, 18, 18, 18],
+      [ResourceId.SpectralHeart]: [0, 0, 0, 12, 30, 30, 30],
+      [ResourceId.SpectralNucleus]: [0, 0, 0, 0, 0, 12, 36],
+    },
+    talents: {
+      [ResourceId.SpectralHusk]: {
+        attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+      },
+      [ResourceId.SpectralHeart]: {
+        attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+      },
+      [ResourceId.SpectralNucleus]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+      },
+      [ResourceId.TeachingsOfElegance]: {
+        attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      },
+      [ResourceId.GuideToElegance]: {
+        attack: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        skill: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        burst: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+      },
+      [ResourceId.PhilosophiesOfElegance]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+      },
+      [ResourceId.TearsOfTheCalamitousGod]: {
+        attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+      },
+      [ResourceId.CrownOfInsight]: {
+        attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      },
+    },
+  },
   [CharacterId.Yelan]: {
     ascension: {
       [ResourceId.RunicFang]: [0, 0, 2, 6, 14, 26, 46],
