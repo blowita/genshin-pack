@@ -393,6 +393,391 @@ export const characterResourcesMapping = {
       [ElementType.Pyro]: undefined,
     },
   },
+  [CharacterId.Nilou]: {
+    ascension: {
+      [ResourceId.PerpetualCaliber]: [0, 0, 2, 6, 14, 26, 46],
+      [ResourceId.VarunadaLazuriteSliver]: [0, 1, 1, 1, 1, 1, 1],
+      [ResourceId.VarunadaLazuriteFragment]: [0, 0, 3, 9, 9, 9, 9],
+      [ResourceId.VarunadaLazuriteChunk]: [0, 0, 0, 0, 3, 9, 9],
+      [ResourceId.VarunadaLazuriteGemstone]: [0, 0, 0, 0, 0, 0, 6],
+      [ResourceId.Padisarah]: [0, 3, 13, 33, 63, 108, 168],
+      [ResourceId.FungalSpores]: [0, 3, 18, 18, 18, 18, 18],
+      [ResourceId.LuminescentPollen]: [0, 0, 0, 12, 30, 30, 30],
+      [ResourceId.CrystallineCystDust]: [0, 0, 0, 0, 0, 12, 36],
+    },
+    talents: {
+      [ResourceId.FungalSpores]: {
+        attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+      },
+      [ResourceId.LuminescentPollen]: {
+        attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+      },
+      [ResourceId.CrystallineCystDust]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+      },
+      [ResourceId.TeachingsOfPraxis]: {
+        attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      },
+      [ResourceId.GuideToPraxis]: {
+        attack: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        skill: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        burst: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+      },
+      [ResourceId.PhilosophiesOfPraxis]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+      },
+      [ResourceId.TearsOfTheCalamitousGod]: {
+        attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+      },
+      [ResourceId.CrownOfInsight]: {
+        attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      },
+    },
+  },
+  [CharacterId.Cyno]: {
+    ascension: {
+      [ResourceId.ThunderclapFruitcore]: [0, 0, 2, 6, 14, 26, 46],
+      [ResourceId.VajradaAmethystSliver]: [0, 1, 1, 1, 1, 1, 1],
+      [ResourceId.VajradaAmethystFragment]: [0, 0, 3, 9, 9, 9, 9],
+      [ResourceId.VajradaAmethystChunk]: [0, 0, 0, 0, 3, 9, 9],
+      [ResourceId.VajradaAmethystGemstone]: [0, 0, 0, 0, 0, 0, 6],
+      [ResourceId.Scarab]: [0, 3, 13, 33, 63, 108, 168],
+      [ResourceId.DiviningScroll]: [0, 3, 18, 18, 18, 18, 18],
+      [ResourceId.SealedScroll]: [0, 0, 0, 12, 30, 30, 30],
+      [ResourceId.ForbiddenCurseScroll]: [0, 0, 0, 0, 0, 12, 36],
+    },
+    talents: {
+      [ResourceId.DiviningScroll]: {
+        attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+      },
+      [ResourceId.SealedScroll]: {
+        attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+      },
+      [ResourceId.ForbiddenCurseScroll]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+      },
+      [ResourceId.TeachingsOfAdmonition]: {
+        attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      },
+      [ResourceId.GuideToAdmonition]: {
+        attack: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        skill: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        burst: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+      },
+      [ResourceId.PhilosophiesOfAdmonition]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+      },
+      [ResourceId.MudraOfTheMaleficGeneral]: {
+        attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+      },
+      [ResourceId.CrownOfInsight]: {
+        attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      },
+    },
+  },
+  [CharacterId.Candace]: {
+    ascension: {
+      [ResourceId.LightGuidingTetrahedron]: [0, 0, 2, 6, 14, 26, 46],
+      [ResourceId.VarunadaLazuriteSliver]: [0, 1, 1, 1, 1, 1, 1],
+      [ResourceId.VarunadaLazuriteFragment]: [0, 0, 3, 9, 9, 9, 9],
+      [ResourceId.VarunadaLazuriteChunk]: [0, 0, 0, 0, 3, 9, 9],
+      [ResourceId.VarunadaLazuriteGemstone]: [0, 0, 0, 0, 0, 0, 6],
+      [ResourceId.Redcrest]: [0, 3, 13, 33, 63, 108, 168],
+      [ResourceId.FadedRedSatin]: [0, 3, 18, 18, 18, 18, 18],
+      [ResourceId.TrimmedRedSilk]: [0, 0, 0, 12, 30, 30, 30],
+      [ResourceId.RichRedBrocade]: [0, 0, 0, 0, 0, 12, 36],
+    },
+    talents: {
+      [ResourceId.FadedRedSatin]: {
+        attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+      },
+      [ResourceId.TrimmedRedSilk]: {
+        attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+      },
+      [ResourceId.RichRedBrocade]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+      },
+      [ResourceId.TeachingsOfAdmonition]: {
+        attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      },
+      [ResourceId.GuideToAdmonition]: {
+        attack: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        skill: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        burst: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+      },
+      [ResourceId.PhilosophiesOfAdmonition]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+      },
+      [ResourceId.TearsOfTheCalamitousGod]: {
+        attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+      },
+      [ResourceId.CrownOfInsight]: {
+        attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      },
+    },
+  },
+  [CharacterId.Dori]: {
+    ascension: {
+      [ResourceId.ThunderclapFruitcore]: [0, 0, 2, 6, 14, 26, 46],
+      [ResourceId.VajradaAmethystSliver]: [0, 1, 1, 1, 1, 1, 1],
+      [ResourceId.VajradaAmethystFragment]: [0, 0, 3, 9, 9, 9, 9],
+      [ResourceId.VajradaAmethystChunk]: [0, 0, 0, 0, 3, 9, 9],
+      [ResourceId.VajradaAmethystGemstone]: [0, 0, 0, 0, 0, 0, 6],
+      [ResourceId.KalpalataLotus]: [0, 3, 13, 33, 63, 108, 168],
+      [ResourceId.FadedRedSatin]: [0, 3, 18, 18, 18, 18, 18],
+      [ResourceId.TrimmedRedSilk]: [0, 0, 0, 12, 30, 30, 30],
+      [ResourceId.RichRedBrocade]: [0, 0, 0, 0, 0, 12, 36],
+    },
+    talents: {
+      [ResourceId.FadedRedSatin]: {
+        attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+      },
+      [ResourceId.TrimmedRedSilk]: {
+        attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+      },
+      [ResourceId.RichRedBrocade]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+      },
+      [ResourceId.TeachingsOfIngenuity]: {
+        attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      },
+      [ResourceId.GuideToIngenuity]: {
+        attack: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        skill: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        burst: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+      },
+      [ResourceId.PhilosophiesOfIngenuity]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+      },
+      [ResourceId.BloodjadeBranch]: {
+        attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+      },
+      [ResourceId.CrownOfInsight]: {
+        attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      },
+    },
+  },
+  [CharacterId.Tighnari]: {
+    ascension: {
+      [ResourceId.MajesticHookedBeak]: [0, 0, 2, 6, 14, 26, 46],
+      [ResourceId.NagadusEmeraldSliver]: [0, 1, 1, 1, 1, 1, 1],
+      [ResourceId.NagadusEmeraldFragment]: [0, 0, 3, 9, 9, 9, 9],
+      [ResourceId.NagadusEmeraldChunk]: [0, 0, 0, 0, 3, 9, 9],
+      [ResourceId.NagadusEmeraldGemstone]: [0, 0, 0, 0, 0, 0, 6],
+      [ResourceId.NilotpalaLotus]: [0, 3, 13, 33, 63, 108, 168],
+      [ResourceId.FungalSpores]: [0, 3, 18, 18, 18, 18, 18],
+      [ResourceId.LuminescentPollen]: [0, 0, 0, 12, 30, 30, 30],
+      [ResourceId.CrystallineCystDust]: [0, 0, 0, 0, 0, 12, 36],
+    },
+    talents: {
+      [ResourceId.FungalSpores]: {
+        attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+      },
+      [ResourceId.LuminescentPollen]: {
+        attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+      },
+      [ResourceId.CrystallineCystDust]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+      },
+      [ResourceId.TeachingsOfAdmonition]: {
+        attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      },
+      [ResourceId.GuideToAdmonition]: {
+        attack: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        skill: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        burst: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+      },
+      [ResourceId.PhilosophiesOfAdmonition]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+      },
+      [ResourceId.TheMeaningOfAeons]: {
+        attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+      },
+      [ResourceId.CrownOfInsight]: {
+        attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      },
+    },
+  },
+  [CharacterId.Collei]: {
+    ascension: {
+      [ResourceId.MajesticHookedBeak]: [0, 0, 2, 6, 14, 26, 46],
+      [ResourceId.NagadusEmeraldSliver]: [0, 1, 1, 1, 1, 1, 1],
+      [ResourceId.NagadusEmeraldFragment]: [0, 0, 3, 9, 9, 9, 9],
+      [ResourceId.NagadusEmeraldChunk]: [0, 0, 0, 0, 3, 9, 9],
+      [ResourceId.NagadusEmeraldGemstone]: [0, 0, 0, 0, 0, 0, 6],
+      [ResourceId.RukkhashavaMushrooms]: [0, 3, 13, 33, 63, 108, 168],
+      [ResourceId.FirmArrowhead]: [0, 3, 18, 18, 18, 18, 18],
+      [ResourceId.SharpArrowhead]: [0, 0, 0, 12, 30, 30, 30],
+      [ResourceId.WeatheredArrowhead]: [0, 0, 0, 0, 0, 12, 36],
+    },
+    talents: {
+      [ResourceId.FirmArrowhead]: {
+        attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+      },
+      [ResourceId.SharpArrowhead]: {
+        attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+      },
+      [ResourceId.WeatheredArrowhead]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+      },
+      [ResourceId.TeachingsOfPraxis]: {
+        attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      },
+      [ResourceId.GuideToPraxis]: {
+        attack: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        skill: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        burst: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+      },
+      [ResourceId.PhilosophiesOfPraxis]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+      },
+      [ResourceId.TearsOfTheCalamitousGod]: {
+        attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+      },
+      [ResourceId.CrownOfInsight]: {
+        attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      },
+    },
+  },
+  [CharacterId.ShikanoinHeizou]: {
+    ascension: {
+      [ResourceId.RunicFang]: [0, 0, 2, 6, 14, 26, 46],
+      [ResourceId.VayudaTurquoiseSliver]: [0, 1, 1, 1, 1, 1, 1],
+      [ResourceId.VayudaTurquoiseFragment]: [0, 0, 3, 9, 9, 9, 9],
+      [ResourceId.VayudaTurquoiseChunk]: [0, 0, 0, 0, 3, 9, 9],
+      [ResourceId.VayudaTurquoiseGemstone]: [0, 0, 0, 0, 0, 0, 6],
+      [ResourceId.Onikabuto]: [0, 3, 13, 33, 63, 108, 168],
+      [ResourceId.TreasureHoarderInsignia]: [0, 3, 18, 18, 18, 18, 18],
+      [ResourceId.SilverRavenInsignia]: [0, 0, 0, 12, 30, 30, 30],
+      [ResourceId.GoldenRavenInsignia]: [0, 0, 0, 0, 0, 12, 36],
+    },
+    talents: {
+      [ResourceId.TreasureHoarderInsignia]: {
+        attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+      },
+      [ResourceId.SilverRavenInsignia]: {
+        attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+      },
+      [ResourceId.GoldenRavenInsignia]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+      },
+      [ResourceId.TeachingsOfTransience]: {
+        attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      },
+      [ResourceId.GuideToTransience]: {
+        attack: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        skill: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        burst: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+      },
+      [ResourceId.PhilosophiesOfTransience]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+      },
+      [ResourceId.TheMeaningOfAeons]: {
+        attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+      },
+      [ResourceId.CrownOfInsight]: {
+        attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      },
+    },
+  },
   [CharacterId.KukiShinobu]: {
     ascension: {
       [ResourceId.RunicFang]: [0, 0, 2, 6, 14, 26, 46],

@@ -93,7 +93,7 @@ const InfoPage: React.FC = () => {
           <details>
             <summary>Roadmap</summary>
             <p>Last updated: February 16th, 2022</p>
-            <p>Latest release: 1.0.5 - June 22nd, 2022</p>
+            <p>Latest release: 1.0.6 - October 15th, 2022</p>
             <p>Coming soon:</p>
             <ul>
               <li>Search characters and resources by name (or regex)</li>
@@ -138,6 +138,32 @@ const InfoPage: React.FC = () => {
         <section>
           <details>
             <summary>Version History</summary>
+            <p>1.0.6 - October 15th, 2022</p>
+            <ul>
+              <li>
+                Added Genshin Impact&apos;s version 2.8 new character (Shikanoin
+                Heizou)
+              </li>
+              <li>
+                Added Genshin Impact&apos;s version 3.0 new character (Collei)
+              </li>
+              <li>
+                Added Genshin Impact&apos;s version 3.0 new character (Tighnari)
+              </li>
+              <li>
+                Added Genshin Impact&apos;s version 3.0 new character (Dori)
+              </li>
+              <li>
+                Added Genshin Impact&apos;s version 3.1 new character (Candace)
+              </li>
+              <li>
+                Added Genshin Impact&apos;s version 3.1 new character (Cyno)
+              </li>
+              <li>
+                Added Genshin Impact&apos;s version 3.1 new character (Nilou)
+              </li>
+            </ul>
+            <br />
             <p>1.0.5 - June 22nd, 2022</p>
             <ul>
               <li>
