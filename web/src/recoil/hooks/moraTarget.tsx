@@ -40,12 +40,9 @@ const calculateMoraForTalents = (character: CharacterEntity): number => {
 
     const elements = [
       ElementType.Anemo,
-      ElementType.Cryo,
       ElementType.Dendro,
       ElementType.Electro,
       ElementType.Geo,
-      ElementType.Hydro,
-      ElementType.Pyro,
     ];
 
     elements.forEach((element) => {

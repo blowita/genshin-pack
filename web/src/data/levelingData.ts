@@ -209,7 +209,68 @@ export const characterResourcesMapping = {
         },
       },
       [ElementType.Cryo]: undefined,
-      [ElementType.Dendro]: undefined,
+      [ElementType.Dendro]: {
+        [ResourceId.FungalSpores]: {
+          attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+          skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+          burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        },
+        [ResourceId.LuminescentPollen]: {
+          attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+          skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+          burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        },
+        [ResourceId.CrystallineCystDust]: {
+          attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+          skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+          burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        },
+        [ResourceId.TeachingsOfAdmonition]: {
+          attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+          skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+          burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        },
+        [ResourceId.GuideToAdmonition]: {
+          attack: [0, 0, 0, 0, 6, 6, 6, 6, 6, 6],
+          skill: [0, 0, 0, 0, 6, 6, 6, 6, 6, 6],
+          burst: [0, 0, 0, 0, 6, 6, 6, 6, 6, 6],
+        },
+        [ResourceId.GuideToIngenuity]: {
+          attack: [0, 0, 2, 2, 2, 11, 11, 11, 11, 11],
+          skill: [0, 0, 2, 2, 2, 11, 11, 11, 11, 11],
+          burst: [0, 0, 2, 2, 2, 11, 11, 11, 11, 11],
+        },
+        [ResourceId.GuideToPraxis]: {
+          attack: [0, 0, 0, 4, 4, 4, 4, 4, 4, 4],
+          skill: [0, 0, 0, 4, 4, 4, 4, 4, 4, 4],
+          burst: [0, 0, 0, 4, 4, 4, 4, 4, 4, 4],
+        },
+        [ResourceId.PhilosophiesOfAdmonition]: {
+          attack: [0, 0, 0, 0, 0, 0, 0, 6, 6, 6],
+          skill: [0, 0, 0, 0, 0, 0, 0, 6, 6, 6],
+          burst: [0, 0, 0, 0, 0, 0, 0, 6, 6, 6],
+        },
+        [ResourceId.PhilosophiesOfIngenuity]: {
+          attack: [0, 0, 0, 0, 0, 0, 0, 0, 12, 12],
+          skill: [0, 0, 0, 0, 0, 0, 0, 0, 12, 12],
+          burst: [0, 0, 0, 0, 0, 0, 0, 0, 12, 12],
+        },
+        [ResourceId.PhilosophiesOfPraxis]: {
+          attack: [0, 0, 0, 0, 0, 0, 4, 4, 4, 20],
+          skill: [0, 0, 0, 0, 0, 0, 4, 4, 4, 20],
+          burst: [0, 0, 0, 0, 0, 0, 4, 4, 4, 20],
+        },
+        [ResourceId.MudraOfTheMaleficGeneral]: {
+          attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+          skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+          burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        },
+        [ResourceId.CrownOfInsight]: {
+          attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+          skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+          burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        },
+      },
       [ElementType.Electro]: {
         [ResourceId.OldHandguard]: {
           attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],

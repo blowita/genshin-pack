@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
   return (
     <Container>
       <p>Genshin Pack is not affiliated with COGNOSPHERE.</p>
-      <p>Genshin Pack Version: 1.0.6</p>
+      <p>Genshin Pack Version: 1.0.7</p>
       <Link to="/info" aria-current={pathname === "/info" && "page"}>
         <FaInfoCircle /> Privacy, Cookies and FAQs
       </Link>

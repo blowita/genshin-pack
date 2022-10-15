@@ -27,6 +27,8 @@ Latest release: 1.0.4 - May 31st, 2022
     recoiljs)
 
 ## Version History
+### 1.0.7 - October 15th, 2022
+- Enabled Traveler's Dendro element
 ### 1.0.6 - October 15th, 2022
 - Added Genshin Impact's version 2.8 character (Shikanoin Heizou)
 - Added Genshin Impact's version 3.0 character (Collei)

@@ -19,7 +19,12 @@ interface TravelerElementPickerProps {
   disabled: boolean;
 }
 
-const focusable = [ElementType.Anemo, ElementType.Geo, ElementType.Electro];
+const focusable = [
+  ElementType.Anemo,
+  ElementType.Geo,
+  ElementType.Electro,
+  ElementType.Dendro,
+];
 
 const TravelerElementPicker: React.FC<TravelerElementPickerProps> = ({
   disabled,
@@ -194,6 +199,16 @@ const TravelerElementPicker: React.FC<TravelerElementPickerProps> = ({
           >
             <CharacterElement data-title="Electro">
               <span className="visuallyhidden">Electro</span>
+            </CharacterElement>
+          </DropdownListItem>
+          <DropdownListItem
+            onClick={() => changeElement(ElementType.Dendro)}
+            role="option"
+            id={`ddi-${ElementType.Dendro}`}
+            aria-selected={selectedElement === ElementType.Dendro}
+          >
+            <CharacterElement data-title="Dendro">
+              <span className="visuallyhidden">Dendro</span>
             </CharacterElement>
           </DropdownListItem>
         </DropdownList>
