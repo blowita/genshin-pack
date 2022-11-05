@@ -93,7 +93,7 @@ const InfoPage: React.FC = () => {
           <details>
             <summary>Roadmap</summary>
             <p>Last updated: February 16th, 2022</p>
-            <p>Latest release: 1.0.7 - October 15th, 2022</p>
+            <p>Latest release: 1.0.8 - November 5th, 2022</p>
             <p>Coming soon:</p>
             <ul>
               <li>Search characters and resources by name (or regex)</li>
@@ -138,6 +138,13 @@ const InfoPage: React.FC = () => {
         <section>
           <details>
             <summary>Version History</summary>
+            <p>1.0.8 - November 5th, 2022</p>
+            <ul>
+              <li>
+                Added Genshin Impact&apos;s version 3.2 new character (Nahida)
+              </li>
+            </ul>
+            <br />
             <p>1.0.7 - October 15th, 2022</p>
             <ul>
               <li>Enabled Traveler&apos;s Dendro element</li>

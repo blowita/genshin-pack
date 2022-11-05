@@ -19,6 +19,7 @@ export enum WeaponType {
 
 export enum CharacterId {
   Traveler = "4d4e3070-a6ba-4024-87fd-c6ce9b82a61f",
+  Nahida = "b7bc3eae-c341-4715-b9ad-69bfa10d222f",
   Nilou = "b17dd536-d6f6-4049-b1b6-58d21ade2f09",
   Cyno = "990d09f2-3b87-416f-a8a5-f7745e6bfeb1",
   Candace = "1e3a58bc-f554-4862-826f-28ad89520f78",
@@ -98,6 +99,16 @@ export const characters: Character[] = [
     rarity: 5,
     colab: false,
     imageUrl: "/genshin-pack/static/images/avatar/Avatar_Traveler.png",
+  },
+  {
+    id: CharacterId.Nahida,
+    sortId: 86,
+    name: "Nahida",
+    element: ElementType.Dendro,
+    weapon: WeaponType.Catalyst,
+    rarity: 5,
+    colab: false,
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Nahida.png",
   },
   {
     id: CharacterId.Nilou,

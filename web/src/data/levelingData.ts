@@ -454,6 +454,61 @@ export const characterResourcesMapping = {
       [ElementType.Pyro]: undefined,
     },
   },
+  [CharacterId.Nahida]: {
+    ascension: {
+      [ResourceId.QuelledCreeper]: [0, 0, 2, 6, 14, 26, 46],
+      [ResourceId.NagadusEmeraldSliver]: [0, 1, 1, 1, 1, 1, 1],
+      [ResourceId.NagadusEmeraldFragment]: [0, 0, 3, 9, 9, 9, 9],
+      [ResourceId.NagadusEmeraldChunk]: [0, 0, 0, 0, 3, 9, 9],
+      [ResourceId.NagadusEmeraldGemstone]: [0, 0, 0, 0, 0, 0, 6],
+      [ResourceId.KalpalataLotus]: [0, 3, 13, 33, 63, 108, 168],
+      [ResourceId.FungalSpores]: [0, 3, 18, 18, 18, 18, 18],
+      [ResourceId.LuminescentPollen]: [0, 0, 0, 12, 30, 30, 30],
+      [ResourceId.CrystallineCystDust]: [0, 0, 0, 0, 0, 12, 36],
+    },
+    talents: {
+      [ResourceId.FungalSpores]: {
+        attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+      },
+      [ResourceId.LuminescentPollen]: {
+        attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+      },
+      [ResourceId.CrystallineCystDust]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+      },
+      [ResourceId.TeachingsOfIngenuity]: {
+        attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      },
+      [ResourceId.GuideToIngenuity]: {
+        attack: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        skill: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        burst: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+      },
+      [ResourceId.PhilosophiesOfIngenuity]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+      },
+      [ResourceId.PuppetStrings]: {
+        attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+      },
+      [ResourceId.CrownOfInsight]: {
+        attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      },
+    },
+  },
   [CharacterId.Nilou]: {
     ascension: {
       [ResourceId.PerpetualCaliber]: [0, 0, 2, 6, 14, 26, 46],

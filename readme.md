@@ -13,7 +13,7 @@ An open-source web fansite to help Genshin Impact players manage their resources
 
 ## :hammer: Status
 
-> :green_circle: Online (Github Pages): https://blowita.github.io/genshin-pack/ [version 1.0.7]
+> :green_circle: Online (Github Pages): https://blowita.github.io/genshin-pack/ [version 1.0.8]
 
 > :construction: Upcoming: [roadmap](./roadmap.md) :wrench:
 

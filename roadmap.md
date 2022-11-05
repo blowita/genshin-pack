@@ -1,7 +1,7 @@
 # Roadmap
 
 Last updated: May 31st, 2022
-Latest release: 1.0.4 - May 31st, 2022
+Latest release: 1.0.8 - November 5th, 2022
 ## Coming soon:
 - Search characters and resources by name (or regex)
 - Filter characters (by element, weapon type and other options)
@@ -27,6 +27,8 @@ Latest release: 1.0.4 - May 31st, 2022
     recoiljs)
 
 ## Version History
+### 1.0.8 - November 5th, 2022
+- Added Genshin Impact's version 3.2 new character (Nahida)
 ### 1.0.7 - October 15th, 2022
 - Enabled Traveler's Dendro element
 ### 1.0.6 - October 15th, 2022
