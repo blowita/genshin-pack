@@ -454,6 +454,61 @@ export const characterResourcesMapping = {
       [ElementType.Pyro]: undefined,
     },
   },
+  [CharacterId.Layla]: {
+    ascension: {
+      [ResourceId.PerpetualCaliber]: [0, 0, 2, 6, 14, 26, 46],
+      [ResourceId.ShivadaJadeSliver]: [0, 1, 1, 1, 1, 1, 1],
+      [ResourceId.ShivadaJadeFragment]: [0, 0, 3, 9, 9, 9, 9],
+      [ResourceId.ShivadaJadeChunk]: [0, 0, 0, 0, 3, 9, 9],
+      [ResourceId.ShivadaJadeGemstone]: [0, 0, 0, 0, 0, 0, 6],
+      [ResourceId.NilotpalaLotus]: [0, 3, 13, 33, 63, 108, 168],
+      [ResourceId.DiviningScroll]: [0, 3, 18, 18, 18, 18, 18],
+      [ResourceId.SealedScroll]: [0, 0, 0, 12, 30, 30, 30],
+      [ResourceId.ForbiddenCurseScroll]: [0, 0, 0, 0, 0, 12, 36],
+    },
+    talents: {
+      [ResourceId.DiviningScroll]: {
+        attack: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        skill: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+        burst: [0, 6, 6, 6, 6, 6, 6, 6, 6, 6],
+      },
+      [ResourceId.SealedScroll]: {
+        attack: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        skill: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+        burst: [0, 0, 3, 7, 13, 22, 22, 22, 22, 22],
+      },
+      [ResourceId.ForbiddenCurseScroll]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 19, 31],
+      },
+      [ResourceId.TeachingsOfIngenuity]: {
+        attack: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        skill: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        burst: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      },
+      [ResourceId.GuideToIngenuity]: {
+        attack: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        skill: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+        burst: [0, 0, 2, 6, 12, 21, 21, 21, 21, 21],
+      },
+      [ResourceId.PhilosophiesOfIngenuity]: {
+        attack: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        skill: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+        burst: [0, 0, 0, 0, 0, 0, 4, 10, 22, 38],
+      },
+      [ResourceId.MirrorOfMushin]: {
+        attack: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        skill: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+        burst: [0, 0, 0, 0, 0, 0, 1, 2, 4, 6],
+      },
+      [ResourceId.CrownOfInsight]: {
+        attack: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        skill: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        burst: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      },
+    },
+  },
   [CharacterId.Nahida]: {
     ascension: {
       [ResourceId.QuelledCreeper]: [0, 0, 2, 6, 14, 26, 46],

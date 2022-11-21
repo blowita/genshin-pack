@@ -19,6 +19,7 @@ export enum WeaponType {
 
 export enum CharacterId {
   Traveler = "4d4e3070-a6ba-4024-87fd-c6ce9b82a61f",
+  Layla = "5e1c227b-1ce8-408a-96e0-3d49d4bbd9cc",
   Nahida = "b7bc3eae-c341-4715-b9ad-69bfa10d222f",
   Nilou = "b17dd536-d6f6-4049-b1b6-58d21ade2f09",
   Cyno = "990d09f2-3b87-416f-a8a5-f7745e6bfeb1",
@@ -99,6 +100,16 @@ export const characters: Character[] = [
     rarity: 5,
     colab: false,
     imageUrl: "/genshin-pack/static/images/avatar/Avatar_Traveler.png",
+  },
+  {
+    id: CharacterId.Layla,
+    sortId: 85,
+    name: "Layla",
+    element: ElementType.Cryo,
+    weapon: WeaponType.Sword,
+    rarity: 4,
+    colab: false,
+    imageUrl: "/genshin-pack/static/images/avatar/Avatar_Layla.png",
   },
   {
     id: CharacterId.Nahida,

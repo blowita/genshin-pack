@@ -92,6 +92,7 @@ export enum ResourceId {
   TearsOfTheCalamitousGod = "3e66e63c-7c4f-4d8c-9387-2c6cb582456a",
   TheMeaningOfAeons = "ac5823ac-9d68-4eae-b712-3f843b5d5bf3",
   PuppetStrings = "682af792-f1ac-4d7d-a48f-52582911801c",
+  MirrorOfMushin = "0844a690-5911-42a5-aca5-6ba354364153",
   HurricaneSeed = "4a2e06a9-b2d5-4fdd-bd49-fe599ad44f96",
   LightningPrism = "ea454e41-81d7-47ff-b96a-93d2de25f98e",
   BasaltPillar = "b170ad0b-55e8-4eb8-84fb-ab7e64bf4f80",
@@ -930,6 +931,14 @@ export const resources: Resource[] = [
     type: ResourceType.TalentLevelUp,
     rarity: 5,
     imageUrl: "/genshin-pack/static/images/item/Item_PuppetStrings.png",
+  },
+  {
+    id: ResourceId.MirrorOfMushin,
+    sortId: 119,
+    name: "Mirror of Mushin",
+    type: ResourceType.TalentLevelUp,
+    rarity: 5,
+    imageUrl: "/genshin-pack/static/images/item/Item_MirrorOfMushin.png",
   },
   {
     id: ResourceId.HurricaneSeed,
